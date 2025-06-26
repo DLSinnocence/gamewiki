@@ -83,7 +83,7 @@ function renderMarkdown(title, data, buffMap) {
   const type = data.Type;
   const rarity = data.Rarity;
   const description = linkifyBuffInText(
-    data.Description || data.描述 || "",
+    escapeMarkdown(data.Description) || data.描述 || "",
     buffMap
   );
   const tips = linkifyBuffInText(data.Tips || "", buffMap);
@@ -98,7 +98,7 @@ function renderMarkdown(title, data, buffMap) {
 
   // 显示除主要字段外的所有字段
   Object.keys(data).forEach((key) => {
-    lines.push(`${key}: ${String(data[key] || "")}`);
+    lines.push(`${key}: ${String(escapeMarkdown(data[key]) || "")}`);
   });
 
   lines.push("```");
