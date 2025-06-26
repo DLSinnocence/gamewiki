@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+
 // Wiki 内容根目录
 const wikiRoot = path.resolve(__dirname, "../wiki");
 
