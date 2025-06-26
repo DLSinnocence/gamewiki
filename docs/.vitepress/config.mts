@@ -99,7 +99,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   title: "游戏 Wiki",
   description: "基于 CSV 自动生成的 Wiki",
-  base: "", // 如果部署到子路径，注意修改
+  base: "gamewiki", // 如果部署到子路径，注意修改
   themeConfig: {
     nav,
     sidebar,
