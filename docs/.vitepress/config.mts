@@ -82,9 +82,12 @@ export function getWikiNavAndSidebar(): {
 
     categories.forEach((category) => {
       const title = toTitleCase(category);
-      indexContent.push(
+      if (title != ".vitepress")
+      {
+        indexContent.push(
         `| ${title} | [查看](/${encodeURIComponent(category)}/) |`
       );
+      }
     });
 
     fs.writeFileSync(wikiIndexPath, indexContent.join("\n"), "utf-8");
@@ -104,5 +107,8 @@ export default defineConfig({
     nav,
     sidebar,
     socialLinks: [{ icon: "github", link: "https://github.com/your-repo" }],
+    search: {
+      provider: 'local'
+    }
   },
 });
