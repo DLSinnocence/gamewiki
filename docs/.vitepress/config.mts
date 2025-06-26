@@ -7,9 +7,6 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Wiki 内容根目录
-const wikiRoot = path.resolve(__dirname, "../wiki");
-
 // 生成 Nav 和 Sidebar
 export function getWikiNavAndSidebar(): {
   nav: DefaultTheme.NavItem[];
@@ -20,7 +17,7 @@ export function getWikiNavAndSidebar(): {
   const __dirname = path.dirname(__filename);
 
   // 固定 Wiki 根目录，根据你实际情况修改
-  const wikiRoot = path.resolve(__dirname, "../wiki");
+  const wikiRoot = path.resolve(__dirname, "../");
 
   const categories = fs.readdirSync(wikiRoot).filter((name) => {
     const dirPath = path.join(wikiRoot, name);
@@ -30,7 +27,7 @@ export function getWikiNavAndSidebar(): {
   const nav = [
     {
       text: "Wiki",
-      link: "/wiki/",
+      link: "/",
     },
   ];
   const sidebar: DefaultTheme.SidebarMulti = {};
@@ -99,10 +96,10 @@ export function getWikiNavAndSidebar(): {
 const { nav, sidebar } = getWikiNavAndSidebar();
 
 export default defineConfig({
-  srcDir: "wiki",
+  ignoreDeadLinks: true,
   title: "游戏 Wiki",
   description: "基于 CSV 自动生成的 Wiki",
-  base: "/wiki/", // 如果部署到子路径，注意修改
+  base: "", // 如果部署到子路径，注意修改
   themeConfig: {
     nav,
     sidebar,

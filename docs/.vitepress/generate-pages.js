@@ -3,6 +3,7 @@ const path = require("path");
 const iconv = require("iconv-lite");
 const { parse } = require("csv-parse/sync");
 const glob = require("glob");
+const { debug } = require("console");
 
 function linkifyBuffInText(text, buffMap) {
   if (!text) return "";
@@ -119,7 +120,7 @@ function generatePages() {
     textFileMap.set(key, f);
   });
 
-  const outputRoot = path.resolve("docs/wiki");
+  const outputRoot = path.resolve("docs/");
 
   for (const dataFile of dataFiles) {
     const relative = path.relative("Source/Data", dataFile).replace(/\\/g, "/");
@@ -206,6 +207,7 @@ function generateCategoryHome(categoryDir, textMap = new Map()) {
   });
 
   const indexPath = path.join(categoryDir, 'index.md');
+  debug(`生成目录首页: ${indexPath}`);
   writeMarkdown(indexPath, indexContent.join('\n'));
 }
 
