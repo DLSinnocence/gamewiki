@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "@types/node": "^24.0.4",
+    "chokidar": "^4.0.3",
+    "fast-csv": "^5.0.2",
+    "glob": "^11.0.3",
+    "lodash": "^4.17.21",
+    "vitepress": "^1.6.3"
+  },
+  "scripts": {
+    "generate": "node docs/.vitepress/generate-pages.js",
+    "docs:dev": "npm run generate && vitepress dev docs",
+    "docs:build": "npm run generate && vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "iconv-lite": "^0.6.3",
+    "papaparse": "^5.5.3"
+  }
+}

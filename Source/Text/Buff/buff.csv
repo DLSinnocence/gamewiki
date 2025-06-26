@@ -1,0 +1,60 @@
+Id,Note,Name,Description,Name_en,Description_en,第 1 列
+唯一的标识（不能重复）,备注,名称,描述,Name,Description,
+inspiration,,灵能,打出下张牌时回复1点行动点。,Psionic,,已完成
+instant,,时之笼,层数等同于已储存的效果数，buff被清除时，结算所有已储存的效果。,Time Cage,,已完成
+wisdom,,启示,"每有1点启示,最大行动点+1。",Revelation,,已完成
+remember,,增生,回合结束时获得等同于层数的护盾。,Proliferation,,已完成
+annihilation,,失能,受伤时玩家失去1点行动点。,Disable,,已完成
+vientiane,,源蜕,失去行动点两次时抽层张牌。,Source Shed,,已完成
+return,,归来,回合结束时重新洗牌。,Rebirth,,已完成
+conscience,,血墙,每次行动时获得层数点护盾(受伤时层数-1)。,Blood Wall,,已完成
+charmed,,时停,轮到单位行动时，消耗1层时停，跳过本回合。,Time Stop,,已完成
+elements,,元素,"每有1层元素,行动时获得2层超凡(每层超凡提供1%增伤)。",Elemental,,已完成
+fast,,敏锐,每回合开始时额外抽等同于敏锐层数张牌。,Acuity,,已完成
+immortal,,不朽,受两次伤时获得层数点行动点。,Immortality,,已完成
+ignorance,,封印,"每有1点封印,最大行动点-1。",Seal,,已完成
+sacrifice,,狂暴,"每次行动时获得持续2回合的1层锋锐，如果血量大于1,受到2点真实伤害。",Frenzy,,已完成
+gainsandlosses,,回响,下张牌打出时消耗所有回响，卡牌的效果重复触发等同于回响层数次。,Echo,,已完成
+unyielding,,不屈,每受伤两次抽层数张牌。,Tenacity,,已完成
+toxin,,毒素,每回合结束时受到毒素层真实伤害。,Toxin,,已完成
+Inferiority,,遗忘,每抽到3张卡牌时丢弃1张卡牌，回合结束时层数-1。,Oblivion,,已完成
+blooding,,流血,行动时受到1点真实伤害。,Bleeding,,已完成
+evergreen,,自愈,回合开始时恢复层数点生命。,Self-Heal,,已完成
+slow,,迟缓,每回合少抽1张牌。,Sluggish,,已完成
+roundRetainCard,,伺机,你的回合结束时保留层数张卡牌。,Ambush,,已完成
+rotten,,腐朽,行动后失去所有护盾。,Decay,,已完成
+burn,,灼烧,回合开始时造成层数乘（1+1%）血量的真实伤害。,Scorch,,已完成
+chaos,,混乱,"你每次行动时,下一张牌的花费会各有1/3的概率变成0倍,1倍,2倍。",Chaos,,已完成
+exorcism,,重伤,受到伤害加70%。,Heavy Wound,,已完成
+rescued,,魔化,"使用卡牌的消耗行动点减-200%,但回合结束时扣除999点生命。",Demonize,,已完成
+vulnerability,,易伤,每层受伤加10%。,Vulnerability,,已完成
+cycle,,循环,抽完1轮牌洗牌后获得层数点行动点。,Cycle,,已完成
+vitality,,吸收,受伤时获得层数点护盾。,Absorption,,已完成
+truth,,鬼化,"回合开始时失去12点生命(不会导致死亡),每次行动恢复4倍层数生命。",Ghostify,,已完成
+fire,,炎刃,行动时随机赋予1名敌人灼烧。,Flame Blade,,已完成
+erupt,,爆发,下次造成的伤害增加层数点。,Eruption,,已完成
+sideEffect,,污染,每抽卡两次时造成10点物理伤害。,Contamination,,已完成
+stretch,,锋锐,每次造成的伤害+1。,Sharpness,,已完成
+disease,,疫病,每回合获得3点毒素。,Plague,,已完成
+weak,,无力,每次造成的伤害-1。,Weakness,,已完成
+tenacity,,坚盾,每层额外提供10%的护盾收益。,Fortitude,,已完成
+courageous,,行垒,行动后获得等同于行垒层数的护盾。,Bastion,,已完成
+resilient,,强韧,受到伤害减少层数点。,Resilience,,已完成
+counterattack,,反击,受到攻击时对随机敌对方造成层数+1点伤害。且自身不会被反击。,Counterstrike,,已完成
+sublimation,,升华,"回合结束时获得3层自愈,10层超凡。",Sublimation,,已完成
+extreme,,极致,每层极致提供10%的伤害加成。,Perfection,,已完成
+impregnable,,坚毅,每层坚毅减少10%的受伤。,Steadfast,,已完成
+eternal,,庇护,每回合最多受到最大生命值一半的伤害。,Sanctuary,,已完成
+adaptiveArmor,,树肤,每次受伤时获得本回合受伤次数的防御两次。,Bark Armor,,已完成
+evolution,,进化,每回合第一次受伤时获得6点护盾，10层超凡。,Evolution,,已完成
+bloodriver,,血河,"每次行动时，25%概率使自己获得2层流血,75%概率使随机敌人获得4层流血。(效果不会随层数改变)",Blood River,,已完成
+extraordinary,,超凡,每层超凡提供1%的增伤。,Transcendence,,已完成
+limitdamage,,限伤,本回合还可受到层数点-1的伤害。,Damage Limit,,已完成
+bornToDie,,慌乱,"每受到3次伤害,丢弃玩家1张卡牌。",Panic,,已完成
+daydreamer,,空想,每次受伤时，随机将一张稀有度2～5的技能牌加入手牌。,Daydream,,已完成
+fate,,天罚,每次检定后，对所有敌人造成2点伤害。,Divine Punish,,已完成
+disqualification,,失格,每层失格降低10%伤害,Disqualify,,
+bloodsea,,血海,"每次行动时,获得3层流血。(效果不会随层数改变)",Blood Sea,,
+lifelink,,同心,拥有者之间的血量始终保持相同。,Life Link,,
+synergies,,连携,友方每有一个对象拥有此buff，获得50%伤害加成。当前{0}。,Synergies,,
+WhiteSolitaire,,白纸牌,提供层数点减伤,Synergies,,

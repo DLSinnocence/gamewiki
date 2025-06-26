@@ -1,0 +1,8 @@
+Id,Note,Name,Description,是否待改
+唯一标识,备注,名称,描述,
+attack,,普通攻击,造成{0}伤害。,
+defence,,防御,增加<color=yellow>{0}</color>护盾。,
+QuadrupleHits,,绝命四连击,造成<color=red>{0}</color>伤害4次。,
+Hah,,哈气,给与敌人2层易伤,
+AswiftBlow,,迅猛一击,"对全体敌人造成{0}伤害。每有一个敌人有易伤,对全体敌人再造成一次.",
+Combing,,梳毛,获得{0}点防御，魔女的幸运在本场战斗中临时加3点.,

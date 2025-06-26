@@ -1,0 +1,11 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,备注,名称,卡牌类型,描述,Name,Type,Description
+1,,圣疗术,技能牌,为自身恢复{0}点生命。,Holy Healing Technique,Skill,Restore 4 health to yourself.
+2,,渴血,技能牌,"消耗自身四点生命,获得{0}层锋锐。",Bloodlust,Skill,Consume 4 health to gain {0} stacks of {buff_stretch}.
+3,,聚气凝神,技能牌,"丢弃自身所有手牌,每丢弃二张获得1层锋锐。",Gather Qi and Focus the Mind,Skill,"Discard all cards in your hand. For every 2 cards discarded, gain 1 stack of {buff_stretch}."
+4,,无我一击,技能牌,每有二层锋锐造成{0}点物理伤害一次。结束后锋锐层数减半。,Selfless Strike,Skill,"Deal {0} physical damage. Repeat for every 2 stacks of {buff_stretch} you have, halving the number of stacks of {buff_stretch} you have."
+5,,治愈祈愿,技能牌,往抽牌堆中加入三张圣疗术。,Healing Prayer,Skill,Add 3 Holy Healing to your draw deck.
+6,,饮血刺剑,消耗攻击牌,"造成{0}点伤害,恢复{1}点生命。",Blood-Drinking Sword Stab,Burn Attack,Deal {0} damage and restore 10 health.
+7,,黄金之音,消耗攻击牌,"结束本回合,造成{0}点伤害,恢复{1}点生命。",Golden Sound,Burn Attack,"End this turn, deal {0} damage, and restore 5 health."
+8,,禁果,消耗技能牌,获得鬼化。,Forbidden Fruit,Burn Skill,Gain the {buff_truth} effect.
+9,,悔悟,消耗技能牌,自身获得锋锐层数两倍的生命。,,Burn Skill,

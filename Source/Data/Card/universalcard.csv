@@ -1,0 +1,44 @@
+Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
+唯一的标识（不能重复）,稀有度,花费,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效,动作
+1,4,0,Unusable,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorPower""])).ToString();Vars[""DesVal2""]=(1+int.Parse(Vars[""CorDraw""])).ToString();","ChangePower(""1"");DrawCount(""1"");",,,Icon/icon experiment/1 (187),,
+2,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";",,"foreach (var item in Object)
+  {
+  if (GetStatus.ContainsKey(item))
+  {
+  item.CurHp = GetStatus[item][""CurHp""];
+  item.MaxHp = GetStatus[item][""MaxHp""];
+  item.Defend = GetStatus[item][""Defend""];
+  }
+  else
+  {
+  GetStatus[item] = new Dictionary<string, int>
+  {
+  { ""CurHp"", item.CurHp },
+  { ""MaxHp"", item.MaxHp },
+  { ""Defend"", item.Defend }
+  };
+  }
+  };",,Icon/icon experiment/1 (187),,
+3,5,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"ChangeRound();AddBuff(""buff_impregnable"",""2"",""3"");",,Icon/icon experiment/1 (187),stream,
+4,4,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorPower""])).ToString();Vars[""DesVal2""]=(5+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");ChangePower(""2"");AddBuff(""buff_toxin"",""10"",""5"");",,Icon/icon experiment/1 (187),,
+5,4,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorDraw""])).ToString();Vars[""DesVal2""]=(5+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");DrawCount(""3"");AddBuff(""buff_toxin"",""10"",""5"");",,Icon/icon experiment/1 (187),,
+6,5,2,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?Self.DefenceCalculate(14+int.Parse(Vars[""CorDef""])).ToString(): (14+int.Parse(Vars[""CorDef""])).ToString();",,"SetStatus(""Self"");ChangeDefence(""14"");",,Icon/icon experiment/1 (187),stream,
+7,5,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(3+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal3""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_resilient"",""10"",""3"");AddBuff(""buff_counterattack"",""10"",""3"");AddBuff(""buff_impregnable"",""10"",""1"");",,Icon/icon experiment/1 (187),,
+8,4,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_unyielding"",""10"",""1"");",,Icon/icon experiment/1 (187),stream,
+9,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_sacrifice"",""10"",""1"");",,Icon/icon experiment/1 (187),stream,
+10,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(5+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_remember"",""10"",""5"");",,Icon/icon experiment/1 (187),stream,
+11,3,1,,"Vars[""BaseScript""]=""AttackCardItem"";",,"SetStatus(""Self"");SetHp(""5"");string val1=((Self.MaxHp-Self.CurHp)*3/10).ToString(); SetStatus(""Target"");Damage(val1);",,Icon/icon experiment/1 (187),slash,Attack
+12,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(4+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_conscience"",""10"",""4"");",,Icon/icon experiment/1 (187),stream,
+13,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(1+int.Parse(Vars[""CorAtk""])).ToString():(1+int.Parse(Vars[""CorAtk""])).ToString();",,"SetStatus(""AllRandomEnemy1"");for (int i=0;i<3;i++) Damage(""1"");",,Icon/icon experiment/1 (187),slash,Attack
+14,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(4+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_weak"",""10"",""2"");AddBuff(""buff_evergreen"",""10"",""4"");",,Icon/icon experiment/1 (187),stream,
+15,3,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?Self.DefenceCalculate(15+int.Parse(Vars[""CorDef""])).ToString(): (10+int.Parse(Vars[""CorDef""])).ToString();Vars[""DesVal2""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
+  SetHp(""25"");ChangeDefence(""15"");
+  AddBuff(""buff_impregnable"", INF, ""2"");",,Icon/icon experiment/1 (187),stream,
+16,5,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(5+int.Parse(Vars[""CorDraw""])).ToString();Vars[""DesVal2""]=(4+int.Parse(Vars[""CorPower""])).ToString();",,"DrawCount(""5"");SetStatus(""Self"");SetHp(""5"");ChangePower(""4"");",,Icon/icon experiment/1 (187),stream,
+17,4,2,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(5+int.Parse(Vars[""CorAtk""])).ToString():(5+int.Parse(Vars[""CorAtk""])).ToString();Vars[""DesVal2""]=Self!=null?Self.DefenceCalculate(8+int.Parse(Vars[""CorDef""])).ToString(): (8+int.Parse(Vars[""CorDef""])).ToString();",,"SetStatus(""Self"");ChangeDefence(""8"");SetStatus(""Target"");for (int i=0;i<2;i++) Damage(""6"");",,Icon/icon experiment/1 (187),cuts,Skill
+18,3,3,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(6+int.Parse(Vars[""CorAtk""])).ToString():(6+int.Parse(Vars[""CorAtk""])).ToString();Vars[""DesVal2""]=Self!=null?Self.DefenceCalculate(14+int.Parse(Vars[""CorDef""])).ToString(): (14+int.Parse(Vars[""CorDef""])).ToString();",,"SetStatus(""Target"");for (int i=0;i<3;i++) Damage(""6"");ChangeDefence(""14"");",,Icon/icon experiment/1 (187),cuts,Skill
+19,4,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_vientiane"",""10"",""1"");",,Icon/icon experiment/1 (187),,
+20,5,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_immortal"",""10"",""1"");",,Icon/icon experiment/1 (187),,
+21,4,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorDraw""])).ToString();",,"BurnCard(""1"",""0"");
+        ChangeHp(""-1"");
+        DrawCount(""3"");",,Icon/icon experiment/1 (187),,

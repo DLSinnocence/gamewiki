@@ -1,0 +1,15 @@
+Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
+唯一的标识（不能重复）,稀有度,花费,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效路径,动作
+1,1,999,"Retain, Unusable, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(5+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_vulnerability"",""5"",""5"");",,,Icon/icon experiment/1 (187),,
+2,1,1,"Curse, Burnout","Vars[""BaseScript""]=""CommonCardItem"";","SetStatus(""Self"");AddBuff(""buff_chaos"",""5"",""1"");",,,Icon/icon experiment/1 (187),,
+3,3,1,"Burnout, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_weak"",""3"",""3"");",,,Icon/icon experiment/1 (187),,
+4,3,2,"Burnout, Curse","Vars[""BaseScript""]=""CommonCardItem"";","SetStatus(""Self"");AddBuff(""buff_charmed"",""2"",""1"");",,,Icon/icon experiment/1 (187),,
+5,1,1,"Burnout, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_rotten"",""3"",""1"");",,,Icon/icon experiment/1 (187),,
+6,1,0,"Burnout,Retain, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_Inferiority"",""5"",""2"");",,Icon/icon experiment/1 (187),,
+7,1,1,"Burnout,Retain, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_toxin"",""5"",""3"");",,Icon/icon experiment/1 (187),,
+8,1,1,"Burnout,Retain, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_weak"",""3"",""1"");",,,Icon/icon experiment/1 (187),,
+9,5,1,"Burnout, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_ignorance"",""5"",""1"");",,,Icon/icon experiment/1 (187),,
+10,5,1,"Burnout, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_annihilation"",""5"",""2"");",,,Icon/icon experiment/1 (187),,
+11,3,1,"Burnout, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_blooding"",""5"",""1"");",,,Icon/icon experiment/1 (187),,
+12,1,0,"Curse, Burnout","Vars[""BaseScript""]=""CommonCardItem"";",,,,Icon/icon experiment/1 (187),,
+13,3,1,"Burnout, Curse","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();","SetStatus(""Self"");AddBuff(""buff_disease"",""5"",""1"");",,,Icon/icon experiment/1 (187),,

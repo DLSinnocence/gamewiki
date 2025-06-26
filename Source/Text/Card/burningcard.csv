@@ -1,0 +1,6 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,#REF!,名称,卡牌类型,描述,Name,Type,Description
+1,,火雨术,攻击牌,"对所有敌人造成{0}点伤害,并给予{1}层灼烧。",Rain of Fire,Attack,Deals {0} damage to all enemies and applies {1} layer of {buff_burn}.
+2,,炽焰新星,消耗攻击牌,"对所有敌人造成{0}点伤害,并给予{1}层灼烧。",Meteor Strike,Burn Attack,Deals {0} damage to all enemies and applies {1} layer of {buff_burn}.
+3,,烈阳,消耗技能牌,"给予灼烧,重伤,失格各{0}层",Solar Flare,Burn Skill,"Applies {0} layers of {buff_burn}, {buff_exorcism}, and {buff_disqualification} to the target."
+4,,腐化黑星,攻击牌,"对所有敌人造成{0}点伤害,并给予{1}层灼烧,{2}层重伤。",Roar of Sunborn,Attack,Deals {0} damage to all enemies and applies {1} layer of {buff_burn} and {2} layers of {buff_exorcism}.

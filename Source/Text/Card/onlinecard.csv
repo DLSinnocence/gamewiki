@@ -1,0 +1,8 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
+1,联机,治愈之星,消耗技能牌,为友方全体回复{0}生命值，若对方血量低于50%，该效果翻倍。注能1：回复量翻倍。,Healing Star,Burn Skill,
+*2,联机,激励,消耗技能牌,立刻结束你的回合，并立刻开启一名友方目标的回合。获得50层持续1回合的无力。,Motivation,Burn Skill,
+*3,联机,连携,消耗技能牌,获得持续两回合的连携。,Synergies,Burn Skill,
+4,联机,复苏术,消耗技能牌,对一名友方角色使用，若其为死亡状态，则将其以10生命值的状态复活。,Resuscitation,Burn Skill,
+5,联机,协助,消耗技能牌,从手牌中选一张牌燃烬，并在指定队友手牌中加一张同名卡牌。,Assistance,Burn Skill,
+6,联机,生命链接,消耗技能牌,你与一名友方获得同心。,Health Link,Burn Skill,

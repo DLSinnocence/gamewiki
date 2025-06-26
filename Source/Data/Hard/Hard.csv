@@ -1,0 +1,7 @@
+Id,Belong,Level,UseScript
+唯一Id,属于哪类,难度等级,对应脚本
+1,命运锁定,1,PlayerInfo.GetNowSave().ExDeleteDes-= 1;
+2,命运锁定,2,PlayerInfo.GetNowSave().ExLockDes += 1;
+3,生命增加,1,PlayerInfo.GetNowSave().EXEnemyHp += 15;
+4,生命增加,2,PlayerInfo.GetNowSave().EXEnemyHp += 25;
+5,生命增加,3,PlayerInfo.GetNowSave().EXEnemyHp += 45;

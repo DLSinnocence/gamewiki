@@ -1,0 +1,39 @@
+Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
+唯一的标识（不能重复）,稀有度,消耗的费用,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效路径,动作
+1,1,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(4+int.Parse(Vars[""CorHp""])).ToString();",,"SetStatus(""Self"");ChangeHp(Vars[""DesVal1""]);",,,,
+2,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");ChangeHp(""-4"");AddBuff(""buff_stretch"",""10"",""3"");",,,,
+3,3,0,,"Vars[""BaseScript""]=""CommonCardItem"";",,"SetStatus(""Self"");
+int A = 0;
+        for (int i = HandCard.Count - 1; i >= 0; i--)
+        {
+            bool shouldRemove = !(HandCard[i].data[""Tag""].Contains(""Retain"")||HandCard[i].data[""Tag""].Contains(""Froze""));
+            if (shouldRemove)
+            {
+                HandCard[i].EffectOfThrowCard();
+                A++;
+            }
+        }
+AddBuff(""buff_stretch"",""10"",(A/2).ToString());",,,,
+4,4,2,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(10+int.Parse(Vars[""CorAtk""])).ToString():(10+int.Parse(Vars[""CorAtk""])).ToString();",,"if (Self.buffBarUI==null||Self.buffBarUI.GetBuff(""buff_stretch"") == null)
+        {
+            Debug.Log(""没有buff_stretch"");
+            return;
+        }
+        SetStatus(""Self"");int a=Self.buffBarUI.GetBuff(""buff_stretch"").buffConfig.Level;SetStatus(""Target"");
+  for (int i = 0; i < a/2+1; i++)
+  {
+  Damage(""10"");
+  }
+  Self.buffBarUI.GetBuff(""buff_stretch"").buffConfig.level=(a/2);",,,slash,Attack
+5,3,0,,"Vars[""BaseScript""]=""CommonCardItem"";",,"for (int i = 0; i < 3; i++)
+  {
+  RandomAddCard(""healcard_1"");
+  }",,,,
+6,3,2,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(10+int.Parse(Vars[""CorAtk""])).ToString():(10+int.Parse(Vars[""CorAtk""])).ToString();Vars[""DesVa2""]=(10+int.Parse(Vars[""CorHp""])).ToString();",,"SetStatus(""Self"");ChangeHp(""10"");SetStatus(""Target"");Damage(""10"");",,Icon/buff/治愈光环,Effects/Prefabs/Flash18,
+7,3,1,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(7+int.Parse(Vars[""CorAtk""])).ToString():(7+int.Parse(Vars[""CorAtk""])).ToString();Vars[""DesVal2""]=(5+int.Parse(Vars[""CorHp""])).ToString();",,"SetStatus(""Target"");Damage(""7"");SetStatus(""Self"");ChangeRound();ChangeHp(""5"");",,Icon/buff/治愈光环,Effects/Prefabs/Hit7,
+8,3,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";",,"SetStatus(""Self"");AddBuff(""buff_truth"",INF,""1"");",,Icon/buff/治愈光环,Effects/Prefabs/Hit11,
+9,4,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (Self.buffBarUI==null||Self.buffBarUI.GetBuff(""buff_stretch"")== null)
+        {
+            return;
+        }
+        ChangeHp( (Self.buffBarUI.GetBuff(""buff_stretch"").buffConfig.level*2).ToString());",,,,

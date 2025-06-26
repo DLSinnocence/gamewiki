@@ -1,0 +1,23 @@
+Id,Price,Icon,Type,Toid,BuyScript
+这里唯一id,真理价格,图标,种类,对应类的id,购买后生效的脚本
+1,10,Icon/Role/魔女,Career,career_*2,
+2,999,Icon/Relic icons/普拉提原体,Relic,relic_*24,
+3,5,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""maxFlushedCount""]+=1;"
+4,10,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""exMaxHp""]+=5;"
+5,20,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""exMaxHp""]+=5;"
+6,25,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""flushmoneychange""]-=5;"
+7,25,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""maxCardCount""]+=1;"
+8,30,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""firstMoney""]+=10;"
+9,40,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""exMoneyMultiplier""]+=10;"
+10,20,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Strength""]+=1;"
+11,20,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Wisdom""]+=1;"
+12,20,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Lucky""]+=1;"
+13,20,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Perceive""]+=1;"
+14,50,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Strength""]+=2;"
+15,50,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Wisdom""]+=2;"
+16,50,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Lucky""]+=2;"
+17,50,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Perceive""]+=2;"
+18,100,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Strength""]+=3;"
+19,100,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Wisdom""]+=3;"
+20,100,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Lucky""]+=3;"
+21,100,Icon/Relic icons/普拉提原体,Var,,"PlayerInfo.Getsave().Gain[""Perceive""]+=3;"

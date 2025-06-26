@@ -1,0 +1,20 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
+1,"时间,输出",一瞬,攻击牌,"对全体敌人进行{0}点的伤害,并施加{1}层灼烧。",A moment,Attack,Deals {0} damage to all enemies and applies {1} layer of {buff_burn}.
+2,"时间,充能",重返,攻击牌,回溯{0}。,Return,Attack,Backtracks {0}.
+3,时间,流年,技能牌,"增加{0}点护盾,使时之笼延后{1}回合。",Flowing years,Skill,Increases shield by {0} and delays {1} turn for {buff_instant}.
+4,时间,回响,技能牌,使时之笼立即结算，并额外触发一次。,resound,Skill,Immediately resolves {buff_instant} and triggers it once more.
+5,时间,倒置,技能牌,"增加{0}点护盾,将时之笼的效果顺序反转。",Inverted,Skill,Increases shield by {0} and reverses the order of {buff_instant} effects.
+6,时间,混沌态,技能牌,时之笼中的每个效果有1/2的概率重新生效。,Chaos,Skill,Each effect in {buff_instant} has a 50% chance to take effect again.
+7,时间,回溯性,技能牌,时之笼中所有项再次执行。,Retrospection,Skill,All items in {buff_instant} are executed again.
+8,时间,时间孪生,技能牌,立即生效两次时之笼中的第{0}项。,Time twins,Skill,The {0}th item in {buff_instant} is immediately activated twice.
+9,时间,未来一瞥,技能牌,"抽到时,封存至时之笼,造成三次目标随机的伤害{0}点。",A glimpse of the future,Skill,"When drawn, it is stored in {buff_instant} and deals {0} damage to three random targets."
+10,"时间,充能",永在,技能牌,抽到时：行动点加一。抽到或弃置时：封存至时之笼。使用时：抽取一张牌。,Eternity,Skill,"Cannot be played. When drawn: +1 power. When drawn or discarded, it is stored in {buff_instant}. When used: Draw a card."
+11,"时间,充能充能",追忆,技能牌,"抽到时,封存至时之笼。使用时：行动点加1。",Memories,Skill,"When drawn, store in the Time Cage. When used: Power +1."
+12,时间,时间停止,技能牌,将所有手牌中的技能牌燃烬并将之加入时之笼。,Time stops,Skill,Burnout all skill cards in your hand and add them to the Time Cage.
+13,时间,残响,技能牌,"增加{0}点护盾,立即生效两次时之笼中的最后一项效果。",Aftersound,Skill,Increase shield by {0} and immediately activate the last effect in the Time Cage twice.
+14,"时间,生存",时之序,技能牌,抽到时：封存至时之笼。获得时之笼层数点护盾。,The sequence of time,Skill,When drawn: Store in the Time Cage. Gain shield equal to the number of Time Cage layers.
+15,时间,窥探-水晶球外,技能牌,从抽牌堆中检索3张“刹那”牌。,Peeking outside the crystal ball,Skill,Retrieve 3 ‘Moment’ cards from the draw pile.
+16,"时间,过牌",零时之墓,技能牌,从弃牌堆中检索3张“凝滞”牌。,The grave of zero hour,Skill,Retrieve 3 ‘Stagnation’ cards from the discard pile.
+17,"时间,输出",时空幽灵,技能牌,"抽到或进入弃牌堆时：造成{0}点伤害,封存至时之笼。使用时：对全体敌人造成层数点伤害。",Ghosts of time and space,Skill,When drawn or discarded: Deal {0} damage and store in the {buff_instant} slot. When used: Deal damage equal to the number of layers to all enemies.
+18,时间,预测,技能牌,抽到时封存至时之笼。从抽卡堆中选二张卡加入手卡。,Prediction,Skill,"When drawn, store in the {buff_instant} slot. Select two cards from the draw pile and add them to your hand."

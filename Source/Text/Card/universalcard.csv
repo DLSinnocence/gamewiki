@@ -1,0 +1,23 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
+1,"通用,充能",沉思,技能牌,"抽到时获得{0}点行动点,抽{1}张牌。",Contemplation,Skill,"When drawn, gain {0} power and draw {1} card."
+2,"通用,生存",回溯,技能牌,"将你的血量回归到刻录的时间节点,如果没有刻录,那就刻录一次。",Retrospection,Skill,"Return your health to the time when the card was engraved. If it has not been engraved, engrave it once."
+3,"通用,生存",忘我,技能牌,"结束你的回合,获得持续二回合的{0}层坚毅。",Selflessness,Skill,End your turn and gain {0} layers of {buff_impregnable} for two turns.
+4,"通用,充能,负面",饮鸩止渴,技能牌,"获得{0}点行动点,获得{1}层毒素。",Drinking poison to quench thirst,Skill,Gain {0} power and gain {1} layer of {buff_toxin}.
+5,"通用,过牌,负面",挖肉补疮,技能牌,"抽取{0}张卡牌,获得{1}层毒素。",Cutting flesh to heal wounds,Skill,Draw {0} cards and gain {1} layer of {buff_toxin}.
+6,"通用,生存",极致坚毅,技能牌,获得{0}点护盾。,Perfection Steadfastness,Skill,Gain {0} shield.
+7,"通用,生存",净世,技能牌,"获得{0}层强韧,{1}层反击,{2}层坚毅。",Purification,Skill,"Gain {0} layers of {buff_resilient}, {1} layer of {buff_counterattack}, and {2} layers of {buff_impregnable}."
+8,"通用,生存",不屈,技能牌,获得{0}层不屈。,Tenacity,Skill,Gain {0} layers of {buff_unyielding}.
+9,"通用,生存",舍身,技能牌,获得{0}层狂暴。,Rampage,Skill,Gain {0} layers of {buff_sacrifice}.
+10,"通用,生存",存想,技能牌,获得{0}层增生。,Contemplation,Skill,Gain {0} layers of {buff_remember}.
+11,"通用,输出",孤注一掷,攻击牌,"将生命降低至五点,对指定敌人造成自身已损生命值30%的伤害。",All or nothing,Attack,Reduce your health to five and deal 30% of your lost health to the target enemy.
+12,"通用,生存",回想,技能牌,获得{0}层血墙。,Recollection,Skill,Gain {0} layers of {buff_conscience}.
+13,"通用,输出",无孔不入,攻击牌,对随机敌人造成三次{0}点伤害。,Pervasiveness,Attack,Deal {0} damage three times to a random enemy.
+14,"通用,生存",锲而不舍,技能牌,"获得{0}层无力,{1}层自愈。",Perseverance,Skill,Gain {0} layers of {buff_weak} and {1} layer of {buff_evergreen}.
+15,"通用,生存",周旋,技能牌,"将生命变为二十五点,获得{0}点护盾,获得{1}层强韧。",Juggling,Skill,"Change your health to 25, gain {0} shield, and gain {1} layer of {buff_resilient}."
+16,"通用,充能,过牌",宁做吾,技能牌,"将生命降低至五点,抽{0}张牌,获得{1}点行动点。",Better to be me,Skill,"Reduces health to five, draws {0} cards, and gains {1} power."
+17,通用,超凡,消耗攻击牌,"造成{0}点伤害二次,获得{1}点护盾。",Transcendence,BurnAttack,Deals {0} damage twice and gains {1} shield.
+18,通用,入圣,攻击牌,"造成{0}点伤害三次,获得{1}点护盾。",Enlightenment,Attack,Deals {0} damage three times and gains {1} shield.
+19,"通用,过牌",一梦也,技能牌,获得{0}层源蜕。,A dream,Skill,Gains {0} layers of the {buff_vientiane} effect.
+20,"通用,过牌",不朽意,技能牌,获得{0}层不朽。,Immortality,Skill,Gains {0} layers of the {buff_immortal} effect.
+21,"通用,过牌",燃命,技能牌,"生命值-1,燃烬一张牌,抽{0}张牌",Immortality,Skill,Gains {0} layers of the {buff_immortal} effect.

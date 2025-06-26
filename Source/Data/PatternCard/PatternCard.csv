@@ -1,0 +1,22 @@
+Id,InitScript,UseScript,Icon,Tag,Effects
+Id,卡牌初始化脚本（使用前执行）,卡牌使用后执行,行动图标,唯一特性,特效
+attack,"Vars[""atk""]=atk();Vars[""CD""]=""0"";Vars[""DesVal1""]=Vars[""atk""];Vars[""priority""]=""1"";","SetStatus(""Target"");Damage(atk());",Icon/Enemy/EnemyAction/攻击,,
+defence,"Vars[""CD""]=""0"";Vars[""DesVal1""]=def();Vars[""priority""]=""1"";","SetStatus(""Self"");ChangeDefence(def());",Icon/Enemy/EnemyAction/防御,,
+QuadrupleHits,"Vars[""DesVal1""]=(int.Parse(atk())/3).ToString();Vars[""priority""]=""2"";Vars[""CD""]=""2"";","SetStatus(""Target"");for (int i=0;i<4;i++) Damage((int.Parse(atk())/3).ToString());",Icon/Enemy/EnemyAction/多段攻击,,
+Hah,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Target"");AddBuff(""buff_vulnerability"",INF,""2"");",Icon/Enemy/EnemyAction/给予异常,,
+AswiftBlow,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=atk();","SetStatus(""AllTarget"");
+        Damage(atk());
+        foreach (var status in Object)
+        {
+            var buffcon = status.buffBarUI;
+            if (buffcon!=null)
+            {
+                if (buffcon.GetBuff(""buff_vulnerability"")!=null)
+                {
+                    Damage(atk());
+                }
+            }
+        }",Icon/Enemy/EnemyAction/多段攻击,,
+Combing,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=def();"," SetStatus(""Self"");
+        ChangeDefence(def());
+        PlayerInfo.TempLucky += 3;",Icon/Enemy/EnemyAction/防御,,

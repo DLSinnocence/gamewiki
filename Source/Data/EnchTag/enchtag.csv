@@ -1,0 +1,62 @@
+Id,Tag,LoadScript,DrawScript,DropScript,UseScript,UnloadScript,Rarity,Type,Formula,Special
+Id（唯一标识）,添加的标签,初始效果,抽到时的效果,进入弃牌堆的效果,使用时的效果,卸下效果,稀有度,类型,配方,上级要求
+1,,,,,"DrawCount(""1"");",,3,正面,"3,4,2,2,0,0",
+2,,,,,"DrawCount(""2"");",,4,正面,"4,4,1,1,1,0",
+3,,,,,"SetStatus(""Self"");AddBuff(""buff_vulnerability"",""1"",""2"");",,3,负面,"2,3,2,0,0,0",
+4,,,,,"SetPower(""1"");",,3,正面,"2,4,2,2,0,0",
+5,,,,,"SetPower(""2"");",,5,正面,"4,4,3,3,0,0",
+6,,,,,"SetStatus(""Self"");AddBuff(""buff_resilient"",""2"",""1"");",,1,正面,"2,2,1,2,0,0",
+7,,,,,"SetStatus(""Self"");AddBuff(""buff_resilient"",""2"",""3"");",,3,正面,"3,3,1,1,0,0",
+8,,,,,"SetStatus(""Self"");AddBuff(""buff_conscience"",""2"",""1"");",,2,正面,"1,2,1,3,0,0",
+9,,,,,"SetStatus(""AllEnemy"");Damage(""1"");",,3,正面,"3,2,2,1,0,0",
+10,,,,,"SetStatus(""Self"");ChangeHp(""-1"");",,3,负面,"1,3,0,3,0,0",
+11,,,,,"ChangePower(""1"");",,4,正面,"4,1,3,2,0,0",
+12,,,,,"ChangePower(""2"");",,5,正面,"4,3,1,2,1,0",
+13,,,,,"SetStatus(""Self"");AddBuff(""buff_sideEffect"",""2"",""1"");",,4,正面,"2,2,2,2,0,0",
+14,,,,,"SetStatus(""Self"");AddBuff(""buff_stretch"",""3"",""1"");",,3,正面,"3,1,2,1,0,0",
+15,,,,,"SetStatus(""Self"");AddBuff(""buff_stretch"",""3"",""2"");",,4,正面,"3,2,2,2,0,0",
+16,,,,,"SetStatus(""AllRandomEnemy1"");AddBuff(""buff_burn"",""1"",""3"");",,3,正面,"2,3,1,2,0,0",
+17,,,,,"SetStatus(""Self"");AddBuff(""buff_extraordinary"",""1"",""20"");",,3,正面,"3,2,2,1,0,0",
+18,,,,,"BurnCard(""1"",""2"");",,3,正面,"2,2,3,1,0,0",
+19,,,,,"BurnCard(""1"",""1"");",,3,负面,"1,3,1,3,0,0",
+20,,,,,"SetStatus(""Self"");AddBuff(""buff_vitality"",""2"",""2"");",,2,正面,"2,2,2,0,0,0",
+21,,,,,"SetStatus(""Self"");AddBuff(""buff_vitality"",""2"",""3"");",,3,正面,"3,3,1,1,0,0",
+22,,,,,"SetStatus(""Self"");ChangeHp(""1"");",,1,正面,"1,1,1,1,0,0",
+23,,,,,"SetStatus(""Self"");AddBuff(""buff_impregnable"",""2"",""1"");",,3,正面,"2,2,2,2,0,0",
+24,,,,,"SetStatus(""Self"");AddBuff(""buff_impregnable"",""2"",""2"");",,5,正面,"3,3,3,1,0,0",
+25,,,,,"SetStatus(""Self"");AddBuff(""buff_counterattack"",""3"",""1"");",,2,正面,"2,1,2,1,0,0",
+26,,,,,"SetStatus(""Self"");AddBuff(""buff_counterattack"",""3"",""2"");",,3,正面,"3,2,1,2,0,0",
+27,,,,,"SetStatus(""Self"");AddBuff(""buff_tenacity"",""2"",""2"");",,2,正面,"2,3,2,1,0,0",
+28,,,,,"SetStatus(""Self"");AddBuff(""buff_tenacity"",""3"",""4"");",,4,正面,"4,2,2,2,0,0",
+29,",燃烬","Dictionary<string,string> Vars1=new(Vars);
+foreach (var item in Vars1)
+{
+    if (item.Key.Contains(""Cor""))
+    {
+        Vars[item.Key] = (int.Parse(Vars[item.Key])+1).ToString();
+    }
+}",,,,"Dictionary<string,string> Vars1=new(Vars);
+foreach (var item in Vars1)
+{
+    if (item.Key.Contains(""Cor""))
+    {
+        Vars[item.Key] = (int.Parse(Vars[item.Key])-1).ToString();
+    }
+}",3,正面,"4,0,0,1,0,0",
+30,,,,,"Vars[""CorAtk""] = (int.Parse(Vars[""CorAtk""])+1).ToString();",,3,正面,"4,2,1,0,0,0",
+31,",燃烬","Dictionary<string,string> Vars1=new(Vars);
+foreach (var item in Vars1)
+{
+    if (item.Key.Contains(""Cor""))
+    {
+        Vars[item.Key] = (int.Parse(Vars[item.Key])+2).ToString();
+    }
+}",,,,"Dictionary<string,string> Vars1=new(Vars);
+foreach (var item in Vars1)
+{
+    if (item.Key.Contains(""Cor""))
+    {
+        Vars[item.Key] = (int.Parse(Vars[item.Key])-2).ToString();
+    }
+}",3,正面,"3,3,3,3,0,0",
+32,,"Vars[""CorBuff""]=(int.Parse(Vars[""CorBuff""]+2)).ToString();",,,"SetStatus(""Self"");PlayerInfo.Hp-=4;","Vars[""CorBuff""]=(int.Parse(Vars[""CorBuff""])-2).ToString();",3,正面,"4,4,4,5,1,0",

@@ -1,0 +1,9 @@
+Id,Note,Image,Name,Description,Name_en,Description_en
+Id,备注,图片路径,标题,正文,Title,Description
+mapselect,,Images/Tutorial/MapSelect/mapselect,地图,你需要将地图节点移入空格中分配位置，这决定了接下来将遇到的挑战。,Map,"You'll need to move the map nodes into spaces to assign locations, which determines the challenges you'll encounter next."
+mapselect_1,,Images/Tutorial/MapSelect/backpack,背包,点击左下角的卡牌，即可进行卡组编辑。,Backpack,"Tap the gear button in the upper right corner to open the backpack. In the backpack, you can check the existing items, enhance the cards, change the deck, and other operations."
+backpack,,Images/Tutorial/BackPack/status,状态,左侧是你的属性，右侧为你在探索中遇到的祝福汇总。,Status,"On the left side is the path that symbolizes the four essences of disaster, moment, heaven and spirit, the specific content can be viewed on the description page, and the right side is a summary of the chess pieces you encountered in the exploration."
+backpack_1,,Images/Tutorial/BackPack/ill,说明,前人留下的手册，能帮助你更好地探索深渊。,Manual,The manual left by our predecessors will surely help you explore the abyss better.
+ench,,Images/Tutorial/BackPack/al,炼金,可以将一些带有<color=yellow>本质成分</color>的物体进行炼金，并可以在可以在休息点进行炼金成品的镶嵌。,Alchemy,"You can use alchemy to refine some objects with specific essences obtained during exploration. It is recommended to start with a matrix with 4 essences all equal to 1. If you refine an object with an entry, you can attach it to the card by dragging it."
+ench_1,,,炼金,将右边的炼金材料拖拽到左边的空格后，再点击按钮即可开始炼金。炼金成功后将获得附魔词条。,Alchemy,将右边的炼金材料拖拽到左边的空格后，再点击按钮即可开始炼金。炼金成功后将获得附魔词条。
+fight,,Images/Tutorial/Fight/fight,战斗,通过左键使用卡牌右键取消卡牌。怪物的血条上显示着韧性值，每次受到普通伤害时-1，当韧性为0时会受到1.5倍伤害。,Fight,"Use the left button to use the card and the right button to cancel the card. (The card value in the battle has been displayed as a bonus). Monsters have a toughness value. Every time they are attacked, their toughness is reduced by 1. When their toughness is broken, they will receive double damage."

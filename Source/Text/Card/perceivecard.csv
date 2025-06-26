@@ -1,0 +1,8 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
+1,,肉体强化,技能牌,获得{0}层锋锐和坚盾。,Physical Enhancement,Skill,Gain {0} stacks of {buff_stretch} and {buff_tenacity}.
+*2,,真视之眼,技能牌,"遍历一个敌人的行动,如果敌人有未看破的行动,对其第一个未看破的行动重新检定。",True Vision,Skill,"Traverse an enemy's action. If the enemy has an unseen action, re-roll their first unseen action."
+3,,重现,消耗技能牌,下张牌再打出一次。,Recreation,Burn Skill,Play the next card again.
+*4,,整理,技能牌,"丢弃所有牌,抽相同数量的牌。",Organization,Skill,Discard all cards and draw the same number of cards.
+5,,极尽升华,消耗技能牌,"选择手牌中一张牌燃烬,获得{0}层超凡。",extreme Sublimation,Burn Skill,Choose a card in your hand to Burnout and gain {0} stacks of {buff_extreme}.
+6,,更高处,消耗技能牌,所有敌人获得{0}层失格。,Higher,Burn Skill,All enemies gain {0} stacks of {buff_disqualification}.

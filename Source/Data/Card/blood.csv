@@ -1,0 +1,123 @@
+Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
+唯一的标识（不能重复）,稀有度,花费,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效路径,动作
+1,1,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(7+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_blooding"", INF, ""7"");",,,cuts,Skill
+2,2,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_blooding"", INF, ""3"");AddBuff(""buff_impregnable"",INF,""2"");",,,,
+3,4,0,"Burnout, Retain","Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(10+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""All"");
+        int count=0;
+        foreach (var item in Object)
+        {
+            var buff = item.buffBarUI.GetBuff(""buff_blooding"");
+            if (buff==null)
+            {
+                continue;
+            }
+            count+=buff.buffConfig.Level*2;
+            buff.ClearBuff();
+        }
+SetStatus(""Self"");
+ChangeHp(count.ToString());
+",,,,
+4,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (Self.buffBarUI.GetBuff(""buff_blooding"") == null) return;
+string count=(Self.buffBarUI.GetBuff(""buff_blooding"").buffConfig.Level*2).ToString();
+SetStatus(""AllEnemy"");
+AddBuff(""buff_blooding"", INF, count);
+SetStatus(""Self"");
+Self.RemoveBuff(""buff_blooding"");",,,cuts,Skill
+5,3,1,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_blooding"", INF, ""3"");
+SetStatus(""Target"");
+        foreach (var item in Object)
+        {
+            var buff= item.buffBarUI.GetBuff(""buff_blooding"");
+            if (buff!=null)
+            {
+                buff.buffConfig.Level *=2;
+                buff.status.UpdateDisplay();
+                if (buff.buffConfig.Level>item.CurHp/2)
+                {
+                    Damage(item.MaxHp.ToString(),""True"");
+                }
+            }
+        }",,,cuts,
+6,3,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_blooding"", INF, ""3"");
+        AddEvent(""Dead"",()=>{SetStatus(""AllRandomEnemy1"");
+        var buffBarObj=Self.buffBarUI;
+        if (buffBarObj==null)
+        {
+            Debug.Log(""buffBarObj is null"");
+            return;
+        }
+        var buff=buffBarObj.GetBuff(""buff_blooding"");
+        SetStatus(""AllFriendsExSelf"");
+        if (buff!=null)
+        {
+            AddBuff(""buff_blooding"", INF, (buff.buffConfig.Level*2).ToString());
+        }
+        });",,,,
+7,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_blooding"", INF, ""3"");
+SetStatus(""All"");
+int lastcount = 0;
+int count = Object.Count();
+while(count != lastcount && count >1)
+{
+    RunImmediately(""buff_blooding"",""Action"");
+    lastcount = count;
+    SetStatus(""All"");
+    count = Object.Count();
+}",,,cuts,
+8,3,1,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
+AddBuff(""buff_blooding"", INF, ""2"");
+SetStatus(""Target"");
+        for (int i = 0; i < 2; i++)
+        {
+            RunImmediately(""buff_blooding"", ""Action"");
+        }",,,cuts,
+9,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_blooding"", INF, ""3"");
+Self.DamageFilter[""buff_blooding""]=false;
+        SetStatus(""Self"");
+        AddEvent(""EndRound"", ()=>{
+            if (Self.DamageFilter.ContainsKey(""buff_blooding""))
+            {
+               if (Self.DamageFilter[""buff_blooding""]==false)
+        {
+            Self.DamageFilter.Remove(""buff_blooding"");
+        } 
+            }
+            });",,,,Skill
+10,5,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";
+        if (FightVars!=null)
+        {
+            Vars[""Usable""]=int.Parse(FightVars.GetValueOrDefault(""blood"", ""0""))<30 ? ""0"": ""1"";
+        }",,"
+        SetStatus(""All"");
+        int count=0;
+        foreach (var item in Object)
+        {
+            if (item.buffBarUI.GetBuff(""buff_blooding"")!=null)
+            {
+                count++;
+            }
+        }
+        for (int i = 0; i < count; i++)
+        {
+            RunImmediately(""buff_blooding"", ""Action"");
+        }",,,,Skill
+11,3,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_blooding"", INF, ""3"");
+        int count=0;
+        foreach (var item in Object)
+        {
+            var buff=Self.buffBarUI.GetBuff(""buff_blooding"");
+            if (buff==null)
+        {
+            continue;
+        }
+        count+=buff.buffConfig.Level/5;
+        }
+        SetStatus(""Self"");
+        for (int i = 0; i < count; i++)
+        {
+            RandomAddBuff();
+        }",,,,
+12,4,0,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
+        AddBuff(""buff_bloodriver"", ""1"", ""1"");
+SetStatus(""AllEnemy"");AddBuff(""buff_blooding"", INF, ""3"");",,,,Skill
+13,3,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_bloodsea"", INF, ""1"");",,,,Skill

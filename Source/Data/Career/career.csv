@@ -1,0 +1,4 @@
+Id,SanMax,SanOri,SanSkill,Icon,Skill,SkillTime,Animation
+唯一id,最大san,初始san,理智的技能,图片来源,主动技能,冷却时间,动画文件夹路径
+1,100,100,blessing_*118,Icon/Role/魔女,careercard_*1,1,AnimationLib/原初魔女
+*2,100,100,blessing_*119,Icon/Role/魔女,careercard_*2,1,AnimationLib/原初魔女

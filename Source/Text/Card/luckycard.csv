@@ -1,0 +1,29 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
+1,,和气生财,消耗技能牌,获得{0}点护盾，结束你的回合。获得{1}金币。,Harmony brings prosperity,Burn Skill,Gain {0} shield and end your turn. Gain {1} gold.
+2,,点石成金,消耗技能牌,"燃烬你的所有手卡，每张获得一点超魔，30金币。
+超魔2： 对敌人造成8点伤害。
+超魔4：获得1～3点能量，抽1～4张牌。
+超魔6：以上效果额外触发一次。",Turn stone into gold,Burn Skill,"Burnout all cards in your hand to gain 1 Super Magic for each card, and 30 gold.
+Super Magic 2: Deal 8 damage to enemies.
+Super Magic 4: Gain 1-3 energy and draw 1-4 cards.
+Super Magic 6: Trigger the above effect once more."
+3,,赢家通吃,攻击牌,"每有100点金币，获得一点超魔。
+超魔X：消耗50金币，对全体敌人造成5点伤害。",The winner takes all,Attack,"Gain 1 Super Magic for every 100 gold you have.
+Super Magic X: Consume 50 gold coins to deal 5 damage to all enemies."
+4,,恶魔契约,技能牌,"这张卡每使用一次，获得一点超魔。
+超魔X：重复X次：50%概率增加20%金币，反之失去10%金币,受到10%最大生命值的真实伤害。",Devil's pact,Skill,"Each time this card is used, gain 1 Super Magic.
+Super Magic X: Repeat X times: 50% chance to gain 20% gold coins, otherwise lose 10% gold coins and take 10% of your maximum health as true damage.
+Reverse."
+5,,汰换,技能牌,"燃烬两张手牌,
+将三张稀有度不低于三的随机卡牌加入牌堆顶部。并抽取{0}张卡牌。",Replacement,Skill,"Burnout two cards from your hand,
+Add three random cards with a rarity of at least three to the top of your deck. Draw {0} cards."
+6,,幻想酊剂,消耗技能牌,获得{0}层空想。,Fantasy potion,Burn Skill,Gain {0} layers of the {buff_daydreamer} effect.
+7,,迷梦,技能牌,每次抽到时，这张卡的打出效果变成一张稀有度在3-5的技能牌（费用不变）。,Dream,Skill,"Each time this card is drawn, its play effect becomes a skill card with a rarity of 3-5 (cost remains unchanged)."
+8,,命运之线,技能牌,下次数字骰额外投掷一次，结果为两者之和。,The thread of fate,Skill,"The next time a number is rolled, roll again and add the results together."
+9,,后悔药,技能牌,下次检定骰的结果变为两次取低。,Regret,Skill,"The next time a check is made, take the lower of the two results."
+10,,一晌贪欢,技能牌,获得{0}层天罚。,A moment of pleasure,Skill,Gain {0} layers of {buff_fate}.
+11,,随缘防御,技能牌,获得{0}到{1}点防御。,Go with the flow,Skill,Gain {0} to {1} points of defence.
+12,,破财消灾,消耗技能牌,"每有一百金币，获得一点超魔。
+超魔X：获得X层强韧。",Break the bank to avoid disaster,Burn Skill,"For every 100 gold coins, gain 1 Super Magic.
+Super Magic X: Gain X layers of {buff_resilient}."

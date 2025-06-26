@@ -1,0 +1,50 @@
+Id,Name,Hp,Attack,Defend,Tough,ActionCount,InitScript,CardList,Model,是否被应用,AttributeText
+Id,名字,血量,攻击力,防御盾,韧性,行动次数,初始buff,卡牌列表,怪物的模型路径,bool,"用;分开,不能加空格(现在只是给个演示,因为怪物要重写特性)"
+10001,旁观者,30,4,3,1,2,,"enemycard_WeakLight, enemycard_NeverDead, enemycard_Charge1, enemycard_defence, enemycard_Observe, enemycard_vulnerabilityLight",Icon/Items/小怪物,是,buff_annihilation;SpecialBuff_guiltless
+10002,脆弱之心,100,11,6,1,2,"AddBuff(""buff_sublimation"", ""20"", ""2"");","enemycard_vulnerabilityLight, enemycard_PlugCards2, enemycard_Witness",Icon/Enemy/7 (31),是,buff_sublimation
+10003,鼹鼠盗,105,11,6,0,2,"AddBuff(""SpecialBuff_ThievesKing"", ""20"", ""1"");","enemycard_Thieves, enemycard_thief, enemycard_QuadrupleHits",Icon/Enemy/7 (1),是,SpecialBuff_ThievesKing
+10004,贪婪者,70,10,0,2,2,,"enemycard_attack, enemycard_defence, enemycard_NeverDead",Icon/Enemy/7 (2),是,
+10005,未知软体动物,48,9,0,3,2,"AddBuff(""buff_conscience"", ""20"", ""5"");","enemycard_attack, enemycard_defence, enemycard_PlugCards1",Icon/Enemy/7 (3),是,buff_conscience
+10006,垂涎,66,9,0,2,2,"AddBuff(""buff_conscience"", ""10"", (int.Parse(atk())/5).ToString());","enemycard_attack, enemycard_defence, enemycard_PlugCards2",Icon/Enemy/7 (5),是,buff_conscience
+10007,水晶魔女,110,12,7,1,3,"AddBuff(""SpecialBuff_ManInTheMirror"", INF, ""1"");","enemycard_defence, enemycard_QuadrupleHits, enemycard_WhereverYouGo, enemycard_attack",Icon/Enemy/7 (10),是,SpecialBuff_ManInTheMirror
+10008,最后一餐,60,8,6,2,2,,"enemycard_defence, enemycard_QuadrupleHits, enemycard_Licking, enemycard_Weak, enemycard_attack",Icon/Enemy/7 (13),是,
+10009,XG-1175圣徒,75,10,8,2,2,"AddBuff(""SpecialBuff_believer"", ""10"", ""6"");AddBuff(""buff_counterattack"", ""10"", (int.Parse(atk())/7).ToString());","enemycard_OrdinaryHit,enemycard_defence, enemycard_burn2, enemycard_specialAttack",Icon/Enemy/7 (18),是,SpecialBuff_believer;buff_counterattack
+10010,狡诈者,71,10,5,2,2,"AddBuff(""buff_bornToDie"",INF,""1"");","enemycard_OrdinaryHit,enemycard_defence,enemycard_OverrunWorkouts,enemycard_OrdinaryFiveHit",Icon/Enemy/7 (23),是,buff_bornToDie
+10011,堕落光之使者,63,6,4,1,3,,"enemycard_attack, enemycard_defence",Icon/Enemy/7 (24),是,
+10012,荒野拳击手,70,8,6,1,2,"AddBuff(""buff_impregnable"", ""3"", ""2"");","enemycard_OrdinaryHit,enemycard_defence,enemycard_OverrunWorkouts,enemycard_OrdinaryFiveHit",Icon/Enemy/7 (25),是,buff_impregnable
+10013,饿殍,68,12,7,1,2,,"enemycard_OrdinaryHit,enemycard_defence,enemycard_disease,enemycard_Weak",Icon/Enemy/7 (26),是,
+10014,幽怨之心,88,8,6,2,2,,"enemycard_OrdinaryHit,enemycard_defence,enemycard_WeakLight",Icon/Enemy/7 (27),是,
+10015,堕落之龙,100,10,8,2,1,"AddBuff(""buff_blooding"", ""10"", (int.Parse(atk())/2).ToString());","enemycard_attack, enemycard_defence, enemycard_Dragon'sMajesty, enemycard_FallenDragon, enemycard_QuadrupleHits",Icon/Enemy/7 (29),是,buff_blooding
+10016,狼人拟态者,44,5,4,2,2,"AddBuff(""buff_sacrifice"", ""3"", ""2"");","enemycard_OrdinaryHit,enemycard_defence,enemycard_NerveReflexes, enemycard_NeverDead",Icon/Enemy/7 (32),是,buff_sacrifice
+10017,T-307铁盒,59,7,4,2,2,"AddBuff(""buff_resilient"", ""3"", ""2"");","enemycard_defence, enemycard_burn1, enemycard_burn, enemycard_attack",Icon/Enemy/7 (33),是,buff_resilient
+10018,痴愚者,220,10,24,3,2,"AddBuff(""SpecialBuff_expiation"", ""5"", ""2"");","enemycard_OrdinaryHit,enemycard_Weak, enemycard_defence, enemycard_NeverDead, enemycard_Witness",Icon/Enemy/7 (34),是,SpecialBuff_expiation
+10019,独眼,50,6,4,1,2,,"enemycard_attack, enemycard_defence, enemycard_charmed, enemycard_SuperFireBall, enemycard_Charge1",Icon/Enemy/7 (38),是,
+10020,诡异的虫子,110,0,0,3,2,"AddBuff(""buff_eternal"", ""4"", ""1"");","enemycard_burn, enemycard_burn1, enemycard_Toxin1, enemycard_Toxin2, enemycard_Toxin3, enemycard_Toxin4",Icon/Enemy/7 (39),是,buff_eternal
+10021,腐化主教,60,8,4,2,2,"AddBuff(""SpecialBuff_BackToBasics"", INF, ""1"");","enemycard_rejuvenation, enemycard_OrdinaryFiveHit, enemycard_NeverDead, enemycard_attack, enemycard_defence",Icon/Items/小怪物,,SpecialBuff_BackToBasics
+10022,类固醇之神,250,9,5,1,2,"AddBuff(""SpecialBuff_UnparalleledPower"", INF, ""1"");
+","enemycard_OrdinaryHit,enemycard_defence,enemycard_OverrunWorkouts,enemycard_OrdinaryFiveHit, enemycard_Come",Icon/Enemy/7 (44),是,SpecialBuff_UnparalleledPower
+10023,大力王之子,75,4,7,1,2,"
+","enemycard_OrdinaryHit,enemycard_defence,enemycard_OverrunWorkouts,enemycard_OrdinaryFiveHit",Icon/Enemy/7 (45),是,
+10024,丑陋者,85,7,4,2,2,"AddBuff(""buff_impregnable"", ""2"", ""2"");AddBuff(""buff_adaptiveArmor"", ""10"", (int.Parse(def())/2).ToString());","enemycard_burn2, enemycard_burn1, enemycard_Toxin3, enemycard_Toxin1, enemycard_Toxin2, enemycard_NeverDead",Icon/Enemy/7 (51),是,buff_impregnable;buff_adaptiveArmor
+10025,沼泽之触,60,4,4,2,2,,"enemycard_OrdinaryHit,enemycard_defence,enemycard_Toxin3, enemycard_Toxin1, enemycard_Toxin4, enemycard_Charge1",Icon/Enemy/7 (53),是,
+10026,异化苍蝇,56,3,2,1,2,,"enemycard_OrdinaryHit,enemycard_defence,enemycard_Toxin1,enemycard_Toxin2,enemycard_Toxin3",Icon/Enemy/7 (56),是,
+99999,测试者,10999999,0,11999998,0,2,"AddBuff(""buff_impregnable"", ""9"", ""3"");","enemycard_OrdinaryHit,enemycard_defence,enemycard_Toxin1,enemycard_Toxin2,enemycard_Toxin3",Icon/Enemy/7 (48),是,buff_impregnable
+10027,无名之神,282,18,16,3,3,"AddBuff(""SpecialBuff_Law:Death"", INF, ""1"");
+AddBuff(""SpecialBuff_Law:Supreme"", INF, ""1"");
+AddBuff(""SpecialBuff_Transcendent"", INF, ""1"");
+AddBuff(""SpecialBuff_ImmortalGodhead"", INF, ""1"");
+AddBuff(""SpecialBuff_Law:Judgment"", INF, ""1"");","enemycard_attack, enemycard_defence, enemycard_QuadrupleHits, enemycard_PlugCards2, enemycard_PlugCards1, enemycard_burn2, enemycard_specialAttack",Icon/Items/领主怪物,是,SpecialBuff_Law:Death;SpecialBuff_Law:Supreme;SpecialBuff_Transcendent;SpecialBuff_ImmortalGodhead;SpecialBuff_Law:Judgment
+10028,巨构之影,80,8,6,0,1,"AddBuff(""SpecialBuff_hunting"", INF, ""1"");","enemycard_QuadrupleHits, enemycard_attack, enemycard_defence, enemycard_rejuvenation",Icon/Items/高体型怪物,是,SpecialBuff_hunting
+10029,同位体,26,4,4,2,2,"AddBuff(""SpecialBuff_AllogeneicConcentric"", INF, ""1"");AddBuff(""buff_conscience"", ""20"", ""4"");","enemycard_rejuvenation, enemycard_OverrunWorkouts, enemycard_attack, enemycard_NeverDead",Icon/Items/小怪物,是,SpecialBuff_AllogeneicConcentric
+10030,力量之碑,300,0,14,3,1,"AddBuff(""SpecialBuff_TrialsOfStrength"", INF, ""1"");","enemycard_MakeIneffectiveRays2, enemycard_defence",Icon/Items/小怪物,,SpecialBuff_TrialsOfStrength
+10031,坚韧之碑,500,14,0,8,3,"AddBuff(""SpecialBuff_TrialsOfTenacity"", INF, ""1"");","enemycard_attack, enemycard_QuadrupleHits, enemycard_burn1",Icon/Items/小怪物,,SpecialBuff_TrialsOfTenacity
+10032,智慧之碑,40,0,0,0,1,"AddBuff(""SpecialBuff_TrialsOfWisdom"", INF, ""6"");",enemycard_AddWisdom,Icon/Items/小怪物,,SpecialBuff_TrialsOfWisdom
+10033,火凤凰,160,3,2,3,2,"AddBuff(""SpecialBuff_Phoenix"", INF, ""1"");","enemycard_SpreadWings, enemycard_HighFly",Icon/Items/小怪物,,SpecialBuff_Phoenix
+10034,飞贼,90,5,4,1,3,"AddBuff(""SpecialBuff_Snitch"", INF, ""1"");","enemycard_attack, enemycard_defence, enemycard_LimePowder, enemycard_PoisonThrowing, enemycard_thief",Icon/Items/小怪物,,SpecialBuff_Snitch
+10035,邪教祭司,120,6,7,2,2,"AddBuff(""SpecialBuff_Priest"", INF, ""1"");","enemycard_defence, enemycard_EvilCurse, enemycard_Toxin2",Icon/Items/小怪物,,SpecialBuff_Priest
+10036,孪生复仇者-火,100,8,6,2,2,"AddBuff(""SpecialBuff_Twins"", INF, ""1"");","enemycard_FireBlade, enemycard_attack, enemycard_defence, enemycard_specialAttack",Icon/Items/小怪物,,SpecialBuff_Twins
+10037,孪生复仇者-冰,100,8,6,2,2,"AddBuff(""SpecialBuff_Twins"", INF, ""1"");","enemycard_attack, enemycard_defence, enemycard_fearless, enemycard_IceShield",Icon/Items/小怪物,,SpecialBuff_Twins
+10038,乐师,70,7,6,2,2,"AddBuff(""SpecialBuff_Musician"", INF, ""1"");","enemycard_attack, enemycard_defence",Icon/Items/小怪物,,SpecialBuff_Musician
+10039,渴血刺客,80,6,0,2,3,"AddBuff(""SpecialBuff_ThirstForBlood"", INF, ""1"");","enemycard_defence, enemycard_attack",Icon/Items/小怪物,,SpecialBuff_ThirstForBlood
+10040,百智全知,50,5,5,2,3,,"enemycard_QuadrupleHits, enemycard_rejuvenation, enemycard_charmed, enemycard_OverrunWorkouts, enemycard_NerveReflexes, enemycard_disease, enemycard_fearless, enemycard_Witness, enemycard_Toxin1, enemycard_Toxin2, enemycard_Toxin3, enemycard_Toxin4, enemycard_foraging, enemycard_NeverDead, enemycard_OrdinaryHit, enemycard_SuperFireBall, enemycard_WeakLight, enemycard_OrdinaryFiveHit, enemycard_Weak, enemycard_thief, enemycard_Thieves",Icon/Items/小怪物,,
+10041,天眷者,50,5,4,2,2,"AddBuff(""SpecialBuff_BlessedByHeaven"", INF, ""1"");","enemycard_attack, enemycard_defence, enemycard_OrdinaryFiveHit",Icon/Items/小怪物,,SpecialBuff_BlessedByHeaven

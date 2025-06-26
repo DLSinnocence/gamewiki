@@ -1,0 +1,4 @@
+Id,Name,Hp,Attack,Defend,ActionCount,InitScript,CardList,Model,是否被应用
+Id,名字,血量,攻击力,防御盾,行动次数,初始buff,卡牌列表,怪物的模型路径,bool
+10001,旁观者,45,5,5,2,,"PatternCard_attack, PatternCard_defence, PatternCard_QuadrupleHits",Icon/Items/小怪物,是
+10002,黑猫,40,4,2,3,"AddBuff(""SpecialBuff_meow"", INF, ""1"");","PatternCard_AswiftBlow, PatternCard_Hah, PatternCard_Combing, PatternCard_attack, PatternCard_defence",Icon/Items/小怪物,

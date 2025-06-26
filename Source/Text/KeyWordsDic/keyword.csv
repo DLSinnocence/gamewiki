@@ -1,0 +1,13 @@
+Id,Note,Keywords,Description,Keywords_en,Description_en
+Id,备注,关键词,描述,keyword,description
+Burnout,,燃烬,该牌在使用后本场战斗中会消逝无法再次使用。,Burnout,This card disappears after use and cannot be used again in the current battle.
+Backtracking,,回溯,若行动点小于X，则行动点回复到X。,Backtracking,"If your power is less than X, your power returns to X."
+Froze,,凝滞,该卡无法以正常出牌、弃牌以外的方式离开手卡。,Froze,This card cannot leave your hand except by normal play or discarding.
+TrueDamage,,真实伤害,该伤害不受其他效果影响。,True Damage,This damage is not affected by other effects.
+Instant,,刹那,该卡牌打出后的效果（使用效果）不立即结算，而是封存至“时之笼”中。,Instant,"The effect of this card (use effect) is not resolved immediately after it is played, but is stored in the ‘{buff_instant}’."
+Infuse,,注能,若行动点足够，自动额外投入X点行动点，触发效果。,Infuse,"If you have enough action points, X additional action points are automatically added, triggering the effect."
+Metamagic,,超魔,当数额大于等于给定要求（X)，额外执行效果。,Metamagic,"When the amount is greater than or equal to the specified requirement (X), the additional effect is executed."
+Recycle,,回转,打出后，这张卡立即回到手卡。,Recycle,"After being played, this card immediately returns to your hand."
+Retain,,保留,回合结束后，这张卡不进入弃牌堆。,Retain,"At the end of the turn, this card does not go to the discard pile."
+Unusable,,不可打出,这张牌不可以正常出牌方式被打出。,Unusable,This card may not be played in the normal way.
+Curse,,诅咒,诅咒牌。,Curse,This is a curse;

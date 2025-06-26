@@ -1,0 +1,21 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,消耗的费用,名称,卡牌类型,描述,Name,Type,Description
+*1,1,法杖敲头,攻击牌,造成{0}点伤害。,Staff Strike,Attack,Deals {0} damage.
+*2,1,魔力屏障,防御牌,增加{0}点护盾。,Magic Barrier,Defence,Increases shield by {0}.
+*3,0,冥想针剂,消耗技能牌,"抽{0}张卡牌,",Meditation Potion,Burn Skill,Draw {0} cards.
+4,1,爆裂魔弹,消耗攻击牌,对所有敌人造成{0}点伤害。,Exploding Magic Bullet,Burn Attack,Deals {0} damage to all enemies.
+5,0,魔力铸金,消耗技能牌,"获得{0}枚金币,注能1:再触发一次.",Magic Casting,Skill,Gains {0} gold coins.
+6,1,装甲结晶,消耗防御牌,"获得{0}点护盾,获得{1}层坚盾。",Armour Crystallisation,Burn Defence,Gains {0} shield and {1} layer of {buff_tenacity}.
+7,1,腐化魔能之心,消耗技能牌,获得1层魔化。,Corrupted Magic Heart,Burn Skill,Gains 1 layer of {buff_rescued}.
+8,1,终结一击,攻击牌,"结束本回合,对所有敌人造成{0}点伤害。",Finishing Blow,Attack,End this turn and deals {0} damage to all enemies.
+9,2,黄金落幕,消耗技能牌,"结束本回合,对所有敌人造成{0}点伤害,获得接受伤害加成的{1}枚金币，最多不超过100枚。",Golden Curtain,Burn Skill,"End this turn, deal {0} damage to all enemies, and gain {1} gold coin for each damage taken, up to a maximum of 100 gold coins."
+*10,2,正义之怒,消耗攻击牌,对敌方造成自身已损失生命30%的伤害。,Righteous Anger,Burn Attack,Deal damage equal to 30% of your lost health to enemies.
+11,1,复仇链枪,消耗攻击牌,对随机目标造成自身已损失生命50%的伤害。,Chain Spear,Burn Attack,Deal damage equal to 50% of your lost health to a random target.
+12,1,瓶装救赎,消耗防御牌,净化2个随机负面状态。,Bottled Redemption,Burn Defence,Purify 2 random negative status effects.
+13,2,寰宇诸星大爆发,消耗攻击牌,"净化自身全部负面状态,对所有敌人造成{0}点伤害。",Universal Star Burst,Burn Attack,Purify all negative status effects on yourself and deal {0} damage to all enemies.
+14,2,回旋刃,攻击牌,造成{0}点伤害2次。,Spinning Blade,Burn Attack,Deal {0} damage twice.
+15,2,魔导飞弹,攻击牌,造成{0}点伤害3次。,Magic Missile,Attack,Deals {0} damage 3 times.
+16,1,不移,消耗技能牌,"获得{0}层强韧,",Unmovable,Burn Skill,Gains {0} stacks of {buff_resilient}.
+17,1,进化,消耗技能牌,获得{0}层进化。,evolve,Burn Skill,Gains {0} stacks of {buff_evolution}.
+18,1,圆环之理,消耗技能牌,获得{0}层循环。抽取{1}张牌。,Circle of Truth,Burn Skill,Gains {0} stacks of {buff_cycle}. Draws {1} card.
+19,0,虚弱一指,消耗技能牌,给与对方{0}层失格。,Weakness Finger,Burn Skill,Gives the opponent {0} stacks of {buff_disqualification}.

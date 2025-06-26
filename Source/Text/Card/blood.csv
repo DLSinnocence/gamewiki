@@ -1,0 +1,15 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
+1,,放血,技能牌,对所有敌人施加三回合{0}点流血。,Bloodletting,,Inflicts {0} layers of {buff_blooding} on all enemies for three turns.
+2,,习于疼痛,防御牌,获得{0}点流血，{1}层坚毅。,Accustomed to pain,,Gains {0} layers of {buff_blooding} and {1} layer of {buff_impregnable}.
+3,,鲜血转移,消耗技能牌,消耗全体所有流血层数，每消耗一层恢复二点生命。,Blood transfer,,Consumes all layers of {buff_blooding} and restores two health layers for each layer consumed.
+4,,苦痛枷锁,技能牌,消耗掉自身所有流血层数，每消耗一层，给予全体敌人二层流血。,Chains of suffering,,Consumes all layers of {buff_blooding} and inflicts two layers of {buff_blooding} on all enemies for each layer consumed.
+5,,放血诅咒,技能牌,"给与所有敌人{0}层流血,使选定敌人的流血层数翻倍，若其流血层数大于当前生命的一半，对其造成最大生命值的真实伤害。",Curse of bloodletting,,"Gives all enemies {0} layers of {buff_blooding}, doubles the number of {buff_blooding} layers on selected enemies, and if their {buff_blooding} layers are greater than half of their current health, deals True Damage equal to their maximum health."
+6,,透骨钉,技能牌,"给与所有敌人{0}层流血,当前场上存在的敌人死亡时，将其流血层数翻倍转移给剩下的敌人。",Bone-piercing nails,,"Gives all enemies {0} layers of {buff_blooding}, and when enemies currently on the field die, doubles their {buff_blooding} layers and transfers them to the remaining enemies."
+7,,盛宴,技能牌,给与所有敌人{0}层流血。触发双方全体的所有流血效果，每当有人因此死亡，重复该效果。,Feast,,"Gives all enemies {0} layers of bleeding. Triggers all bleeding effects on both sides, and repeats the effect whenever someone dies from it."
+8,,血爆,技能牌,获得{0}层流血，触发敌人的流血二次。,Blood explosion,,"Gains {0} layers of bleeding, triggering the enemy's bleeding a second time."
+9,,血魔契约,技能牌,给与所有敌人{0}层流血，直到回合结束，你不再因流血受到伤害。,Blood demon contract,,"Gives all enemies {0} layers of bleeding until the end of the turn, and you no longer take damage from bleeding."
+10,,灭！尽！,技能牌,流血累计造成三十点伤害时可用，双方全体每有一人有流血效果，全体触发一次流血。,Destroy! Exterminate!,,"Can be used when bleeding has accumulated 30 damage, and triggers once for every enemy with a bleeding effect on either side."
+11,,献祭,技能牌,给与所有敌人{0}层流血。所有人每有五层流血，玩家获得一层持续三回合的随机buff。,Sacrifice,,"Gives all enemies {0} layers of {buff_blooding}. For every five layers of {buff_blooding} all players have, the player gains a random buff that lasts for three turns."
+12,,转化,技能牌,获得持续一回合的{0}层血河，给予所有敌人{0}层流血。,Transformation,,Gains {0} layers of {buff_bloodriver} that lasts for one turn and gives all enemies {0} layers of {buff_blooding}.
+13,,放血者之咒,技能牌,全体敌人获得{0}层血海。,Curse of the bloodletter,,All enemies gain {0} layers of {buff_bloodsea}.

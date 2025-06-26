@@ -1,0 +1,312 @@
+Id,Rarity,OwnScript,FightScript,Icon
+id,稀有度,获取时的脚本,战斗脚本,图片名称
+1,1,,"AddEvent(""Action"",(() => {SetStatus(""Self"");ChangeDefence(""2"");}));",Icon/Relic icons/风之灵
+2,3,,"AddEvent(""Action"",() => {if(CheckDice.Roll().Value<20){ChangePower(""1"");}});",Icon/Relic icons/法师资格证书
+3,3,,"AddEvent(""Shuffle"",(() => {SetStatus(""AllRandomEnemy1"");ChangeHp(""-20"");}));",Icon/Relic icons/影劫草
+4,4,,"AddEvent(""Init"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_exorcism"",""10"",""2"");}));",Icon/Relic icons/白盐
+5,4,,"AddEvent(""Init"",() => {SetStatus(""Self"");ChangeHp(""15"");Vars[""ThisCount""]=""0"";});AddEvent(""StartRound"",() => {Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""])+1).ToString();SetStatus(""Self"");for(int i=0; i<(((int.Parse(Vars[""ThisCount""])%5)+1)/5); i++ ){ChangeHp(""-999"");}});",Icon/Relic icons/死契  帕雷凡
+6,3,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_burn"",""10"",""1"");}));",Icon/Relic icons/红石
+7,5,,"AddEvent(""Init"",() => {ChangePower(""2"");});",Icon/Relic icons/普拉提原体
+8,3,,"SetStatus(""AllTarget"");
+        AddEvent(""Action"",() => {ChangeHp(((Self.CurHp-Self.MaxHp)*3/10).ToString());});",Icon/Relic icons/怨恨
+9,5,,"AddEvent(""Init"",() => {SetStatus(""Self"");AddBuff(""buff_blooding"",""10"",""2"");ChangeMaxPower(""1"");});",Icon/Relic icons/风之灵
+10,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""2"");}));",Icon/Relic icons/风之灵
+11,3,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_truth"",""10"",""1"");AddBuff(""buff_stretch"",""10"",""2"");}));",Icon/Relic icons/风之灵
+12,3,,"AddEvent(""Init"",() => {SetStatus(""Self"");AddBuff(""buff_truth"",""10"",""1"");AddBuff(""buff_fast"",""10"",""3"");ChangeHp((Self.CurHp/6*-1).ToString());});",Icon/Relic icons/风之灵
+13,2,,"AddEvent(""StartRound"",() => {SetStatus(""Self"");if(Self.CurHp<30){AddBuff(""buff_truth"",""10"",""10"");}});",Icon/Relic icons/风之灵
+14,5,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomTarget3"");Damage(""1"");}));",Icon/Relic icons/穿刺群落
+15,3,,"AddEvent(""Init"", () => {
+        Vars[""ThisCount""] = ""0"";
+            if (Self.CurHp <= Self.MaxHp * 2 / 5 && Vars[""ThisCount""] == ""0"")
+            {
+                Vars[""ThisCount""] = ""1"";
+                PlayerInfo.Money += 10;
+                AddBuff(""buff_truth"",INF, ""1"");
+            }
+        });
+        AddEvent(""Hurt"",() => {if (Self.CurHp <= Self.MaxHp * 2 / 5 && Vars[""ThisCount""] == ""0"")
+            {
+                Vars[""ThisCount""] = ""1"";
+                PlayerInfo.Money += 10;
+                AddBuff(""buff_truth"",INF, ""1"");
+            }});",Icon/Relic icons/恶念
+16,2,,"AddEvent(""Action"",() => {
+  if (CheckDice.Roll().Value<50)
+  {
+  SetStatus(""AllRandomEnemy1"");ChangeHp(""-10"");
+  }
+  });",Icon/Relic icons/风之灵
+17,5,,"AddEvent(""StartRound"",(() => {SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""4"");ChangePower(""1"");}));",Icon/Relic icons/风之灵
+18,3,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomEnemy1"");Damage(""1"");SetStatus(""Self"");ChangeDefence(""1"");}));",Icon/Relic icons/风之灵
+19,3,,"AddEvent(""StartRound"",() => {SetStatus(""Self"");ChangeDefence(Vars[""layersExperienced""]);});",Icon/Relic icons/风之灵
+20,5,,"AddEvent(""Attack"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_weak"",""10"",""1"");}));",Icon/Relic icons/风之灵
+21,3,,"AddEvent(""Hurt"",(() => ChangeMoney(""8"")));",Icon/Relic icons/染血硬币
+22,3,,"AddEvent(""StartRound"", () => {  AddBuff(""buff_stretch"", INF, ""8""); });
+        AddEvent(""Action"",() => {SetStatus(""Self"");
+            var buffBarUI = Self.buffBarUI;
+            if (buffBarUI==null)
+            {
+                return;
+            }
+            if (buffBarUI.GetBuff(""buff_stretch"")==null)
+            {
+                AddBuff(""buff_weak"",INF,""1"");
+            }
+            else
+            {
+                buffBarUI.GetBuff(""buff_stretch"").buffConfig.level -= 1;
+            }
+            });",Icon/Relic icons/断剑
+*23,3,,"AddEvent(""Init"",() => {
+            if (!Vars.ContainsKey(""ThisCount""))
+            {
+                Vars[""ThisCount""] = ""0"";
+            }
+            if(Vars[""ThisCount""]==""0"")
+            {
+                SetStatus(""Self"");
+                ChangeDynamicVar(""liveCount"",""1"");
+            }});AddEvent(""Dead"",() => {Vars[""ThisCount""]=""2"";});",Icon/Relic icons/风之灵
+*24,5,,"AddEvent(""Action"",(() => ChangePower(""1"")));",Icon/Relic icons/风之灵
+25,1,,"AddEvent(""Init"",(() => {DrawCount(""2"");ChangeMaxHp(""-1"");}));",Icon/Relic icons/风之灵
+26,5,,"AddEvent(""Hurt"",(() => ChangePower(""1"")));",Icon/Relic icons/风之灵
+27,4,,"AddEvent(""StartRound"",(() =>{SetStatus(""Self"");ChangeDynamicVar(""UseCount"",""1"");}));",Icon/Relic icons/风之灵
+28,5,,"AddEvent(""Init"",(() => Vars[""ThisCount""]=""0""));AddEvent(""StartRound"",() => {Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""])+1).ToString();ChangePower(""2"");DrawCount(""2"");SetStatus(""Self"");for (int i = 0; i < (int.Parse(Vars[""ThisCount""])%5+1)/4; i++) { SetStatus(""Self"");ChangeHp(Self.MaxHp.ToString()); } });",Icon/Relic icons/死契  科尼姆斯
+29,3,,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""Action"",(() =>
+        {
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            ChangeMoney(""3"");
+            if (int.Parse(Vars[""ThisCount""]) >= 100)
+            {
+                PlayerInfo.Money+=600;
+                EscapeFight();
+            }
+        }));",Icon/Relic icons/风之灵
+30,5,,"AddEvent(""Action"",(() => {SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");}));",Icon/Relic icons/风之灵
+31,5,,"AddEvent(""Init"",() => {SetStatus(""Self"");ChangeHp((-3/10*Self.CurHp).ToString());});
+        AddEvent(""Action"",() => {if(CheckDice.Roll().Value<40) ChangeDynamicVar(""UseCount"",""1"");});",Icon/Relic icons/风之灵
+32,5,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_wisdom"",""10"",""1"");}));",Icon/Relic icons/风之灵
+33,5,,"AddEvent(""Init"",(() => {SetStatus(""Self"");ChangeHp(""2"");ChangePower(""2"");}));",Icon/Relic icons/风之灵
+34,5,,"AddEvent(""Hurt"",(() => {SetStatus(""Self"");ChangeDefence(""4"");}));",Icon/Relic icons/风之灵
+35,5,,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""NoPowerWhenTry"",(() => { ChangePower(""1"");
+            ChangeHp(Math.Pow(int.Parse(Vars[""ThisCount""]+2),2).ToString());}));
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+        AddEvent(""StartRound"",(() => { Vars[""ThisCount""] = ""0""; }));",Icon/Relic icons/风之灵
+36,5,,"AddEvent(""Init"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_charmed"",""10"",""1"");}));",Icon/Relic icons/静滞秒针
+37,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_remember"",""10"",""5"");}));",Icon/Relic icons/风之灵
+38,5,,"AddEvent(""Init"",() => PlayerInfo.Reward+=1);",Icon/Relic icons/风之灵
+39,3,,"AddEvent(""Init"",() => {SetStatus(""Self"");
+        if (Self.CurHp>Self.MaxHp*4/10)
+        {
+                ChangeMoney((Self.CurHp-Self.MaxHp*4/10).ToString());
+        }
+            Vars[""MaxHp""]=Self.MaxHp.ToString();SetHp((int.Parse(Vars[""MaxHp""])*4/10).ToString());});",Icon/Relic icons/风之灵
+40,5,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_unyielding"",""10"",""1"");}));",Icon/Relic icons/风之灵
+*41,3,,"AddEvent(""Init"",()=>{SetStatus(""AllTarget"");AddBuff(""buff_blooding"", INF, ""5"");});
+bool isTrigger = false;
+SetStatus(""All"");
+AddEvent(""buff_bloodingOnLevelChange"", () => {
+if (isTrigger) return;
+SetStatus(""All"");
+        int count=0;
+        foreach (var item in Object)
+        {
+            var buff=item.buffBarUI.GetBuff(""buff_blooding"");
+            if (buff!=null)
+            {
+            count+=buff.buffConfig.Level;
+            }
+        }
+        if (count<30)
+        {
+            return;
+        }
+        Self.DamageFilter[""blooding""]=true;
+        isTrigger = true;
+});",Icon/Relic icons/风之灵
+42,3,,"AddEvent(""StartRound"",() => {Vars[""Used""]=""True"";SetStatus(""Self"");ChangeDynamicVar(""DefaultDamege"",""9"");});
+        AddEvent(""AttackDone"",() => {
+            if (!Vars.ContainsKey(""Used""))
+            {
+                return;
+            }
+           if (Vars[""Used""]==""True"")
+           {
+            Vars[""Used""]=""False"";SetStatus(""Self"");ChangeDynamicVar(""DefaultDamege"",""-9"");
+           } 
+            });",Icon/Relic icons/风之灵
+43,3,,"AddEvent(""Init"",(() => {SetStatus(""Self"");ChangeMaxHp(""3"");}));",Icon/Relic icons/风之灵
+44,1,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_extraordinary"",""10"",""20"");}));",Icon/Relic icons/风之灵
+45,5,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_cycle"",INF,""2"");}));",Icon/Relic icons/风之灵
+46,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");ChangeHp(""10"");}));",Icon/Relic icons/风之灵
+47,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_counterattack"",""10"",""3"");}));",Icon/Relic icons/风之灵
+48,2,,"AddEvent(""Init"",() => {
+  if (PlayerInfo.CardTotalCount>22)
+  {
+  ChangeMaxPower(""1"");
+  }
+  });",Icon/Relic icons/风之灵
+49,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_impregnable"",""10"",""1"");}));",Icon/Relic icons/风之灵
+50,2,,"AddEvent(""Hitted"",(() => {SetStatus(""Self"");ChangeHp(""2"");}));",Icon/Relic icons/风之灵
+51,1,,"AddEvent(""EndRound"", () =>
+        {
+            int count = HandCard.Where(x => x.data[""InitScript""].Contains(""CommonCardItem"")).Count() * 2;
+            SetStatus(""Self"");
+            ChangeDefence(count.ToString());
+        });",Icon/Relic icons/风之灵
+52,4,,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""EndRound"", () =>
+        {
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            SetStatus(""Self"");
+            ChangeDefence((Self.Defend*2/5).ToString());
+            if (int.Parse(Vars[""ThisCount""]) >= 6)
+            {
+                ChangeHp(""-999"");
+            }
+        });",Icon/Relic icons/风之灵
+53,3,,"AddEvent(""Init"", () => { Vars[""ToCount""] = PlayerInfo.enemyCount.ToString();Vars[""ThisCount""] = ""0""; });
+        SetStatus(""AllTarget"");
+        AddEvent(""Dead"",()=> {if (int.Parse(Vars[""ThisCount""])<int.Parse(Vars[""ToCount""]))
+        {
+                PlayerInfo.AddBless(""blessing_15"");
+        } });
+        AddEvent(""EndRound"", () =>
+        {
+            Vars[""ThisCount""]= (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+        });",Icon/Relic icons/风之灵
+54,6,,"Vars[""ToPower""] = ""0"";Vars[""ToCard""] = ""0"";
+        AddEvent(""StartRound"", () => { Vars[""ToPower""] = ""0"";Vars[""ToCard""] = ""0""; });
+        AddEvent(""EndCreateCardItem"",()=>{ if (HandCard.Count==PlayerInfo.CardTopCount&&Vars[""ToPower""] == ""0"")
+        {
+            Vars[""ToPower""] = ""1"";
+            ChangePower(""3"");
+        }});
+        AddEvent(""AddPower"", () => { if (PlayerInfo.Power>PlayerInfo.MaxPower&&Vars[""ToPower""] == ""0"")
+        {
+            Vars[""ToCard""] = ""1"";
+            DrawCount(""4"");
+        }});",Icon/Relic icons/风之灵
+55,3,,"AddEvent(""Init"",()=> { AddBuff(""buff_sublimation"",INF,""1"");  });",Icon/Relic icons/风之灵
+56,3,,"AddEvent(""StartRound"",() => {ChangeCardTop(""1"");
+            SetStatus(""AllRandomEnemy1"");
+            for (int i = 0; i < PlayerInfo.Wisdom / 5; i++) { Damage(""2""); } ;});",Icon/Relic icons/风之灵
+57,2,,"AddEvent(""Init"",(() => DrawCount(""3"")));",Icon/Relic icons/风之灵
+58,4,,"AddEvent(""Init"",() => {SetStatus(""Self"");
+        GetStatus.Add(Self,new Dictionary<string, int>{[""CurHp""]=Self.CurHp,[""MaxHp""]=Self.MaxHp});
+  Vars[""ThisCount""]=""0"";});
+  AddEvent(""StartRound"",() => {Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""])+1).ToString();
+  if (int.Parse(Vars[""ThisCount""])==2)
+  {
+  Self.CurHp=GetStatus[Self][""CurHp""];
+  Self.MaxHp=GetStatus[Self][""MaxHp""];
+  }});",Icon/Relic icons/风之灵
+59,5,,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""Action"", () =>
+        {
+            int a = DefaultDice.Roll().Value;
+            if (a < 25)
+            {
+                SetStatus(""AllRandomEnemy1"");
+                Damage(Vars[""ThisCount""]);
+            }
+            else if (a < 50)
+            {
+                SetStatus(""Self"");
+                ChangeDefence(Vars[""ThisCount""]);
+            }
+            else if (a < 75)
+            {
+                SetStatus(""Self"");
+                ChangeHp(Vars[""ThisCount""]);
+            }
+            else
+            {
+                ChangeMoney(Vars[""ThisCount""]);
+            } });
+        AddEvent(""BurnCard"",(() => {Vars[""ThisCount""] =(int.Parse(Vars[""ThisCount""])+1).ToString();}));",Icon/Relic icons/风之灵
+60,3,,"AddEvent(""EndRound"",() => {ChangeHp((PlayerInfo.Power*8).ToString());ChangePower((-1*PlayerInfo.Power).ToString()); });",Icon/Relic icons/风之灵
+61,3,,"AddEvent(""Init"",(() => {SetStatus(""Self"");ChangeMaxHp(""-2"");ChangeMoney(""40"");}));",Icon/Relic icons/风之灵
+62,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");ChangeDynamicVar(""RetainCard"",""2""); }));",Icon/Relic icons/风之灵
+63,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_chaos"",INF,""1"");}));",Icon/Relic icons/风之灵
+64,4,,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""buff_instantOnLevelChange"",()=> {
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            if (int.Parse(Vars[""ThisCount""]) %2==0)
+            {
+                DrawCount(""1"");
+            }
+        });",Icon/Relic icons/风之灵
+65,4,,"SetStatus(""AllTarget"");
+        AddEvent(""Dead"",()=> { if (fightType== PlayerInfo.Enemy) 
+            {
+                PlayerInfo.AddBless(""blessing_20"");
+            
+        }});",Icon/Relic icons/风之灵
+66,2,,"AddEvent(""ICreateCardItem"",()=> { ChangeDefence((ValueDice.Roll().Value/30).ToString()); });",Icon/Relic icons/风之灵
+67,1,,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""Hurt"", () =>
+        {
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            if (int.Parse(Vars[""ThisCount""])%6==0&&int.Parse(Vars[""ThisCount""])<25)
+            {
+                PlayerInfo.AddBless(""blessing_10"");
+            }
+        });",Icon/Relic icons/风之灵
+68,4,,"if (PlayerInfo.enemylevel==2)
+        {
+            AddEvent(""Win"",()=> { PlayerInfo.AddBless(""blessing_5""); });
+        }",Icon/Relic icons/风之灵
+69,3,,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""Action"",()=>{ Vars[""ThisCount""] = ""1""; });
+        AddEvent(""EneRound"",()=>{ if (Vars[""ThisCount""] == ""0"")
+        {
+                ChangeDefence(""30"");
+        } ; });",Icon/Relic icons/风之灵
+70,4,,"AddEvent(""Init"",()=> { DrawCount(""5"");Vars[""ThisCount""] = ""5""; });
+        AddEvent(""Action"",()=> { Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString(); });
+        AddEvent(""StartRound"", () => {
+            DrawCount((5-int.Parse(Vars[""ThisCount""])).ToString());
+             Vars[""ThisCount""] = ""0""; });",Icon/Relic icons/风之灵
+71,4,,"AddEvent(""Init"", ()=> { ChangeMaxPower(""1""); });
+        AddEvent(""StartRound"", () => { BurnCard(""1"",""1""); });",Icon/Relic icons/风之灵
+72,3,,"if (PlayerInfo.CardTotalCount>18&&PlayerInfo.CardTotalCount<28)
+        {
+            AddBuff(""buff_extraordinary"", INF, (PlayerInfo.CardTotalCount*10-180).ToString());
+        }
+        else if(PlayerInfo.CardTotalCount>=28)
+        {
+            AddBuff(""buff_extraordinary"", INF, ""100"");
+        }",Icon/Relic icons/风之灵
+73,2,,"ChangeMaxPower(""-1"");
+        AddEvent(""EndRound"",()=>{ AddBuff(""buff_wisdom"", INF, ""1""); });",Icon/Relic icons/风之灵
+74,3,,"AddEvent(""Init"",()=> { Vars[""ThisCount""] = ""0""; });
+        AddEvent(""Action"",()=> {if (HandCard.Count == 1 && Vars[""ThisCount""] == ""0"")
+            {
+                DrawCount(""4"");
+            Vars[""ThisCount""] = ""1"";
+            
+        } });
+        AddEvent(""StartRound"",()=> {Vars[""ThisCount""] = ""0"";});",Icon/Relic icons/风之灵
+75,1,,"AddEvent(""Action"",()=> {if (HandCard.Count > PlayerInfo.CardCount)
+            {
+                if (Self.buffBarUI == null)
+                {
+                    Debug.LogWarning(""Self.buffBarUI is null"");
+                    return;
+                }
+                if (Self.buffBarUI.GetBuff(""buff_WhiteSolitaire"") == null)
+                {
+                    AddBuff(""buff_WhiteSolitaire"", INF, (HandCard.Count - PlayerInfo.CardCount).ToString());
+                }
+                else
+                {
+                    Self.buffBarUI.GetBuff(""buff_WhiteSolitaire"").buffConfig.Level = (HandCard.Count - PlayerInfo.CardCount);
+                }
+        } });",Icon/Relic icons/风之灵
+76,1,,"AddEvent(""EndRound"",()=> {if (HandCard.Count < PlayerInfo.CardCount)
+            {
+                ChangeDefence((PlayerInfo.CardCount- HandCard.Count).ToString());
+        } });",Icon/Relic icons/风之灵

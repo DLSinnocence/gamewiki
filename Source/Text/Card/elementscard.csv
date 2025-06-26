@@ -1,0 +1,15 @@
+Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
+唯一的标识（不能重复）,费用,名称,卡牌类型,描述,Name,Type,Description
+1,0,水之翼,消耗技能牌,获得{0}层元素。抽{1}张牌。,WaterWings,Burn Skill,Gain {0} stacks of {buff_elements}. Draw {1} card.
+2,1,青翠之森的遗梦,消耗技能牌,"获得{0}层元素,{1}层自愈。",Verdant Legacy,Burn Skill,Gain {0} stacks of {buff_elements} and {1} stack of {buff_evergreen}.
+3,1,生机,消耗技能牌,"获得{0}层元素,{1}层吸收。",Vital Surge,Burn Skill,Gain {0} stacks of {buff_elements} and {1} stack of {buff_vitality}.
+4,2,聚雷,攻击牌,"获得{0}层元素和{1}层超凡,造成{2}点伤害。",Thunder Convergence,Attack,"Gain {0} stacks of {buff_elements} and {1} stack of {buff_extraordinary}, deal {2} damage."
+5,1,风暴,消耗技能牌,"获得{0}层元素和{1}层超凡,造成{2}点伤害,给予选择目标{3}层易伤。",Thunderclap,Burn Skill,"Gain {0} stacks of {buff_elements} and {1} stacks of {buff_extraordinary}, deal {2} damage, and apply {3} stacks of {buff_vulnerability} to the target."
+6,2,雷绝,消耗技能牌,"获得{0}层元素和{1}层超凡,造成{2}点伤害。",Thunder's End,Burn Skill,"Gain {0} stacks of {buff_elements} and {1} stacks of {buff_extraordinary}, deal {2} damage."
+7,0,火起,技能牌,"获得{0}层元素,给予敌人{1}层灼烧。",Ignition,Skill,Gain {0} stacks of {buff_elements} and apply {1} stack of {buff_burn} to enemies.
+8,1,火中兽,消耗技能牌,"获得{0}层元素,给予敌人等量灼烧,并触发敌人的所有灼烧。抽取{1}张牌。",Inferno Beast,Burn Skill,"Gain {0} stacks of {buff_elements} and give enemies the same amount of {buff_burn}, triggering all of their {buff_burn} effects. Draw {1} card."
+9,1,掌心炎,消耗技能牌,"获得{0}层元素,给予敌人{1}层灼烧,造成{2}点伤害。",Palm Inferno,Burn Skill,"Gain {0} stacks of {buff_elements}, give enemies {1} stack of {buff_burn}, and deal {2} damage."
+10,1,元素护盾,技能牌,"获得{0}层元素,获得元素层数+5点护盾。",Elemental Aegis,Skill,Gain {0} stacks of {buff_elements} and gain a shield equal to the number of stacks of {buff_elements} you have.
+11,1,元素升华,技能牌,"获得{0}层元素,抽取元素层数1/4张卡牌。",Elemental Ascension,Skill,"Gain {0} stacks of {buff_elements}, draw 1/4 of the number of stacks of {buff_elements} cards."
+12,1,元素循环,技能牌,"获得{0}层元素,获得元素层数1/4点行动点。",Elemental Cycle,Skill,"Gain {0} stacks of {buff_elements}, gain 1/4 of the number of stacks of {buff_elements} power."
+13,1,元素爆发,攻击牌,"获得{0}层元素,对所有敌人造成等同于元素层数点伤害。",Elemental Detonation,Attack,"Gain {0} stacks of {buff_elements}, deal damage equal to the number of stacks of {buff_elements} to all enemies."

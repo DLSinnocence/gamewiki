@@ -1,0 +1,251 @@
+Id,ApplyScript,ClearScript,ReducePerTurn,ReducePerAttacked,ReducePerUse,UpperBound,Icon,Type,Rarity
+BUFF的ID（唯一英文）,BUFF生效时的效buff_BUFF的ID（唯一英文）时的效果,清除时效果,层数每回合减少数,层数每受击减少数,层数每行动减少数,层数上限,图标路径,类型,稀有度
+inspiration,"var buffContent=Self.buffBarUI;
+        if (buffContent==null)
+        {
+            Debug.LogError(""buffContent is null"");
+            return;
+        }
+        AddEvent(""Action"",() => {ChangePower(buffContent.GetBuff(""buff_inspiration"").buffConfig.Level.ToString());});",,1,0,1,3,Icon/buff/灵能,正面,2
+instant,,"var buffContent = Self.buffBarUI; var buff = buffContent.GetBuff(""buff_instant""); if (buff == null) { return; } var list = buff.effectList.ToList(); while (list.Count > 0){list[0].action();list.RemoveAt(0);} ",0,0,0,999,Icon/buff/时之笼,正面,2
+wisdom,"var buffContent=Self.buffBarUI;AddEvent(""buff_wisdomOnLevelChange"",() => {ChangeMaxPower(buffContent.GetBuff(""buff_wisdom"").buffConfig.Level.ToString());});",,0,0,0,999,Icon/buff/启示,正面,5
+remember,"SetStatus(""Self"");var buffContent=Self.buffBarUI;AddEvent(""EndRound"",() => {ChangeDefence(buffContent.GetBuff(""buff_remember"").buffConfig.Level.ToString());});",,1,0,0,999,Icon/buff/增生,正面,2
+annihilation," var buffContent=Self.buffBarUI;
+        if (buffContent==null)
+        {
+            return;
+        }
+        AddEvent(""Hurt"",() => {
+        ChangePower(""-1"");});",,0,1,0,100,Icon/buff/失能,负面,4
+vientiane,"var buffContent=Self.buffBarUI;AddEvent(""CostPower"",() => {
+            if (!Vars.ContainsKey(""ThisCount""))
+            {
+                Vars[""ThisCount""] = ""0"";
+            }
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            if (int.Parse(Vars[""ThisCount""]) %2==0)
+            {
+                DrawCount(buffContent.GetBuff(""buff_vientiane"").buffConfig.Level.ToString());
+            }
+            });",,0,0,0,2,Icon/buff/源蜕,正面,5
+return,"var buffContent=Self.buffBarUI;AddEvent(""EndRound"",() => {ShuffleDeck();});",,1,0,0,999,Icon/buff/归来,正面,3
+conscience,"SetStatus(""Self"");var buffContent=Self.buffBarUI;AddEvent(""Action"",() => {ChangeDefence(buffContent.GetBuff(""buff_conscience"").buffConfig.Level.ToString());});",,1,1,0,999,Icon/buff/血墙,正面,3
+charmed,"SetStatus(""Self"");var buffContent=Self.buffBarUI;AddEvent(""StartRound"",() => {ChangeRound();});",,1,0,0,10,Icon/buff/时停,负面,5
+elements,"SetStatus(""Self"");
+var buffContent=Self.buffBarUI;AddEvent(""Action"",() => {
+            AddBuff(""buff_extraordinary"",INF,(int.Parse(buffContent.GetBuff(""buff_elements"").buffConfig.Level.ToString())*2).ToString());});",,2,0,0,999999,Icon/buff/元素,正面,2
+fast,"var buffContent=Self.buffBarUI;AddEvent(""buff_fastOnLevelChange"",() => {ChangeDynamicVar(""RoundCard"",buffContent.GetBuff(""buff_fast"").buffConfig.Level.ToString());});",,1,0,0,10,Icon/buff/敏锐,正面,3
+immortal,"var buffContent=Self.buffBarUI;AddEvent(""Hurt"",() => {
+            if (!Vars.ContainsKey(""ThisCount""))
+            {
+                Vars[""ThisCount""] = ""0"";
+            }
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            if (int.Parse(Vars[""ThisCount""]) %2== 0)
+            {
+                ChangePower(buffContent.GetBuff(""buff_immortal"").buffConfig.Level.ToString());
+            }
+            });",,0,0,0,2,Icon/buff/不朽,正面,5
+ignorance,"var buffContent=Self.buffBarUI;AddEvent(""StartRound"",() => {ChangeMaxPower((int.Parse(buffContent.GetBuff(""buff_ignorance"").buffConfig.Level.ToString())*-1).ToString());});",,0,0,0,9999,Icon/buff/封印,负面,5
+sacrifice,"var buffContent=Self.buffBarUI;AddEvent(""Action"",() => {
+            AddBuff(""buff_stretch"",""2"",buffContent.GetBuff(""buff_sacrifice"").buffConfig.Level.ToString());
+            if (Self.CurHp>2)
+            {
+                ChangeHp((buffContent.GetBuff(""buff_sacrifice"").buffConfig.Level*-2).ToString());
+            }
+            });",,0,0,0,999,Icon/buff/狂暴,正面,4
+gainsandlosses,"var buffContent=Self.buffBarUI;AddEvent(""Action"",() => {ChangeDynamicVar(""UseCount"",""1"");});",,1,0,1,3,Icon/buff/回响,正面,3
+unyielding,"var buffContent = Self.buffBarUI; AddEvent(""Hurt"", () =>
+        {
+            if (!Vars.ContainsKey(""ThisCount""))
+            {
+                Vars[""ThisCount""] = ""0"";
+            }
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            DrawCount(buffContent.GetBuff(""buff_unyielding"").buffConfig.Level.ToString());
+        });",,0,0,0,3,Icon/buff/不屈,正面,5
+toxin,"SetStatus(""Self"");
+        var buffContent=Self.buffBarUI;
+        AddEvent(""EndRound"",() => {ChangeHp((-1*buffContent.GetBuff(""buff_toxin"").buffConfig.Level).ToString());});",,1,0,0,999999,Icon/buff/毒素,负面,1
+Inferiority,"var buffContent=Self.buffBarUI;
+        Vars[""ThitCount""]=""0"";
+        AddEvent(""CreateCardItem"",() => {
+        Vars[""ThitCount""]=(int.Parse(Vars[""ThitCount""])+1).ToString();
+        if (int.Parse(Vars[""ThitCount""])%3==0)
+        {
+           ThrowCard(""1"",""1"");
+        }
+        });",,1,0,0,10,Icon/buff/遗忘,负面,1
+blooding,"var buffContent=Self.buffBarUI;
+        AddEvent(""Action"",() => {
+FightVars[""blood""]=(int.Parse(FightVars.GetValueOrDefault(""blood"",""0""))+buffContent.GetBuff(""buff_blooding"").buffConfig.Level).ToString();ChangeHp((int.Parse(buffContent.GetBuff(""buff_blooding"").buffConfig.Level.ToString())*-1).ToString());});",,1,0,0,9999,Icon/buff/流血,负面,2
+evergreen,"var buffContent=Self.buffBarUI;AddEvent(""StartRound"",() => {ChangeHp(buffContent.GetBuff(""buff_evergreen"").buffConfig.Level.ToString());});",,1,0,0,9999,Icon/buff/自愈,正面,1
+slow,"var buffContent=Self.buffBarUI;AddEvent(""buff_slowOnLevelChange"",() => {ChangeDynamicVarPercent(""RoundCard"",(int.Parse(buffContent.GetBuff(""buff_slow"").buffConfig.Level.ToString())*-1).ToString());});",,1,0,0,9999,Icon/buff/迟缓,负面,3
+roundRetainCard,"var buffContent=Self.buffBarUI;AddEvent(""StartRound"",() => {ChangeDynamicVarPercent(""RetainCard"",buffContent.GetBuff(""buff_roundRetainCard"").buffConfig.Level.ToString());});",,0,0,0,999,Icon/buff/伺机,正面,2
+rotten,"var buffContent=Self.buffBarUI;AddEvent(""Action"",() => {Self.Defend=0;});",,1,0,0,2,Icon/buff/腐朽,负面,4
+burn," var buffContent=Self.buffBarUI;
+        AddEvent(""StartRound"",() => {ChangeHp(((int)((-1-Self.MaxHp/100f)*buffContent.GetBuff(""buff_burn"").buffConfig.Level)).ToString());});",,1,0,0,35,Icon/buff/灼烧,负面,2
+chaos,"var buffContent=Self.buffBarUI;
+        SetStatus(""Self"");
+        AddEvent(""Action"",() => {
+            int count=ValueDice.WithRange(0,100).Roll().Value;
+            if (count >= 67)
+            {
+                ChangeDynamicVar(""CardCost"", ( -Self.dynamicVariables[""CardCost""]).ToString());
+                Self.dynamicVariables[""CardCost""] = 0;
+            }
+            else if (count >= 34)
+            {
+                ChangeDynamicVar(""CardCost"", ( 1-Self.dynamicVariables[""CardCost""] ).ToString());
+                Self.dynamicVariables[""CardCost""] = 1;
+            }
+            else
+            {
+                ChangeDynamicVar(""CardCost"", ( 2-Self.dynamicVariables[""CardCost""]).ToString());
+            }
+        });",,0,0,0,999,Icon/buff/混乱,负面,3
+exorcism,"var buffContent=Self.buffBarUI;
+        SetStatus(""Self"");
+        AddEvent(""buff_exorcismOnLevelChange"",() => {ChangeDynamicVarPercent(""AttackedPercentDamage"",(int.Parse(buffContent.GetBuff(""buff_exorcism"").buffConfig.Level.ToString())*70).ToString());});",,1,2,0,2,Icon/buff/重伤,负面,2
+rescued,"SetStatus(""Self"");
+AddEvent(""buff_rescuedOnLevelChange"",()=>{ChangeDynamicVar(""CardCost"",""-2"");});","ChangeHp(""-999"");",10,0,0,1,Icon/buff/魔化,正面,4
+vulnerability,"SetStatus(""Self"");var buffContent=Self.buffBarUI;
+        if (buffContent==null)
+        {
+            return;
+        }
+        AddEvent(""buff_vulnerabilityOnLevelChange"",() => {ChangeDynamicVarPercent(""AttackedPercentDamage"",(int.Parse(buffContent.GetBuff(""buff_vulnerability"").buffConfig.Level.ToString())*10).ToString());});",,2,0,0,10,Icon/buff/易伤,负面,2
+cycle,"var buffContent=Self.buffBarUI;AddEvent(""Shuffle"",() => {ChangePower(buffContent.GetBuff(""buff_cycle"").buffConfig.Level.ToString());});",,0,0,0,5,Icon/buff/循环,正面,4
+vitality,"SetStatus(""Self"");var buffContent=Self.buffBarUI;AddEvent(""Hurt"",() => {ChangeDefence(buffContent.GetBuff(""buff_vitality"").buffConfig.Level.ToString());});",,1,0,0,999,Icon/buff/吸收,正面,2
+truth,"var buffContent=Self.buffBarUI;
+AddEvent(""EndRound"",() => {
+if (Self.CurHp>12)
+{
+ChangeHp(""-12"");
+}
+});AddEvent(""Action"",() => {ChangeHp((int.Parse(buffContent.GetBuff(""buff_truth"").buffConfig.Level.ToString())*4).ToString());});",,0,0,0,3,Icon/buff/鬼化,正面,4
+fire,"var buffContent = Self.buffBarUI; AddEvent(""Action"", () =>
+        {
+            SetStatus(""Target"");
+            AddBuff(""buff_burn"", buffContent.GetBuff(""buff_fire"").buffConfig.Level.ToString(), buffContent.GetBuff(""buff_fire"").buffConfig.Level.ToString());
+        });",,0,0,0,1,Icon/buff/炎刃,正面,4
+erupt,"var buffContent=Self.buffBarUI;AddEvent(""buff_eruptOnLevelChange"",() => {ChangeDynamicVar(""DefaultDamege"",buffContent.GetBuff(""buff_erupt"").buffConfig.Level.ToString());});
+        AddEvent(""AttackDone"",() =>{RemoveBuff(""buff_erupt"");});",,0,0,0,9999,Icon/buff/爆发,正面,1
+sideEffect,"var buffContent=Self.buffBarUI;AddEvent(""ICreateCardItem"",() => {
+        if (!Vars.ContainsKey(""ThisCount""))
+        {
+            Vars[""ThisCount""] = ""0"";
+        }
+        else
+        {
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+        }
+        if (int.Parse(Vars[""ThisCount""]) %2==0)
+        {
+            SetStatus(""AllRandomEnemy1"");
+            Damage((int.Parse(buffContent.GetBuff(""buff_sideEffect"").buffConfig.Level.ToString())*10).ToString());
+        }
+        });",,1,1,0,999,Icon/buff/污染,正面,3
+stretch,"var buffContent=Self.buffBarUI;AddEvent(""buff_stretchOnLevelChange"",() => {ChangeDynamicVar(""DefaultDamege"",buffContent.GetBuff(""buff_stretch"").buffConfig.Level.ToString());});        ",,0,0,0,999,Icon/buff/锋锐,正面,2
+disease,"	var buffContent=Self.buffBarUI;AddEvent(""StartRound"",() => {AddBuff(""buff_toxin"",""10"",(int.Parse(buffContent.GetBuff(""buff_disease"").buffConfig.Level.ToString())*3).ToString());});",,1,0,0,999,Icon/buff/疫病,负面,3
+weak,"var buffContent=Self.buffBarUI;AddEvent(""buff_weakOnLevelChange"",() => {ChangeDynamicVar(""DefaultDamege"",(int.Parse(buffContent.GetBuff(""buff_weak"").buffConfig.Level.ToString())*-1).ToString());});",,0,0,0,9999,Icon/buff/无力,负面,2
+tenacity,"var buffContent=Self.buffBarUI;AddEvent(""buff_tenacityOnLevelChange"",() => {ChangeDynamicVarPercent(""DefendPercent"",(int.Parse(buffContent.GetBuff(""buff_tenacity"").buffConfig.Level.ToString())*10).ToString());});",,0,0,0,999,Icon/buff/坚盾,正面,2
+courageous,"var buffContent=Self.buffBarUI;AddEvent(""Action"",() => {ChangeDefence(buffContent.GetBuff(""buff_courageous"").buffConfig.Level.ToString());});",,1,0,0,9999,Icon/buff/行垒,正面,3
+resilient,"var buffContent=Self.buffBarUI;
+        SetStatus(""Self"");
+        AddEvent(""buff_resilientOnLevelChange"",() => {ChangeDynamicVar(""AttackedDefaultDamage"",(int.Parse(buffContent.GetBuff(""buff_resilient"").buffConfig.Level.ToString())*-1).ToString());});",,0,0,0,9999,Icon/buff/强韧,正面,2
+counterattack,"var buffContent=Self.buffBarUI;
+        AddEvent(""Hitted"",
+        () => {
+            if (Self==null)
+            {
+                return;
+            }
+            
+            Self.DamageFilter[""buff_counterattack""]=false;
+        SetStatus(""AllRandomTarget1""); Damage((buffContent.GetBuff(""buff_counterattack"").buffConfig.Level+1).ToString());
+        });",,0,0,0,9999,Icon/buff/反击,正面,2
+sublimation,"var buffContent=Self.buffBarUI;AddEvent(""EndRound"",() => {AddBuff(""buff_evergreen"",""3"",(buffContent.GetBuff(""buff_sublimation"").buffConfig.Level*3).ToString());
+            AddBuff(""buff_extraordinary"",""3"",(buffContent.GetBuff(""buff_sublimation"").buffConfig.Level*10).ToString());});",,0,0,0,999,Icon/buff/升华,正面,3
+extreme,"var buffContent=Self.buffBarUI;AddEvent(""buff_extremeOnLevelChange"",() => {ChangeDynamicVarPercent(""PercentDamage"",(int.Parse(buffContent.GetBuff(""buff_extreme"").buffConfig.Level.ToString())*10).ToString());});",,0,0,0,9999,Icon/buff/极致,正面,2
+impregnable,"var buffContent=Self.buffBarUI;AddEvent(""buff_impregnableOnLevelChange"",() => {ChangeDynamicVarPercent(""AttackedPercentDamage"",(int.Parse(buffContent.GetBuff(""buff_impregnable"").buffConfig.Level.ToString())*-10).ToString());});",,0,0,0,8,Icon/buff/坚毅,正面,3
+eternal,"SetStatus(""Self"");
+        AddEvent(""buff_eternalOnLevelChange"",()=>
+        {
+            ChangeDynamicVarPercent(""MaxChangeHp"", ""-50"");
+            AddBuff(""buff_limitdamage"", INF, ""1"");
+        });",,0,0,0,1,Icon/buff/庇护,正面,5
+adaptiveArmor,"AddEvent(""StartRound"", () => { Vars[""ThisCount""] = ""0""; });
+        AddEvent(""Hurt"", () =>
+        {
+            if (!Vars.ContainsKey(""ThisCount""))
+            {
+                Vars[""ThisCount""] = ""0"";
+            }
+            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+            for (int i = 0; i < 2; i++)
+            {
+                ChangeDefence(Vars[""ThisCount""]);
+            }
+        });",,0,0,0,999,Icon/buff/树肤,正面,4
+evolution,"AddEvent(""buff_evolutionOnLevelChange"",() => {Vars[""ThisCount""]=""0"";});
+        AddEvent(""StartRound"",() => {Vars[""ThisCount""]=""0"";});
+        AddEvent(""Hurt"",() => {
+            if (Vars[""ThisCount""]==""0"")
+            {
+                Vars[""ThisCount""]=""1"";SetStatus(""Self"");
+                ChangeDefence(""6"");AddBuff(""buff_extraordinary"",""2"",""10"");
+                
+            }
+          });",,0,0,0,1,Icon/buff/进化,正面,2
+bloodriver,"AddEvent(""Action"",()=>{int a=CheckDice.Roll().Value;
+            if (a>=75)
+            {
+                SetStatus(""Self"");
+                AddBuff(""buff_blooding"",INF,""2"");
+            }
+            else
+            {
+                SetStatus(""AllTarget"");
+                AddBuff(""buff_blooding"",INF,""4"");
+            }
+        });",,1,0,0,1,Icon/buff/血河,正面,3
+extraordinary,"var buffContent=Self.buffBarUI;AddEvent(""buff_extraordinaryOnLevelChange"",() => {
+            ChangeDynamicVarPercent(""PercentDamage"",buffContent.GetBuff(""buff_extraordinary"").buffConfig.Level.ToString());});",,0,0,0,99999,Icon/buff/超凡,正面,1
+limitdamage,"var buffContent=Self.buffBarUI;
+Self.buffBarUI.GetBuff(""buff_limitdamage"").buffConfig.level=
+           (int)(Self.MaxHp * Self.dynamicVariables[""MaxChangeHp""] - Self.dynamicVariables[""thisHP""]) +1;
+        AddEvent(""Hurt"",() => {
+           
+           Self.buffBarUI.GetBuff(""buff_limitdamage"").buffConfig.level=
+           (int)(Self.MaxHp * Self.dynamicVariables[""MaxChangeHp""] - Self.dynamicVariables[""thisHP""]) +1;});   ",,0,0,0,99999,Icon/buff/限伤,指示物,0
+bornToDie,"var buffContent=Self.buffBarUI;
+        AddEvent(""Hitted"",() => {
+        if (!Vars.ContainsKey(""ThisCount""))
+        {
+            Vars[""ThisCount""] = ""0"";
+        }
+        else
+        {
+            Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""])+1).ToString();
+            if (int.Parse(Vars[""ThisCount""]) %3== 0)
+            {
+SetStatus(""Source"");
+               ThrowCard(""1"",""1""); 
+            }
+        }
+        });",,0,0,0,1,Icon/buff/慌乱,正面,5
+daydreamer," List<Dictionary<string,string>>cards=GetcardsByRarity(""2"",""5"");
+        cards=cards.Where(x => x[""Type""]!=(""诅咒"")).ToList();
+        AddEvent(""Hurt"",()=>
+        {
+            AddCard(cards[DefaultDice.WithRange(0, cards.Count - 1).Roll().Value][""Id""]);
+            DrawCount(""1"");
+        });",,0,0,0,10,Icon/buff/空想,正面,3
+fate,"AddEvent(""OnDiceCheck"", () => {SetStatus(""AllTarget""); Damage(""2""); });",,0,0,0,100,Icon/buff/天罚,正面,3
+disqualification,"var buffContent=Self.buffBarUI;AddEvent(""buff_disqualificationOnLevelChange"",() => {ChangeDynamicVarPercent(""PercentDamage"",(int.Parse(buffContent.GetBuff(""buff_disqualification"").buffConfig.Level.ToString())*-10).ToString());});",,1,0,0,6,Icon/buff/失格,负面,3
+bloodsea,"AddEvent(""Action"",  () => {SetStatus(""Self"");AddBuff(""buff_blooding"", INF, ""3"");});",,0,0,0,1,Icon/buff/血海,负面,4
+lifelink,"void AverageHp() {   SetStatus(""All"");   int total = 0; int minMaxHp = 0;   int count = 0;   ForAllStatus(status =>    {     if (status.buffBarUI.GetBuff(""buff_lifelink"") == null) return; if (count == 0) minMaxHp = status.MaxHp; else minMaxHp = minMaxHp > status.MaxHp ? status.MaxHp : minMaxHp;     total += status.CurHp;     count += 1;   });   if (count == 0) return;   int even = total / count; even = even > minMaxHp ? minMaxHp : even;   Object = Object.Where(x => x.buffBarUI.GetBuff(""buff_lifelink"") != null).ToList();   SetHp(even.ToString()); } SetStatus(""Self""); AverageHp();AddEvent(""Hurt"", () => AverageHp()); AddEvent(""Heal"", () => AverageHp());",,0,0,0,1,Icon/buff/同心,正面,4
+synergies,"Vars[""CorCount""]=""0"";SetStatus(""AllFriends"");int count = 0;foreach (var status in Object){var buff = status.buffBarUI.GetBuff(""buff_synergies""); if (buff != null) count ++;}foreach (var status in Object){var buff = status.buffBarUI.GetBuff(""buff_synergies""); if (buff != null) buff.buffConfig.dataConfig.Vars[""CorCount""]=count.ToString(); buff.buffConfig.dataConfig.Vars[""DesVal1""] = count.ToString();}","SetStatus(""AllFriendsExSelf"");int count = 0;foreach (var status in Object){var buff = status.buffBarUI.GetBuff(""buff_synergies""); if (buff != null) count ++;}foreach (var status in Object){var buff = status.buffBarUI.GetBuff(""buff_synergies""); if (buff != null) buff.buffConfig.dataConfig.Vars[""CorCount""]=count.ToString(); buff.buffConfig.dataConfig.Vars[""DesVal1""] = count.ToString();}",0,0,0,1,Icon/buff/连携,正面,3
+WhiteSolitaire,"var buffContent=Self.buffBarUI;AddEvent(""buff_WhiteSolitaireOnLevelChange"",
+        () => {ChangeDynamicVar(""AttackedDefaultDamage"",(int.Parse(buffContent.GetBuff(""buff_WhiteSolitaire"").buffConfig.Level.ToString())*-1).ToString());});",,0,0,0,999,Icon/buff/白纸牌,正面,2
