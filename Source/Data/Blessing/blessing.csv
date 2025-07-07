@@ -28,24 +28,66 @@ id,权重,本身脚本;,战斗脚本,图片名称,类型,选项 1,稀有度
 *29,-1,PlayerInfo.MaxHp-=5;,,Icon/Blessing/风暴,负面,技能,1
 *30,0,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_blooding"",INF,""1"");}));",Icon/Blessing/倒吊人,负面,技能,1
 *31,-5,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_disease"",INF,""1"");}));",Icon/Blessing/死神,负面,技能,1
-*101,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_erupt"", INF, ""6"");}));",Icon/Blessing/主教,正面,技能,5
-*102,2,,"AddEvent(""Init"",(() => {DrawCount(""1"");}));",Icon/Blessing/主教,正面,技能,5
-*103,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");ChangePower(""1"");}));",Icon/Blessing/主教,正面,技能,5
-*104,2,,"AddEvent(""Init"",(() => {SetStatus(""Self"");ChangeDefence(""6"");}));",Icon/Blessing/主教,正面,技能,5
-*105,3,,"AddEvent(""Init"",() => {SetStatus(""Self"");AddBuff(""buff_stretch"",INF,""3"");});",Icon/Blessing/主教,正面,技能,5
-*106,3,,"AddEvent(""Init"",()=>{PlayerInfo.Money+=30;});",Icon/Blessing/主教,正面,技能,5
-*107,3,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_wisdom"",INF,""1"");}));",Icon/Blessing/主教,正面,技能,5
-*108,3,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_impregnable"",INF,""2"");}));",Icon/Blessing/主教,正面,技能,5
-*109,4,,"AddEvent(""Action"",() => {if (CheckDice.Roll().Value<80)
+*101,2,,"if (PlayerInfo.Strength<10)
+        {
+            return;
+        }AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_erupt"", INF, ""6"");}));",Icon/Blessing/主教,正面,技能,5
+*102,2,,"if (PlayerInfo.Lucky<10)
+        {
+            return;
+        }AddEvent(""Init"",(() => {DrawCount(""1"");}));",Icon/Blessing/主教,正面,技能,5
+*103,2,,"if (PlayerInfo.Wisdom<10)
+        {
+            return;
+        }AddEvent(""Init"",(() => {SetStatus(""Self"");ChangePower(""1"");}));",Icon/Blessing/主教,正面,技能,5
+*104,2,,"if (PlayerInfo.Perceive<10)
+        {
+            return;
+        }AddEvent(""Init"",(() => {SetStatus(""Self"");ChangeDefence(""6"");}));",Icon/Blessing/主教,正面,技能,5
+*105,3,,"if (PlayerInfo.Strength<20)
+        {
+            return;
+        }AddEvent(""Init"",() => {SetStatus(""Self"");AddBuff(""buff_stretch"",INF,""3"");});",Icon/Blessing/主教,正面,技能,5
+*106,3,,"if (PlayerInfo.Lucky<20)
+        {
+            return;
+        }AddEvent(""Init"",()=>{PlayerInfo.Money+=30;});",Icon/Blessing/主教,正面,技能,5
+*107,3,,"if (PlayerInfo.Wisdom<20)
+        {
+            return;
+        }AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_wisdom"",INF,""1"");}));",Icon/Blessing/主教,正面,技能,5
+*108,3,,"if (PlayerInfo.Perceive<20)
+        {
+            return;
+        }AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_impregnable"",INF,""2"");}));",Icon/Blessing/主教,正面,技能,5
+*109,4,,"if (PlayerInfo.Strength<30)
+        {
+            return;
+        }AddEvent(""Action"",() => {if (CheckDice.Roll().Value<80)
 {
 SetStatus(""AllRandomEnemy1"");Damage(""10"");
 } });",Icon/Blessing/主教,正面,技能,5
-*110,4,,"AddEvent(""Init"",() => PlayerInfo.Reward+=1);",Icon/Blessing/主教,正面,技能,5
-*111,4,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_truth"",INF,""1"");}));",Icon/Blessing/主教,正面,技能,5
-*112,4,,"AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_vientiane"",INF,""1"");}));",Icon/Blessing/主教,正面,技能,5
-*113,5,,"SetStatus(""Self"");AddEvent(""Init"",() => {
+*110,4,,"if (PlayerInfo.Lucky<30)
+        {
+            return;
+        }AddEvent(""Init"",() => PlayerInfo.Reward+=1);",Icon/Blessing/主教,正面,技能,5
+*111,4,,"if (PlayerInfo.Wisdom<30)
+        {
+            return;
+        }AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_truth"",INF,""1"");}));",Icon/Blessing/主教,正面,技能,5
+*112,4,,"if (PlayerInfo.Perceive<30)
+        {
+            return;
+        }AddEvent(""Init"",(() => {SetStatus(""Self"");AddBuff(""buff_vientiane"",INF,""1"");}));",Icon/Blessing/主教,正面,技能,5
+*113,5,,"if (PlayerInfo.Strength<40)
+        {
+            return;
+        }SetStatus(""Self"");AddEvent(""Init"",() => {
             AddBuff(""buff_extraordinary"",INF,""100"");});",Icon/Blessing/主教,正面,技能,5
-*114,5,,"AddEvent(""OnDiceValue"", () =>
+*114,5,,"if (PlayerInfo.Lucky<40)
+        {
+            return;
+        }AddEvent(""OnDiceValue"", () =>
         {
                 ValueDice.OnRoll += result => {
             result.CopyTo(new(result.Value+10,result.Bonus));
@@ -58,9 +100,15 @@ AddEvent(""OnDiceCheck"", () =>
  result.CopyTo(new( (result.Value-10),result.Bonus));
             };
         });",Icon/Blessing/主教,正面,技能,5
-*115,5,,"AddEvent(""Init"",() => {SetStatus(""Self"");AddBuff(""buff_sideEffect"",INF,""4"");AddBuff(""buff_cycle"",INF,""2"");
+*115,5,,"if (PlayerInfo.Wisdom<40)
+        {
+            return;
+        }AddEvent(""Init"",() => {SetStatus(""Self"");AddBuff(""buff_sideEffect"",INF,""4"");AddBuff(""buff_cycle"",INF,""2"");
         SetStatus(""AllEnemy"");AddBuff(""buff_charmed"",INF,""1"");});",Icon/Blessing/主教,正面,技能,5
-*116,5,,"AddEvent(""StartRound"",() => {SetStatus(""Self"");foreach (var item in Object)
+*116,5,,"if (PlayerInfo.Perceive<40)
+        {
+            return;
+        }AddEvent(""StartRound"",() => {SetStatus(""Self"");foreach (var item in Object)
         {
             if (GetStatus.ContainsKey(item))
             {

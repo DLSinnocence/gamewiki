@@ -28,22 +28,22 @@ Id,Note,Name,Description,Tips,Name_en,Description_en,Tips_en
 *29,通用,风暴,最大生命值-5。,,Storm,Maximum Health -5.,
 *30,负面,倒吊人,战斗开始时获得1层流血。,,Hanged Man,Gain 1 {buff_blooding} at the start of the battle.,
 *31,负面,死神,战斗开始时获得1层疫病。,,Death,Gain 1 {buff_disease} at the start of the battle.,
-*101,魔力,超凡之始-力,战斗开始时第一次伤害+6。,魔力开始在你指尖涌动。,Beginning of the Extraordinary - Strength,First damage dealt at the start of the battle is increased by 6.,Magic begins to flow from your fingertips.
-*102,幸运,超凡之始-运,战斗开始时额外抽1张牌。,你是人们口中的“幸运儿”。,Beginning of the Extraordinary - Luck,Draw an additional card at the start of the battle.,You are known as ‘the lucky one.’
-*103,精神,超凡之始-智,战斗开始时额外获得1点行动点。,你的学识贯通古今。。,Beginning of the Extraordinary - Wisdom,Gain 1 additional power at the start of the battle.,Your knowledge spans the ages.
-*104,感知,超凡之始-感,战斗开始时获得6点防御。,你的感官异常敏锐。,Beginning of the Extraordinary - Sensitivity,Gain 6 Defence at the start of the battle.,Your senses are exceptionally sharp.
-*105,魔力,超魔涌动,战斗开始时获得3层锋锐。,你的魔力水平异常之高，经常将照明施成火球术的效果。,Super Magic Surge,Gain 3 {buff_stretch} at the start of the battle.,Your magic is so powerful that you can often cast fireballs for illumination.
-*106,幸运,吉星高照,战斗开始时额外获得30点金币。,你总是创造着奇迹，幸运女神格外垂青。,Lucky Star Blessing,Gain 30 gold coins at the start of combat.,"You are constantly performing miracles, and Lady Luck smiles upon you."
-*107,精神,万法通明,战斗开始时获得1层启示。,无论多么晦涩的魔力回路，你都可以参透。,Master of All magics,Gain 1 layer of {buff_wisdom} at the start of combat.,"No matter how obscure the magic circuit, you can understand it."
-*108,感知,我见众生,战斗开始时获得2层坚韧。,你已窥见众生百相，也坚定了心中的信念。,Witness to all beings,Gain 2 layers of {buff_tenacity} at the start of combat.,You have seen the many faces of all beings and strengthened your convictions.
-*109,魔力,撼天动地,你每次出牌有80%概率额外造成10点伤害。,你魔力的威能足以改天换地。,Shake the earth,You have a 60% chance to deal 10 additional damage each time you play a card.,The power of your magic is sufficient to reshape the heavens and earth.
-*110,幸运,天降机缘,你的战斗奖励+1。,奇迹总是主动降临到你身边。,Opportunity from Heaven,Your combat reward is increased by 1.,Miracles always come to you of their own accord.
-*111,精神,未来之主,战斗开始时你获得1层鬼化。,时间线对于凡人过于艰涩，而你早已穷尽一切可能。,Master of the Future,You gain 1 layer of {buff_truth} at the start of combat.,"The timeline is too complex for mortals, but you have already explored every possibility."
-*112,感知,眸中万象,战斗开始你获得1层源蜕。,你洞悉世间万物，也窥视到一丝不属于“此处”的真相。,Insight into everything,You gain 1 layer of {buff_Vientiane} at the start of combat.,You understand all things in the world and have glimpsed a fragment of truth that does not belong to ‘this place.’
-*113,魔力,以力证道,战斗开始时获得100层超凡。,魔力开始自发涌动，铭刻着独属于你的回路。,Proving the Way with Power,Gain 100 layers of {buff_extraordinary} at the start of combat.,"Magic begins to flow spontaneously, etching circuits unique to you."
-*114,幸运,天命至高,你的所有检定骰降低10检定难度，所有数值骰额外加10检定。,并非天命加身，你即是天命。,The Supreme Destiny,"All your check dice are reduced by 10 check difficulty, and all value dice are increased by 10 check.",It is not fate that has chosen you; you are fate itself.
-*115,精神,虚之造物主,"战斗开始时自身获得3层循环,5层污染。给与所有敌人一层时停。",你早已跳脱出时间，凡间的威胁再难伤你分毫。,Creator of Nothingness,"At the start of battle, you gain 3 layers of {buff_cycle} and 5 layers of {buff_sideEffect}. All enemies are given 1 layer of {buff_charmed}.",You have long transcended time; the threats of the mortal world can no longer harm you in the slightest.
-*116,感知,第一因,"第1回合记录你的状态,之后每回合回溯到对应状态并获得1层坚毅。",万般因果加身，你成为世间第一因。,First Cause,"Record your status in the first round, then backtrack to the corresponding status each round and gain 1 layer of {buff_impregnable}.","Bound by countless causes and effects, you have become the first cause of the world."
+*101,魔力,超凡之始-力,"魔力大于等于10时,战斗开始时第一次伤害+6。",魔力开始在你指尖涌动。,Beginning of the Extraordinary - Strength,First damage dealt at the start of the battle is increased by 6.,Magic begins to flow from your fingertips.
+*102,幸运,超凡之始-运,"幸运大于等于10时,战斗开始时额外抽1张牌。",你是人们口中的“幸运儿”。,Beginning of the Extraordinary - Luck,Draw an additional card at the start of the battle.,You are known as ‘the lucky one.’
+*103,精神,超凡之始-智,"精神大于等于10时,战斗开始时额外获得1点行动点。",你的学识贯通古今。。,Beginning of the Extraordinary - Wisdom,Gain 1 additional power at the start of the battle.,Your knowledge spans the ages.
+*104,感知,超凡之始-感,"感知大于等于10时,战斗开始时获得6点防御。",你的感官异常敏锐。,Beginning of the Extraordinary - Sensitivity,Gain 6 Defence at the start of the battle.,Your senses are exceptionally sharp.
+*105,魔力,超魔涌动,"魔力大于等于20时,战斗开始时获得3层锋锐。",你的魔力水平异常之高，经常将照明施成火球术的效果。,Super Magic Surge,Gain 3 {buff_stretch} at the start of the battle.,Your magic is so powerful that you can often cast fireballs for illumination.
+*106,幸运,吉星高照,"幸运大于等于20时,战斗开始时额外获得30点金币。",你总是创造着奇迹，幸运女神格外垂青。,Lucky Star Blessing,Gain 30 gold coins at the start of combat.,"You are constantly performing miracles, and Lady Luck smiles upon you."
+*107,精神,万法通明,"精神大于等于20时,战斗开始时获得1层启示。",无论多么晦涩的魔力回路，你都可以参透。,Master of All magics,Gain 1 layer of {buff_wisdom} at the start of combat.,"No matter how obscure the magic circuit, you can understand it."
+*108,感知,我见众生,"感知大于等于20时,战斗开始时获得2层坚韧。",你已窥见众生百相，也坚定了心中的信念。,Witness to all beings,Gain 2 layers of {buff_tenacity} at the start of combat.,You have seen the many faces of all beings and strengthened your convictions.
+*109,魔力,撼天动地,"魔力大于等于30时,你每次出牌有80%概率额外造成10点伤害。",你魔力的威能足以改天换地。,Shake the earth,You have a 60% chance to deal 10 additional damage each time you play a card.,The power of your magic is sufficient to reshape the heavens and earth.
+*110,幸运,天降机缘,"幸运大于等于30时,你的战斗奖励+1。",奇迹总是主动降临到你身边。,Opportunity from Heaven,Your combat reward is increased by 1.,Miracles always come to you of their own accord.
+*111,精神,未来之主,"精神大于等于30时,战斗开始时你获得1层鬼化。",时间线对于凡人过于艰涩，而你早已穷尽一切可能。,Master of the Future,You gain 1 layer of {buff_truth} at the start of combat.,"The timeline is too complex for mortals, but you have already explored every possibility."
+*112,感知,眸中万象,"感知大于等于30时,战斗开始你获得1层源蜕。",你洞悉世间万物，也窥视到一丝不属于“此处”的真相。,Insight into everything,You gain 1 layer of {buff_Vientiane} at the start of combat.,You understand all things in the world and have glimpsed a fragment of truth that does not belong to ‘this place.’
+*113,魔力,以力证道,"魔力大于等于40时,战斗开始时获得100层超凡。",魔力开始自发涌动，铭刻着独属于你的回路。,Proving the Way with Power,Gain 100 layers of {buff_extraordinary} at the start of combat.,"Magic begins to flow spontaneously, etching circuits unique to you."
+*114,幸运,天命至高,"幸运大于等于40时,你的所有检定骰降低10检定难度，所有数值骰额外加10检定。",并非天命加身，你即是天命。,The Supreme Destiny,"All your check dice are reduced by 10 check difficulty, and all value dice are increased by 10 check.",It is not fate that has chosen you; you are fate itself.
+*115,精神,虚之造物主,"精神大于等于40时,战斗开始时自身获得3层循环,5层污染。给与所有敌人一层时停。",你早已跳脱出时间，凡间的威胁再难伤你分毫。,Creator of Nothingness,"At the start of battle, you gain 3 layers of {buff_cycle} and 5 layers of {buff_sideEffect}. All enemies are given 1 layer of {buff_charmed}.",You have long transcended time; the threats of the mortal world can no longer harm you in the slightest.
+*116,感知,第一因,"感知大于等于40时,第1回合记录你的状态,之后每回合回溯到对应状态并获得1层坚毅。",万般因果加身，你成为世间第一因。,First Cause,"Record your status in the first round, then backtrack to the corresponding status each round and gain 1 layer of {buff_impregnable}.","Bound by countless causes and effects, you have become the first cause of the world."
 *118,生存,原初魔女-理性化盾,"战斗开始时获得二层坚毅。
 原初之理:1次战斗冷却，从牌堆中检索一张牌。",理性，是这里唯一应当珍视的东西。,Primordial Witch - Rationalisation Shield,"Gain 2 layers of {buff_impregnable} at the start of combat.
 Primordial Truth: 1 combat cooldown, retrieve a card from the deck.",Reason is the only thing worth cherishing here.

@@ -1,65 +1,57 @@
-Id,InitScript,UseScript,Icon,Tag,Effects
-Id,卡牌初始化脚本（使用前执行）,卡牌使用后执行,行动图标,唯1特性,特效
-attack,"Vars[""atk""]=atk();Vars[""CD""]=""0"";Vars[""DesVal1""]=Vars[""atk""];Vars[""priority""]=""1"";","SetStatus(""Target"");Damage(atk());",Icon/Enemy/EnemyAction/攻击,无,
-defence,"Vars[""CD""]=""0"";Vars[""DesVal1""]=def();Vars[""priority""]=""1"";","SetStatus(""Self"");ChangeDefence(def());",Icon/Enemy/EnemyAction/防御,无,
-QuadrupleHits,"Vars[""DesVal1""]=(int.Parse(atk())/3).ToString();Vars[""priority""]=""2"";Vars[""CD""]=""2"";","SetStatus(""Target"");for (int i=0;i<4;i++) Damage((int.Parse(atk())/3).ToString());",Icon/Enemy/EnemyAction/多段攻击,无,
-rejuvenation,"Vars[""DesVal1""]=(int.Parse(atk())*4/5).ToString();Vars[""priority""]=""1"";Vars[""CD""]=""1"";","SetStatus(""Self"");ChangeHp(Vars[""DesVal1""]);",Icon/Enemy/EnemyAction/治疗,无,
-charmed,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Target"");AddBuff(""buff_charmed"",""1"",""1"");",Icon/Enemy/EnemyAction/给予异常,无,
-OverrunWorkouts,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""atk""]=atk();Vars[""DesVal1""]=(int.Parse(Vars[""atk""])/4).ToString();","SetStatus(""Self"");AddBuff(""buff_stretch"",""10"",(int.Parse(atk())/4).ToString());",Icon/Enemy/EnemyAction/自我强化,无,
-NerveReflexes,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Self"");AddBuff(""buff_sacrifice"",""10"",""1"");",Icon/Enemy/EnemyAction/自我强化,无,
-disease,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Target"");AddBuff(""buff_disease"",""10"",""1"");",Icon/Enemy/EnemyAction/给予异常,无,
-fearless,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Self"");AddBuff(""buff_vitality"",""10"",""4"");",Icon/Enemy/EnemyAction/自我强化,无,
-Witness,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Self"");AddBuff(""buff_impregnable"",""10"",""2"");",Icon/Enemy/EnemyAction/自我强化,无,
-Toxin1,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";","SetStatus(""Target"");AddBuff(""buff_toxin"",""10"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,
-Toxin2,"Vars[""CD""]=""1"";Vars[""priority""]=""2"";","SetStatus(""Target"");AddBuff(""buff_toxin"",""10"",""4"");",Icon/Enemy/EnemyAction/给予异常,无,
-Toxin3,"Vars[""CD""]=""1"";Vars[""priority""]=""1"";","SetStatus(""Target"");AddBuff(""buff_toxin"",""10"",""5"");",Icon/Enemy/EnemyAction/给予异常,无,
-Toxin4,"Vars[""CD""]=""2"";Vars[""priority""]=""1"";","SetStatus(""Target"");AddBuff(""buff_toxin"",""10"",""6"");",Icon/Enemy/EnemyAction/给予异常,无,
-foraging,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";Vars[""DesVal1""]=(int.Parse(atk())*4/5).ToString();","SetStatus(""Target"");Damage((int.Parse(atk())*4/5).ToString());",Icon/Enemy/EnemyAction/多段攻击,无,
-Licking,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Target"");AddBuff(""buff_rotten"",""2"",""2"");",Icon/Enemy/EnemyAction/给予异常,无,
-NeverDead,"Vars[""CD""]=""2"";Vars[""priority""]=""1"";","SetStatus(""Self"");AddBuff(""buff_evergreen"",""5"",""5"");",Icon/Enemy/EnemyAction/治疗,无,
-OrdinaryHit,"Vars[""CD""]=""1"";Vars[""priority""]=""2"";Vars[""atk""]=atk();Vars[""DesVal1""]=Vars[""atk""];","SetStatus(""Target"");Damage((int.Parse(atk())).ToString());",Icon/Enemy/EnemyAction/多段攻击,无,
-SuperFireBall,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=atk();","SetStatus(""Target"");for (int i=0;i<2;i++) Damage(atk());",Icon/Enemy/EnemyAction/多段攻击,无,
-WeakLight,"Vars[""CD""]=""4"";Vars[""priority""]=""2"";","SetStatus(""Target"");AddBuff(""buff_weak"",""10"",""2"");",Icon/Enemy/EnemyAction/给予异常,无,
-OrdinaryFiveHit,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";Vars[""atk""]=atk();Vars[""DesVal1""]=(int.Parse(Vars[""atk""])*3/10).ToString();","SetStatus(""Target"");for (int i=0;i<5;i++) Damage((int.Parse(Vars[""atk""])*3/10).ToString());",Icon/Enemy/EnemyAction/多段攻击,无,
-Weak,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=(int.Parse(atk())/5).ToString();","SetStatus(""Self"");AddBuff(""buff_weak"",""10"",((int.Parse(atk()))/5).ToString());",Icon/Enemy/EnemyAction/给予异常,无,
-thief,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=""10"";","ChangeMoney(""-10"");",Icon/Enemy/EnemyAction/攻击准备,无,
-Thieves,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=""15"";","ChangeMoney(""-15"");",Icon/Enemy/EnemyAction/攻击准备,无,
-Charge1,"Vars[""CD""]=""2"";Vars[""priority""]=""10"";",,Icon/Enemy/EnemyAction/攻击准备,无,
-Charge2,"Vars[""CD""]=""3"";Vars[""priority""]=""11"";",,Icon/Enemy/EnemyAction/攻击准备,无,
-burn,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";","SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,
-burn1,"Vars[""CD""]=""2"";Vars[""priority""]=""4"";","SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,
-burn2,"Vars[""CD""]=""2"";Vars[""priority""]=""3"";","SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""8"");",Icon/Enemy/EnemyAction/给予异常,无,
-specialAttack,"Vars[""CD""]=""2"";Vars[""priority""]=""3"";Vars[""DesVal1""]=atk();Vars[""DesVal2""]=def();","SetStatus(""Target"");Damage(atk());SetStatus(""Self"");ChangeDefence(def());",Icon/Enemy/EnemyAction/多段攻击,无,
-MakeIneffectiveRays1,"Vars[""CD""]=""3"";Vars[""priority""]=""3"";Vars[""DesVal2""]=def();","SetStatus(""Self"");ChangeDefence(def());AddBuff(""buff_impregnable"",INF,""2"");",Icon/Enemy/EnemyAction/自我强化,无,
-PlugCards1,"Vars[""CD""]=""3"";Vars[""priority""]=""4"";","for (int i = 0; i < 3; i++)
+Id,InitScript,TargetScript,UseScript,Icon,Tag,Effects,Sound
+Id,卡牌初始化脚本（使用前执行）,卡牌出现时执行（设定目标）,卡牌使用后执行,行动图标,唯一特性,特效,
+attack,"Vars[""atk""]=atk();Vars[""CD""]=""0"";Vars[""DesVal1""]=Vars[""atk""];Vars[""priority""]=""1"";","SetStatus(""Target"");",Damage(atk());,Icon/Enemy/EnemyAction/攻击,无,,
+defence,"Vars[""CD""]=""0"";Vars[""DesVal1""]=def();Vars[""priority""]=""1"";","SetStatus(""Self"");",ChangeDefence(def());,Icon/Enemy/EnemyAction/防御,无,,
+QuadrupleHits,"Vars[""DesVal1""]=(int.Parse(atk())/3).ToString();Vars[""priority""]=""2"";Vars[""CD""]=""2"";","SetStatus(""Target"");",for (int i=0;i<4;i++) Damage((int.Parse(atk())/3).ToString());,Icon/Enemy/EnemyAction/多段攻击,无,,
+rejuvenation,"Vars[""DesVal1""]=(int.Parse(atk())*4/5).ToString();Vars[""priority""]=""1"";Vars[""CD""]=""1"";","SetStatus(""Self"");","ChangeHp(Vars[""DesVal1""]);",Icon/Enemy/EnemyAction/治疗,无,,
+charmed,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_charmed"",""1"",""1"");",Icon/Enemy/EnemyAction/给予异常,无,,
+OverrunWorkouts,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""atk""]=atk();Vars[""DesVal1""]=(int.Parse(Vars[""atk""])/4).ToString();","SetStatus(""Self"");","AddBuff(""buff_stretch"",""10"",(int.Parse(atk())/4).ToString());",Icon/Enemy/EnemyAction/自我强化,无,,
+NerveReflexes,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Self"");","AddBuff(""buff_sacrifice"",""10"",""1"");",Icon/Enemy/EnemyAction/自我强化,无,,
+disease,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_disease"",""10"",""1"");",Icon/Enemy/EnemyAction/给予异常,无,,
+fearless,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Self"");","AddBuff(""buff_vitality"",""10"",""4"");",Icon/Enemy/EnemyAction/自我强化,无,,
+Witness,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Self"");","AddBuff(""buff_impregnable"",""10"",""2"");",Icon/Enemy/EnemyAction/自我强化,无,,
+Toxin1,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";","SetStatus(""Target"");","AddBuff(""buff_toxin"",""10"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,,
+Toxin2,"Vars[""CD""]=""1"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_toxin"",""10"",""4"");",Icon/Enemy/EnemyAction/给予异常,无,,
+Toxin3,"Vars[""CD""]=""1"";Vars[""priority""]=""1"";","SetStatus(""Target"");","AddBuff(""buff_toxin"",""10"",""5"");",Icon/Enemy/EnemyAction/给予异常,无,,
+Toxin4,"Vars[""CD""]=""2"";Vars[""priority""]=""1"";","SetStatus(""Target"");","AddBuff(""buff_toxin"",""10"",""6"");",Icon/Enemy/EnemyAction/给予异常,无,,
+foraging,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";Vars[""DesVal1""]=(int.Parse(atk())*4/5).ToString();","SetStatus(""Target"");",Damage((int.Parse(atk())*4/5).ToString());,Icon/Enemy/EnemyAction/多段攻击,无,,
+Licking,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_rotten"",""2"",""2"");",Icon/Enemy/EnemyAction/给予异常,无,,
+NeverDead,"Vars[""CD""]=""2"";Vars[""priority""]=""1"";","SetStatus(""Self"");","AddBuff(""buff_evergreen"",""5"",""5"");",Icon/Enemy/EnemyAction/治疗,无,,
+OrdinaryHit,"Vars[""CD""]=""1"";Vars[""priority""]=""2"";Vars[""atk""]=atk();Vars[""DesVal1""]=Vars[""atk""];","SetStatus(""Target"");",Damage((int.Parse(atk())).ToString());,Icon/Enemy/EnemyAction/多段攻击,无,,
+SuperFireBall,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=atk();","SetStatus(""Target"");",for (int i=0;i<2;i++) Damage(atk());,Icon/Enemy/EnemyAction/多段攻击,无,,
+WeakLight,"Vars[""CD""]=""4"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_weak"",""10"",""2"");",Icon/Enemy/EnemyAction/给予异常,无,,
+OrdinaryFiveHit,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";Vars[""atk""]=atk();Vars[""DesVal1""]=(int.Parse(Vars[""atk""])*3/10).ToString();","SetStatus(""Target"");","for (int i=0;i<5;i++) Damage((int.Parse(Vars[""atk""])*3/10).ToString());",Icon/Enemy/EnemyAction/多段攻击,无,,
+Weak,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=(int.Parse(atk())/5).ToString();","SetStatus(""Self"");","AddBuff(""buff_weak"",""10"",((int.Parse(atk()))/5).ToString());",Icon/Enemy/EnemyAction/给予异常,无,,
+thief,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=""10"";","SetStatus(""Target"");","ChangeMoney(""-10"");",Icon/Enemy/EnemyAction/攻击准备,无,,
+Thieves,"Vars[""CD""]=""2"";Vars[""priority""]=""2"";Vars[""DesVal1""]=""15"";","SetStatus(""Target"");","ChangeMoney(""-15"");",Icon/Enemy/EnemyAction/攻击准备,无,,
+Charge1,"Vars[""CD""]=""2"";Vars[""priority""]=""10"";","SetStatus(""Self"");",,Icon/Enemy/EnemyAction/攻击准备,无,,
+Charge2,"Vars[""CD""]=""3"";Vars[""priority""]=""11"";","SetStatus(""Self"");",,Icon/Enemy/EnemyAction/攻击准备,无,,
+burn,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";","SetStatus(""Target"");","SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,,
+burn1,"Vars[""CD""]=""2"";Vars[""priority""]=""4"";","SetStatus(""Target"");","SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,,
+burn2,"Vars[""CD""]=""2"";Vars[""priority""]=""3"";","SetStatus(""Target"");","SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""8"");",Icon/Enemy/EnemyAction/给予异常,无,,
+specialAttack,"Vars[""CD""]=""2"";Vars[""priority""]=""3"";Vars[""DesVal1""]=atk();Vars[""DesVal2""]=def();","SetStatus(""Target"");","SetStatus(""Target"");Damage(atk());SetStatus(""Self"");ChangeDefence(def());",Icon/Enemy/EnemyAction/多段攻击,无,,
+MakeIneffectiveRays1,"Vars[""CD""]=""3"";Vars[""priority""]=""3"";Vars[""DesVal2""]=def();","SetStatus(""Self"");","SetStatus(""Self"");ChangeDefence(def());AddBuff(""buff_impregnable"",INF,""2"");",Icon/Enemy/EnemyAction/自我强化,无,,
+PlugCards1,"Vars[""CD""]=""3"";Vars[""priority""]=""4"";","SetStatus(""Target"");","for (int i = 0; i < 3; i++)
         {
             RandomAddCard(""card_*2"");
-        }",Icon/Enemy/EnemyAction/干扰出牌,无,
-PlugCards2,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","RandomAddCard(""cursecard_2"");
+        }",Icon/Enemy/EnemyAction/干扰出牌,无,,
+PlugCards2,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Target"");","RandomAddCard(""cursecard_2"");
 RandomAddCard(""card_*1"");
-RandomAddCard(""card_*1"");",Icon/Enemy/EnemyAction/干扰出牌,无,
-WhereverYouGo,"Vars[""CD""]=""13"";Vars[""priority""]=""12"";","SetStatus(""Target"");
-        foreach (var item in Object)
-        {
-            Self.dynamicVariables=item.dynamicVariables;
-            item.ResetDamageStatus();
-        }",Icon/Enemy/EnemyAction/干扰出牌,无,
-PlugCards3,"Vars[""CD""]=""3"";Vars[""priority""]=""5"";","for (int i = 0; i < 3; i++)
+RandomAddCard(""card_*1"");",Icon/Enemy/EnemyAction/干扰出牌,无,,
+WhereverYouGo,"Vars[""CD""]=""13"";Vars[""priority""]=""12"";","SetStatus(""Target"");","foreach (var item in Object)
+{
+ Self.dynamicVariables=item.dynamicVariables;
+ item.ResetDamageStatus();
+}",Icon/Enemy/EnemyAction/干扰出牌,无,,
+PlugCards3,"Vars[""CD""]=""3"";Vars[""priority""]=""5"";","SetStatus(""Target"");","for (int i = 0; i < 3; i++)
         {
             RandomAddCard(""card_*2"");
-        }",Icon/Enemy/EnemyAction/干扰出牌,无,
-vulnerabilityLight,"Vars[""CD""]=""2"";Vars[""priority""]=""5"";","SetStatus(""Target"");
-        AddBuff(""buff_vulnerability"",""3"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,
-MakeIneffectiveRays2,"Vars[""CD""]=""0"";Vars[""priority""]=""3"";Vars[""DesVal1""]=def();","SetStatus(""Self"");ChangeDefence(def());AddBuff(""buff_impregnable"",INF,""1"");",Icon/Enemy/EnemyAction/自我强化,无,
-AddWisdom,"Vars[""CD""]=""0"";Vars[""priority""]=""3"";","int a = DefaultDice.Roll().Value/25+1;
-        SetStatus(""Target"");
-        AddCard(""nocard_*""+a);",Icon/Enemy/EnemyAction/干扰出牌,无,
-SpreadWings,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=atk();","SetStatus(""AllTarget"");
-        Damage(atk());
-        AddBuff(""buff_burn"",INF,""1"");",Icon/Enemy/EnemyAction/给予异常,无,
-HighFly,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=def();","SetStatus(""Self"");
-        ChangeDefence(def());
-        SetStatus(""AllTarget"");
+        }",Icon/Enemy/EnemyAction/干扰出牌,无,,
+vulnerabilityLight,"Vars[""CD""]=""2"";Vars[""priority""]=""5"";","SetStatus(""Target"");","AddBuff(""buff_vulnerability"",""3"",""3"");",Icon/Enemy/EnemyAction/给予异常,无,,
+MakeIneffectiveRays2,"Vars[""CD""]=""0"";Vars[""priority""]=""3"";Vars[""DesVal1""]=def();","SetStatus(""Self"");","ChangeDefence(def());AddBuff(""buff_impregnable"",INF,""1"");",Icon/Enemy/EnemyAction/自我强化,无,,
+AddWisdom,"Vars[""CD""]=""0"";Vars[""priority""]=""3"";","SetStatus(""Target"");","int a = DefaultDice.Roll().Value/25+1;AddCard(""nocard_*""+a);",Icon/Enemy/EnemyAction/干扰出牌,无,,
+SpreadWings,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=atk();","SetStatus(""AllTarget"");","Damage(atk()); AddBuff(""buff_burn"",INF,""1"");",Icon/Enemy/EnemyAction/给予异常,无,,
+HighFly,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=def();","SetStatus(""AllTarget"");","Self.Defend += def();
         foreach (var status in Object)
         {
             if (status.buffBarUI != null)
@@ -70,8 +62,8 @@ HighFly,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=def();","
                     Vars[""CorDef""]=(int.Parse(Vars[""CorDef""]) + (buff.buffConfig.Level)).ToString();
                 } 
            }
-        }",Icon/Enemy/EnemyAction/给予异常,无,
-Come,"Vars[""CD""]=""2"";Vars[""priority""]=""4"";Vars[""ThisCount""]=""0"";","Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""]) + 1).ToString();
+        }",Icon/Enemy/EnemyAction/给予异常,无,,
+Come,"Vars[""CD""]=""2"";Vars[""priority""]=""4"";Vars[""ThisCount""]=""0"";","SetStatus(""Self"");","Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""]) + 1).ToString();
         if (int.Parse(Vars[""ThisCount""]) <= 2)
         {
             AddEnemy(""enemy_10023"");
@@ -79,37 +71,29 @@ Come,"Vars[""CD""]=""2"";Vars[""priority""]=""4"";Vars[""ThisCount""]=""0"";","V
         else
         {
             ChangeHp((Self.MaxHp/10*-1).ToString());
-        }",Icon/Enemy/EnemyAction/给予异常,无,
+        }",Icon/Enemy/EnemyAction/给予异常,无,,
 Dragon'sMajesty,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";Vars[""ThisCount""]=""0"";int k = int.Parse(PlayerInfo.GetDiff()) > 3 ? 3 : 2;
         Vars[""Desval1""]=k.ToString(); if (int.Parse(Vars[""ThisCount""]) >= 2)
         {
             Vars[""CD""] = ""9999"";
-        }","SetStatus(""AllTarget"");
-        int k = int.Parse(PlayerInfo.GetDiff()) > 3 ? 3 : 2;
+        }","SetStatus(""AllTarget"");","        int k = int.Parse(PlayerInfo.GetDiff()) > 3 ? 3 : 2;
         for (int i = 0; i < k; i++)
         {
             AddCard(""cursecard_3"");
         }
-        Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();",Icon/Enemy/EnemyAction/给予异常,无,
-FallenDragon,"Vars[""CD""]=""3"";Vars[""priority""]=""4"";","SetStatus(""AllFriend"");
-        foreach (var item in Object)
+        Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();",Icon/Enemy/EnemyAction/给予异常,无,,
+FallenDragon,"Vars[""CD""]=""3"";Vars[""priority""]=""4"";","SetStatus(""AllFriend"");","foreach (var item in Object)
         {
             item.ToughOrigin += 1;
         }
         SetStatus(""Self"");
-        AddBuff(""buff_extraordinary"",INF,""20"");",Icon/Enemy/EnemyAction/自我强化,无,
-LimePowder,"Vars[""CD""]=""3"";Vars[""priority""]=""3"";","SetStatus(""Target"");
-        AddBuff(""buff_Inferiority"",INF,""1"");",Icon/Enemy/EnemyAction/给予异常,无,
-PoisonThrowing,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Target"");
-        AddBuff(""buff_Inferiority"",INF,""1"");
-        AddBuff(""buff_toxin"",INF,""3"");",Icon/Enemy/EnemyAction/给予异常,无,
-Observe,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Target"");
-        AddBuff(""buff_disqualification"",INF,""2"");",Icon/Enemy/EnemyAction/给予异常,无,
-EvilCurse,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";","SetStatus(""Target"");
-        string a = (DefaultDice.Roll().Value/10+1).ToString();
-        RandomAddCard(""cursecard_""+a);",Icon/Enemy/EnemyAction/给予异常,无,
-FireBlade,"Vars[""CD""]=""4"";Vars[""priority""]=""5"";","SetStatus(""Self"");
-        AddBuff(""buff_fire"",INF,""1"");",Icon/Enemy/EnemyAction/自我强化,无,
-IceShield,"Vars[""CD""]=""4"";Vars[""priority""]=""5"";","SetStatus(""Target"");
-        AddBuff(""buff_annihilation"",INF,""1"");
-        AddBuff(""buff_slow"",INF,""3"");",,,
+        AddBuff(""buff_extraordinary"",INF,""20"");",Icon/Enemy/EnemyAction/自我强化,无,,
+LimePowder,"Vars[""CD""]=""3"";Vars[""priority""]=""3"";","SetStatus(""Target"");","AddBuff(""buff_Inferiority"",INF,""1"");",Icon/Enemy/EnemyAction/给予异常,无,,
+PoisonThrowing,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_Inferiority"",INF,""1"");
+AddBuff(""buff_toxin"",INF,""3"");",Icon/Enemy/EnemyAction/给予异常,无,,
+Observe,"Vars[""CD""]=""3"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_disqualification"",INF,""2"");",Icon/Enemy/EnemyAction/给予异常,无,,
+EvilCurse,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";","SetStatus(""Target"");","string a = (DefaultDice.Roll().Value/10+1).ToString();
+RandomAddCard(""cursecard_""+a);",Icon/Enemy/EnemyAction/给予异常,无,,
+FireBlade,"Vars[""CD""]=""4"";Vars[""priority""]=""5"";","SetStatus(""Self"");","AddBuff(""buff_fire"",INF,""1"");",Icon/Enemy/EnemyAction/自我强化,无,,
+IceShield,"Vars[""CD""]=""4"";Vars[""priority""]=""5"";","SetStatus(""Target"");","AddBuff(""buff_annihilation"",INF,""1"");
+AddBuff(""buff_slow"",INF,""3"");",,,,

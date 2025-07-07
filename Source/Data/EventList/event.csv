@@ -1,37 +1,209 @@
-Id,Choice,1Script,2Script,3Script,4Script,Icon
-Id,选项个数,选项1脚本,选项2脚本,选项3脚本;,选项4脚本,图片路径
-1,2,"PlayerInfo.ContinueEvent(""2"");PlayerInfo.MaxHp+=4;","PlayerInfo.ContinueEvent(""2"");PlayerInfo.Hp+=-5;",,,Images/CG_Images/FightBackground/1 (6)
-Sub_1_2,1,"PlayerInfo.Goodbless(""2"");PlayerInfo.EndEvent();",PlayerInfo.Wisdom+=2;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-2,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();",PlayerInfo.Wisdom+=2;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-3,2,"PlayerInfo.ContinueEvent(""2"");",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-Sub_3_2,1,PlayerInfo.MaxHp+=12;PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6)
-4,2,"PlayerInfo.Goodbless(""2"");PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-5,1,PlayerInfo.Wisdom+=2;PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6)
-6,1,PlayerInfo.Hp+=20;PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6)
-7,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-8,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-9,2,"PlayerInfo.ChangeAllVars(""1"");PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-10,2,PlayerInfo.Hp-=10;PlayerInfo.Perceive+=2;PlayerInfo.EndEvent();,PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-11,2,"PlayerInfo.Goodbless(""2"");PlayerInfo.EndEvent();",PlayerInfo.Hp+=-10;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-12,2,"PlayerInfo.Goodbless(""2"");PlayerInfo.EndEvent();","PlayerInfo.RandomAddCard(""1"");PlayerInfo.EndEvent();",,,Images/CG_Images/FightBackground/1 (6)
-13,2,"PlayerInfo.Goodbless(""2"");PlayerInfo.EndEvent();",PlayerInfo.Wisdom+=2;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-14,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.MaxHp+=5;PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-15,2,"PlayerInfo.ChangeAllVars(""2"");PlayerInfo.StartLevel(""Fight"",""boss"");",PlayerInfo.Lucky+=2;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-16,2,"PlayerInfo.ChangeAllVars(""1"");PlayerInfo.StartLevel(""Fight"",""elite"");",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-17,2,"PlayerInfo.Perceive+=1;PlayerInfo.StartLevel(""Fight"",""common"");",PlayerInfo.Perceive+=2;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-18,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();",PlayerInfo.Perceive+=2;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-19,2,"PlayerInfo.Goodbless(""3"");PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-20,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.MaxHp+=5;PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-21,2,"PlayerInfo.Goodbless(""2"");PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();",PlayerInfo.Hp+=20;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-22,3,"if (PlayerInfo.Strength<= 20)         {             PlayerInfo.Hp-=30;PlayerInfo.EndEvent();         }         else         {             PlayerInfo.StartLevel(""Fight"", ""level_10013"");         }","if (PlayerInfo.Wisdom< 20)         {             PlayerInfo.EndEvent();         }         else         {             PlayerInfo.ContinueEvent(""2"");         }",PlayerInfo.EndEvent();,,Images/CG_Images/FightBackground/1 (6)
-Sub_22_2,1,"PlayerInfo.Goodbless(""2"");PlayerInfo.RandomAddRelic(""2"");PlayerInfo.EndEvent();",,,,Images/CG_Images/FightBackground/1 (6)
-23,2,"PlayerInfo.Strength+=1;ChangeMoney(""100"");PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-24,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();",PlayerInfo.Hp-=15;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-25,2,PlayerInfo.Perceive-=1;PlayerInfo.EndEvent();,PlayerInfo.Perceive+=2;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-26,2,PlayerInfo.Hp+=-10;PlayerInfo.Strength+=3;PlayerInfo.EndEvent();,PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-27,2,"PlayerInfo.ContinueEvent(""2"");PlayerInfo.Perceive+=2;",PlayerInfo.Perceive+=1;PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-Sub_27_2,2,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();","PlayerInfo.Goodbless(""2"");PlayerInfo.EndEvent();",,,Images/CG_Images/FightBackground/1 (6)
-*999,2,"PlayerInfo.ContinueEvent(""2"");PlayerInfo.Hp+=PlayerInfo.MaxHp*3/10;","PlayerInfo.ContinueEvent(""2"");",,,Images/CG_Images/FightBackground/1 (6)
-Sub_*999_2,2,"PlayerInfo.StartLevel(""build"",""shop"");",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
-*1000,2,"PlayerInfo.ContinueEvent(""2"");PlayerInfo.Hp+=PlayerInfo.MaxHp*3/10;PlayerInfo.Goodbless(""4"");","PlayerInfo.ContinueEvent(""2"");PlayerInfo.Hp+=PlayerInfo.MaxHp*3/10;PlayerInfo.Goodbless(""4"");",,,Images/CG_Images/FightBackground/1 (6)
-Sub_*1000_2,2,PlayerInfo.EndEvent();,PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6)
+Id,1Script,2Script,3Script,4Script,5Script,Icon,LockScript,IsHighRisk,EntryScript
+Id,选项1脚本,选项2脚本,选项3脚本;,选项4脚本,,图片路径,含所有选项的解锁条件,是否是高危事件,退出脚本，为后置事件准备的
+*999,"PlayerInfo.ContinueEvent(""2"");PlayerInfo.Hp+=PlayerInfo.MaxHp*3/10;","PlayerInfo.ContinueEvent(""2"");",,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",TRUE,
+Sub_*999_2,"PlayerInfo.StartLevel(""build"",""shop"");",PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",TRUE,
+*1000,"PlayerInfo.ContinueEvent(""2"");PlayerInfo.Hp+=PlayerInfo.MaxHp*3/10;PlayerInfo.Goodbless(""4"");","PlayerInfo.ContinueEvent(""2"");PlayerInfo.Hp+=PlayerInfo.MaxHp*3/10;PlayerInfo.Goodbless(""4"");",,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",TRUE,
+Sub_*1000_2,PlayerInfo.EndEvent();,PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",TRUE,
+1,"int baseCount = PlayerInfo.CardTotalCount;
+        PlayerInfo.RemoveCard(""All"");
+        PlayerInfo.RandomAddCard(baseCount.ToString());
+        int relicCount = PlayerInfo.RelicCount;
+        PlayerInfo.RemoveRelic(""All"");
+        PlayerInfo.RandomAddRelic(relicCount.ToString());
+        PlayerInfo.Hp = PlayerInfo.MaxHp;
+        PlayerInfo.Money += 100;
+        PlayerInfo.EndEvent();","PlayerInfo.AddBless(""blessing_5"");
+        PlayerInfo.EndEvent();",,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+2,"PlayerInfo.AddCard(PlayerInfo.GetCareer()[""Skill""]); PlayerInfo.EndEvent();","if (PlayerInfo.CardTotalCount==0)
+        {
+            return;
+        }
+        string id = PlayerInfo.CardList[^1].data[""Id""];
+        PlayerInfo.AddCard(id);
+        PlayerInfo.AddCard(id); PlayerInfo.EndEvent();",,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+3,"SelectCardAndAddTag(""3"",PlayerInfo.CardList.ToList()); PlayerInfo.EndEvent();",PlayerInfo.Wisdom += 3; PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+4,"PlayerInfo.RandomAddCard(""1"");
+        PlayerInfo.EndEvent();","PlayerInfo.RandomAddRelic(""1"");
+        PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";
+Vars[""Choice3""]=""1"";",FALSE,
+*5,"PlayerInfo.LockChoice(""2"");
+        PlayerInfo.SetGameVar(""ElectionObj"", ""Soul"");
+        if (PlayerInfo.GetGameVar(""Input"") == """")
+        {
+            PlayerInfo.SetGameVar(""Input"", ""1"");
+        }
+        else
+        {
+            PlayerInfo.SetGameVar(""Input"", (int.Parse(PlayerInfo.GetGameVar(""Input"")) + 1).ToString());
+        }
+        PlayerInfo.Hp -= 4;","PlayerInfo.LockChoice(""1"");
+        PlayerInfo.SetGameVar(""ElectionObj"", ""Robot"");
+        if (PlayerInfo.GetGameVar(""Input"") == """")
+        {
+            PlayerInfo.SetGameVar(""Input"", ""1"");
+        }
+        else
+        {
+            PlayerInfo.SetGameVar(""Input"", (int.Parse(PlayerInfo.GetGameVar(""Input"")) + 1).ToString());
+        }
+        PlayerInfo.Money -= 10;",PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";Vars[""Choice2""]=""1"";Vars[""Choice3""]=""1"";
+",FALSE,
+*-5,,,,,,,"Vars[""Choice1""]=""1"";",FALSE,
+*-15,,,,,,,"Vars[""Choice1""]=""1"";",FALSE,
+*6,,,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+Sub_*6_2,,,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+7,"PlayerInfo.Reward += 1;
+        string levelId="""";
+        int a = PlayerInfo.DefaultRoll;
+        if (a<33)
+        {
+            levelId = ""level_10026"";
+        }
+        else if(a<66)
+        {
+            levelId = ""level_10027"";
+        }
+        else
+        {
+            levelId = ""level_10028"";
+        }
+        dataConfig.data[""EntryScript""] = ""PlayerInfo.StartLevel(\""Fight\"",\"""" + levelId + ""\"");PlayerInfo.InitCorruption -= 10;"";
+PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+8,"PlayerInfo.RandomAddRelic(""1"");PlayerInfo.EndEvent();","PlayerInfo.AddRelic(""relic_*77"");
+        PlayerInfo.Money -= 50;
+         PlayerInfo.EndEvent();","PlayerInfo.AddRelic(""relic_*78"");
+        PlayerInfo.Money -= 200;
+         PlayerInfo.EndEvent();","PlayerInfo.ChangeSelected(""2"");
+        PlayerInfo.EndEvent();","PlayerInfo.ChangeSelected(""2"");
+        PlayerInfo.EndEvent();",Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""] = ""1"";
+        if (PlayerInfo.Money<50)
+        {
+            Vars[""Choice2""] = ""2"";
+        }
+        else
+        {
+            Vars[""Choice2""] = ""1"";
+        }
+        if (PlayerInfo.Money<200)
+        {
+            Vars[""Choice3""] = ""2"";
+        }
+        else
+        {
+        Vars[""Choice3""] = ""2"";
+        }
+        if (PlayerInfo.GetCareer()[""Id""]==""career_1"")
+        {
+            Vars[""Choice4""] = ""1"";
+        }
+        else
+        {
+            Vars[""Choice4""] = ""0"";
+        }
+        if (PlayerInfo.GetCareer()[""Id""]==""career_2"")
+        {
+            Vars[""Choice5""] = ""1"";
+        }
+        else
+        {
+            Vars[""Choice5""] = ""0"";
+        }",FALSE,
+9," PlayerInfo.ContinueEvent(""2"");","PlayerInfo.Perceive += 3;
+        PlayerInfo.EndEvent();",,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+Sub_9_2,"dataConfig.data[""EntryScript""] = ""PlayerInfo.StartLevel(\""Fight\"",\""elite\"");"";
+        PlayerInfo.EndEvent();",,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+",FALSE,
+10,"int a=PlayerInfo.DefaultRoll-PlayerInfo.Lucky/2;
+        Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
+        if ((int.Parse(Vars[""ThisCount""]) != 6) &&(a < 100 - 100 /(6- int.Parse(Vars[""ThisCount""]))) )
+        {
+            if (int.Parse(Vars[""ThisCount""]) < 3)
+            {
+                PlayerInfo.Money += 40 * int.Parse(Vars[""ThisCount""]);
+            }
+            else
+            {
+                PlayerInfo.RandomAddRelic(""1"");
+                PlayerInfo.Money += 100;
+            }
+        }
+        else
+        {
+            PlayerInfo.LockChoice(""1"");
+            PlayerInfo.Hp -= 100;
+            PlayerInfo.EndEvent();
+        }", PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+11,"PlayerInfo.Wisdom -= 1;
+        PlayerInfo.Perceive -= 1;
+        PlayerInfo.Strength += 2;","PlayerInfo.Wisdom += 2;
+        PlayerInfo.Perceive -= 1;
+        PlayerInfo.Lucky -= 1;","PlayerInfo.Lucky += 2;
+        PlayerInfo.Perceive -= 1;
+        PlayerInfo.Strength -= 1;", PlayerInfo.EndEvent();,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";
+Vars[""Choice3""]=""1"";
+Vars[""Choice4""]=""1"";",FALSE,
+12,"if (PlayerInfo.Money >= 20)
+        {
+            PlayerInfo.RandomAddCard(""1"");
+            PlayerInfo.Money -= 20;
+            if (PlayerInfo.Money < 20)
+            {
+                PlayerInfo.LockChoice(""1"");
+            }
+        }
+        else
+            {
+                PlayerInfo.LockChoice(""1"");
+            }  ","if (PlayerInfo.TrueCount >= 5)
+        {
+            PlayerInfo.RandomAddBless(""1"");
+            PlayerInfo.TrueCount -= 5;
+            if (PlayerInfo.TrueCount < 5)
+            {
+                PlayerInfo.LockChoice(""2"");
+            }
+        }
+        else
+            {
+                PlayerInfo.LockChoice(""2"");
+            } ", PlayerInfo.EndEvent();,,,Images/CG_Images/FightBackground/1 (6),"if (PlayerInfo.Money>=20)
+        {
+            Vars[""Choice1""]=""1"";
+        }
+        else
+        {
+            Vars[""Choice1""]=""2"";
+        }
+        if (PlayerInfo.TrueCount>=5)
+        {
+            Vars[""Choice2""]=""1"";
+        }
+        else
+        {
+            Vars[""Choice2""]=""2"";
+        }
+Vars[""Choice3""]=""1"";",FALSE,
+13,"PlayerInfo.Reward += 1;
+        dataConfig.data[""EntryScript""] = ""PlayerInfo.StartLevel(\""Fight\"",\""elite\"");"";
+        PlayerInfo.EndEvent();",PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+14,"PlayerInfo.Money += 100;
+        PlayerInfo.EndEvent();","PlayerInfo.MaxHp += 10;
+        PlayerInfo.EndEvent();",,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",FALSE,
+15,EndTheGame();, PlayerInfo.EndEvent();,,,,Images/CG_Images/FightBackground/1 (6),"Vars[""Choice1""]=""1"";
+Vars[""Choice2""]=""1"";",TRUE,

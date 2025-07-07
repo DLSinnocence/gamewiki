@@ -8,21 +8,21 @@ Id,敌人Id的数组,备注
 10006,enemy_10014,精英
 10007,enemy_10005,普通
 10008,enemy_10026,普通
-10009,"enemy_10025, enemy_10026",强精英
-10010,"enemy_10001, enemy_10015, enemy_10021",高难boss
+10009,"enemy_10025, enemy_10026",精英
+10010,"enemy_10001, enemy_10015, enemy_10021",boss
 10011,"enemy_10022, enemy_10023",boss
 10012,enemy_10012,精英
 10013,enemy_10017,普通
 10014,enemy_10018,精英
 10015,enemy_10021,普通
 10016,enemy_10019,普通
-10017,"enemy_10019, enemy_10001",强精英
+10017,"enemy_10019, enemy_10001",精英
 10018,enemy_10028,普通
 10019,enemy_10016,普通
-10020,"enemy_10029, enemy_10029, enemy_10029",高难boss
+10020,"enemy_10029, enemy_10029, enemy_10029",boss
 10021,enemy_10009,精英
 10022,enemy_10007,boss
-10023,enemy_10015,强精英
+10023,enemy_10015,精英
 *99999,enemy_99999,测试
 10024,enemy_10024,boss
 10025,enemy_10020,boss

@@ -310,3 +310,9 @@ SetStatus(""All"");
             {
                 ChangeDefence((PlayerInfo.CardCount- HandCard.Count).ToString());
         } });",Icon/Relic icons/风之灵
+*77,1,,"AddEvent(""Init"",()=> { ChangeDefence(""12""); });",Icon/Relic icons/风之灵
+*78,5,,"AddEvent(""Init"",() =>
+        {
+            AddBuff(""buff_stretch"", INF, ""3"");
+            ChangePower(""1"");
+        });",Icon/Relic icons/风之灵

@@ -24,7 +24,7 @@ slow,,迟缓,每回合少抽1张牌。,Sluggish,,已完成
 roundRetainCard,,伺机,你的回合结束时保留层数张卡牌。,Ambush,,已完成
 rotten,,腐朽,行动后失去所有护盾。,Decay,,已完成
 burn,,灼烧,回合开始时造成层数乘（1+1%）血量的真实伤害。,Scorch,,已完成
-chaos,,混乱,"你每次行动时,下一张牌的花费会各有1/3的概率变成0倍,1倍,2倍。",Chaos,,已完成
+chaos,,混乱,"每次行动后,卡牌的费用随机变化为0倍,1倍,2倍，持续至战斗结束",Chaos,,已完成
 exorcism,,重伤,受到伤害加70%。,Heavy Wound,,已完成
 rescued,,魔化,"使用卡牌的消耗行动点减-200%,但回合结束时扣除999点生命。",Demonize,,已完成
 vulnerability,,易伤,每层受伤加10%。,Vulnerability,,已完成

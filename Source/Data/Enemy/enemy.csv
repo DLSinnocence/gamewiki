@@ -25,7 +25,7 @@ Id,名字,血量,攻击力,防御盾,韧性,行动次数,初始buff,卡牌列表
 ","enemycard_OrdinaryHit,enemycard_defence,enemycard_OverrunWorkouts,enemycard_OrdinaryFiveHit, enemycard_Come",Icon/Enemy/7 (44),是,SpecialBuff_UnparalleledPower
 10023,大力王之子,75,4,7,1,2,"
 ","enemycard_OrdinaryHit,enemycard_defence,enemycard_OverrunWorkouts,enemycard_OrdinaryFiveHit",Icon/Enemy/7 (45),是,
-10024,丑陋者,85,7,4,2,2,"AddBuff(""buff_impregnable"", ""2"", ""2"");AddBuff(""buff_adaptiveArmor"", ""10"", (int.Parse(def())/2).ToString());","enemycard_burn2, enemycard_burn1, enemycard_Toxin3, enemycard_Toxin1, enemycard_Toxin2, enemycard_NeverDead",Icon/Enemy/7 (51),是,buff_impregnable;buff_adaptiveArmor
+10024,丑陋者,80,7,4,2,2,"AddBuff(""buff_impregnable"", ""2"", ""2"");AddBuff(""buff_adaptiveArmor"", ""10"", (int.Parse(def())/2).ToString());","enemycard_burn2, enemycard_burn1, enemycard_Toxin3, enemycard_Toxin1, enemycard_Toxin2, enemycard_NeverDead",Icon/Enemy/7 (51),是,buff_impregnable;buff_adaptiveArmor
 10025,沼泽之触,60,4,4,2,2,,"enemycard_OrdinaryHit,enemycard_defence,enemycard_Toxin3, enemycard_Toxin1, enemycard_Toxin4, enemycard_Charge1",Icon/Enemy/7 (53),是,
 10026,异化苍蝇,56,3,2,1,2,,"enemycard_OrdinaryHit,enemycard_defence,enemycard_Toxin1,enemycard_Toxin2,enemycard_Toxin3",Icon/Enemy/7 (56),是,
 99999,测试者,10999999,0,11999998,0,2,"AddBuff(""buff_impregnable"", ""9"", ""3"");","enemycard_OrdinaryHit,enemycard_defence,enemycard_Toxin1,enemycard_Toxin2,enemycard_Toxin3",Icon/Enemy/7 (48),是,buff_impregnable
