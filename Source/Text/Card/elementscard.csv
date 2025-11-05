@@ -1,15 +1,15 @@
-Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
-唯一的标识（不能重复）,费用,名称,卡牌类型,描述,Name,Type,Description
-1,0,水之翼,消耗技能牌,获得{0}层元素。抽{1}张牌。,WaterWings,Burn Skill,Gain {0} stacks of {buff_elements}. Draw {1} card.
-2,1,青翠之森的遗梦,消耗技能牌,"获得{0}层元素,{1}层自愈。",Verdant Legacy,Burn Skill,Gain {0} stacks of {buff_elements} and {1} stack of {buff_evergreen}.
-3,1,生机,消耗技能牌,"获得{0}层元素,{1}层吸收。",Vital Surge,Burn Skill,Gain {0} stacks of {buff_elements} and {1} stack of {buff_vitality}.
-4,2,聚雷,攻击牌,"获得{0}层元素和{1}层超凡,造成{2}点伤害。",Thunder Convergence,Attack,"Gain {0} stacks of {buff_elements} and {1} stack of {buff_extraordinary}, deal {2} damage."
-5,1,风暴,消耗技能牌,"获得{0}层元素和{1}层超凡,造成{2}点伤害,给予选择目标{3}层易伤。",Thunderclap,Burn Skill,"Gain {0} stacks of {buff_elements} and {1} stacks of {buff_extraordinary}, deal {2} damage, and apply {3} stacks of {buff_vulnerability} to the target."
-6,2,雷绝,消耗技能牌,"获得{0}层元素和{1}层超凡,造成{2}点伤害。",Thunder's End,Burn Skill,"Gain {0} stacks of {buff_elements} and {1} stacks of {buff_extraordinary}, deal {2} damage."
-7,0,火起,技能牌,"获得{0}层元素,给予敌人{1}层灼烧。",Ignition,Skill,Gain {0} stacks of {buff_elements} and apply {1} stack of {buff_burn} to enemies.
-8,1,火中兽,消耗技能牌,"获得{0}层元素,给予敌人等量灼烧,并触发敌人的所有灼烧。抽取{1}张牌。",Inferno Beast,Burn Skill,"Gain {0} stacks of {buff_elements} and give enemies the same amount of {buff_burn}, triggering all of their {buff_burn} effects. Draw {1} card."
-9,1,掌心炎,消耗技能牌,"获得{0}层元素,给予敌人{1}层灼烧,造成{2}点伤害。",Palm Inferno,Burn Skill,"Gain {0} stacks of {buff_elements}, give enemies {1} stack of {buff_burn}, and deal {2} damage."
-10,1,元素护盾,技能牌,"获得{0}层元素,获得元素层数+5点护盾。",Elemental Aegis,Skill,Gain {0} stacks of {buff_elements} and gain a shield equal to the number of stacks of {buff_elements} you have.
-11,1,元素升华,技能牌,"获得{0}层元素,抽取元素层数1/4张卡牌。",Elemental Ascension,Skill,"Gain {0} stacks of {buff_elements}, draw 1/4 of the number of stacks of {buff_elements} cards."
-12,1,元素循环,技能牌,"获得{0}层元素,获得元素层数1/4点行动点。",Elemental Cycle,Skill,"Gain {0} stacks of {buff_elements}, gain 1/4 of the number of stacks of {buff_elements} power."
-13,1,元素爆发,攻击牌,"获得{0}层元素,对所有敌人造成等同于元素层数点伤害。",Elemental Detonation,Attack,"Gain {0} stacks of {buff_elements}, deal damage equal to the number of stacks of {buff_elements} to all enemies."
+Id,Type,是否完成,Note,Name,Name_zh-Hant,Name_en,Name_ja,Description,Description_zh-Hant,Description_en,Description_ja
+唯一的标识（不能重复）,卡牌类型,FALSE,费用,名称,,Name,,描述,,Description,
+1,消耗技能牌,TRUE,0,海洋之梦,海洋之夢,Ocean's Dream,海洋の夢,获得{0}层元素。抽{1}张牌。,獲得{0}層元素。抽{1}張牌。,Gain {0} layer(s) of {buff_elements}. Draw {1} cards.,元素を{0}スタック獲得する。カードを{1}枚引く。
+2,消耗技能牌,TRUE,0,“生长”,“生長”,Growth,「成長」,"获得{0}层元素,{1}层自愈。","得到{0}層元素,{1}層自癒。",Gain {0} layer(s) of {buff_elements} and {1} layer(s) of {buff_evergreen}.,元素を{0}スタック、再生を{1}スタック獲得する。
+3,技能牌,TRUE,1,森之结晶,森之結晶,Forest Crystal,森の結晶,"获得{0}层元素,{1}层吸收。","得到{0}層元素,{1}層吸收。",Gain {0} layer(s) of {buff_elements} and {1} layer(s) of {buff_vitality}.,元素を{0}スタック、吸収を{1}スタック獲得する。
+4,攻击牌,TRUE,2,聚雷术,聚雷術,Lightning Convergence,集雷術,"获得{0}层元素和{1}层超凡,造成{2}点伤害。","得到{0}層元素和{1}層超凡,造成{2}點傷害。","Gain {0} layer(s) of {buff_elements} and {1} layer(s) of {buff_extraordinary}, then deal {2} damage.",元素を{0}スタックと超越を{1}スタック獲得し、{2}ダメージを与える。
+5,技能牌,TRUE,1,雷枪,雷槍,Lightning Spear,雷槍,"获得{0}层元素,造成{1}点伤害,给予选择目标{2}层易伤。","得到{0}層元素,造成{1}點傷害,給予選擇目標{2}層易傷。","Gain {0} layer(s) of {buff_elements} , deal {1} damage, and apply {2} layer(s) of {buff_vulnerability} to the target.",元素を{0}スタックと獲得し、{1}ダメージを与え、選択した対象に脆弱を{2}スタック付与する。
+6,消耗技能牌,TRUE,2,雷绝,雷絕,Lightning Extinction,雷絶,"获得{0}层元素和{1}层超凡,获得{2}点防御。","得到{0}層元素和{1}層超凡,造成{2}點傷害。","Gain {0} layer(s) of {buff_elements} and {1} layer(s) of {buff_extraordinary}, then gain {2} shield  .",元素を{0}スタックと超越を{1}スタック獲得し、{2}のシールドを獲得する。
+7,技能牌,TRUE,0,凝火术,凝火術,Fire Condensation,凝火術,"获得{0}层元素,给予敌人{1}层灼烧。","得到{0}層元素,給予敵人{1}層灼燒。",Gain {0} layer(s) of {buff_elements} and apply {1} layer(s) of {buff_burn} to all enemies.,元素を{0}スタック獲得し、全ての敵に燃焼を{1}スタック付与する。
+8,技能牌,TRUE,1,绽放,綻放,Bloom,開花,"获得{0}层元素,给予敌人等量灼烧,并触发敌人的所有灼烧。","獲得{0}層元素,給予敵人等量灼燒,並觸發敵人的所有灼燒。","Gain {0} layer(s) of {buff_elements}, apply the same amount of {buff_burn} to all enemies, and trigger all {buff_burn} effects on enemies. Draw {1} card.",元素を{0}スタック獲得し、敵に同量の燃焼を付与し、敵の全ての燃焼を発動させる。カードを{1}枚引く。
+9,消耗技能牌,TRUE,1,罐装火元,罐裝火元,Bottled Fire Element,缶詰の火元,"获得{0}层元素,给予敌人{1}层灼烧,造成{2}点伤害。","得到{0}層元素,給予敵人{1}層灼燒,造成{2}點傷害。","Gain {0} layer(s) of {buff_elements}, apply {1} layer(s) of {buff_burn} to all enemies, and deal {2} damage.",元素を{0}スタック獲得し、全ての敵に燃焼を{1}スタック付与し、{2}ダメージを与える。
+10,技能牌,TRUE,1,元素护盾,元素護盾,Elemental Shield,元素の盾,"获得{0}层元素,获得双倍元素层数点护盾。","獲得{0}層元素,獲得雙倍元素層數點護盾。",Gain {0} layer(s) of {buff_elements} and gain shield equal to double  your {buff_elements} layers.,元素を{0}スタック獲得し、元素スタック数の2倍のシールドを獲得する。
+11,技能牌,TRUE,1,元素升华,元素昇華,Elemental Ascension,元素昇華,"获得{0}层元素,抽取元素层数1/4张卡牌。","取得{0}層元素,抽取元素層數1/4張卡牌。","Gain {0} layer(s) of {buff_elements}, then draw cards equal to 1/4 of your {buff_elements} layers (rounded down).",元素を{0}スタック獲得し、元素スタック数の1/4の枚数のカードを引く。
+12,技能牌,TRUE,1,元素循环,元素循環,Elemental Cycle,元素循環,"获得{0}层元素,获得元素层数1/4点魔能。","得到{0}層元素,獲得元素層數1/4點魔能。","Gain {0} layer(s) of {buff_elements}, then gain mana equal to 1/4 of your {buff_elements} layers (rounded down).",元素を{0}スタック獲得し、元素スタック数の1/4のマナを獲得する。
+13,攻击牌,TRUE,1,元素爆发,元素爆發,Elemental Burst,元素爆発,"获得{0}层元素,对所有敌人造成等同于双倍元素层数点伤害。","獲得{0}層元素,對所有敵人造成等同於雙倍元素層數點傷害。","Gain {0} layer(s) of {buff_elements}, then deal damage equal to double your {buff_elements} layers  to all enemies.",元素を{0}スタック獲得し、全ての敵に元素スタック数の2倍に等しいダメージを与える。

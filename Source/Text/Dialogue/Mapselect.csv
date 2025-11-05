@@ -1,0 +1,3 @@
+Id,Text,Text_en,Text_ja,ChoiceText1,ChoiceText1_en,ChoiceText1_ja,ChoiceText2,ChoiceText2_en,ChoiceText2_ja,Notification,Notification_en,Notification_ja
+对话Id,对话正文,,,选项1文本,,,,,,,,
+1,现在是冒险的行动规划阶段，将心中想去的地点置入选择区吧！待选满所有待选空位后，就可以开始行动了。(点击命运卡牌并拖动。获得的行动卡牌需要点击左下角牌堆替换),"This is the action planning phase of the adventure. Place the locations you wish to visit into the selection area! Once all empty slots are filled, you can begin your journey. (Click and drag the Destiny Cards. Acquired action cards need to be replaced by clicking the deck in the bottom left corner.)",冒険の行動計画フェーズです。行きたい場所を選択エリアに配置しましょう！全ての空きスロットを埋めると、行動を開始できます。（運命カードをクリック＆ドラッグで配置します。獲得した行動カードは左下の山札をクリックして入れ替える必要があります）,,,,,,,,,

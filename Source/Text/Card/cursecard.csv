@@ -1,15 +1,15 @@
-Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
-唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
-1,,脆弱灵魂,诅咒,"保留,不可打出,抽到时获得五层持续{0}回合的易伤。",Fragile Soul,Curse,"Keep, cannot be played, when drawn, gain five layers of {0} turns of {buff_vulnerability} effect."
-2,,思维混乱,诅咒,抽到时获得混乱。,Chaos,Curse,"When drawn, gain {0} layers of {buff_chaos} effect."
-3,,脱力,诅咒,"抽到时获得{0}层无力,持续三回合。",Exhaustion,Curse,"When drawn, gain {0} layers of {buff_weak} effect, lasting three turns."
-4,,腐化白石,诅咒,抽到时获得持续二回合的时停。,Corruption White Stone,Curse,"When drawn, gain {0} turns of {buff_charmed} effect."
-5,,腐朽,诅咒,抽到后获得{0}回合腐朽。,Decay,Curse,"When drawn, gain {0} turns of {buff_rotten} effect."
-6,,遗忘,诅咒,"保留,打出时获得{0}层遗忘。",Oblivion,Curse,"Keep, when played, gain {0} layers of {buff_Inferiority} effect."
-7,,隐疾,诅咒,"保留,打出时获得{0}层毒素。",Hidden Illness,Curse,"Keep, gain {0} stacks of ‘{buff_toxin}’ when played."
-8,,傲慢,诅咒,"保留,抽到时获得{0}层无力,持续五回合。",Arrogance,Curse,"Keep, gain {0} stacks of ‘{buff_weak}’ for five turns when drawn."
-9,,封印,诅咒,"抽到时获得{0}层封印,持续五回合。",Seal,Curse,Gain {0} stacks of ‘{buff_ignorance}’ for five turns when drawn.
-10,,湮灭,诅咒,"抽到时获得{0}层失能,持续五回合。",Annihilation,Curse,Gain {0} stacks of ‘{buff_annihilation}’ for five turns when drawn.
-11,,流血,诅咒,抽到时获得{0}层持续五回合的流血。,Bleeding,Curse,Gain {0} stacks of ‘{buff_blooding}’ for five turns when drawn.
-12,,虚无,诅咒,毫无用处。,Nothingness,Curse,Useless.
-13,,瘟疫蔓延,诅咒,抽到时获得{0}层疫病。,Plague,Curse,"When drawn, gains {0} layers of the {buff_disease} effect."
+Id,Type,已完成,Note,Name,Name_zh-Hant,Name_en,Name_ja,Description,Description_zh-Hant,Description_en,Description_ja
+唯一的标识（不能重复）,类型,FALSE,备注,名称,,Name,,描述,,Description,
+1,诅咒,FALSE,,脆弱感,脆弱感,Fragility,脆弱感,抽到时自身获得{0}层的易伤。,"保留,不可打出,抽到時獲得{0}層的易傷。","Keep, cannot be played, when drawn, gain five layers of {0} turns of {buff_vulnerability} effect.",保持、使用不可。引いた時、自身に脆弱を{0}スタック付与する。
+2,诅咒,FALSE,,思维紊乱,思維紊亂,Chaos,思考混乱,抽到时自身获得混乱。,抽到時獲得混亂。,"When drawn, gain {0} layers of {buff_chaos} effect.",引いた時、自身に混乱を付与する。
+3,诅咒,FALSE,,无力感,無力感,Weakness,無力感,抽到时自身获得{0}层无力。,抽到時獲得{0}層無力。,"When drawn, gain {0} layers of {buff_weak} effect, lasting three turns.",引いた時、自身に脱力を{0}スタック付与する。
+4,诅咒,FALSE,,腐化白石,腐化白石,Corrupted White Stone,腐敗した白石,丢弃时自身获得时停。,丟棄時獲得時停。,"When drawn, gain {0} turns of {buff_timestop} effect.",捨てた時、自身に時間停止を付与する。
+5,诅咒,FALSE,,腐朽,腐朽,Decay,腐朽,抽到后自身获得{0}层腐朽。,抽到後獲得{0}層腐朽。,"When drawn, gain {0} turns of {buff_rotten} effect.",引いた時、自身に腐朽を{0}スタック付与する。
+6,诅咒,FALSE,,遗忘,遺忘,Oblivion,忘却,打出时自身获得{0}层遗忘。,"保留,打出時獲得{0}層遺忘。","Keep, when played, gain {0} layers of {buff_oblivion} effect.",保持。使用した時、自身に忘却を{0}スタック付与する。
+7,诅咒,FALSE,,隐疾,隱疾,Hidden Ailment,隠れた病,打出时自身获得{0}层毒素。,"保留,打出時獲得{0}層毒素。","Keep, gain {0} stacks of ‘{buff_toxin}’ when played.",保持。使用した時、自身に毒素を{0}スタック付与する。
+8,诅咒,FALSE,,恐惧感,恐懼感,Fear,恐怖感,抽到时自身获得{0}层无力。,"保留,抽到時獲得{0}層無力。","Keep, gain {0} stacks of ‘{buff_weak}’ for five turns when drawn.",保持。引いた時、自身に脱力を{0}スタック付与する。
+9,诅咒,FALSE,,迟滞感,遲滯感,Sluggishness,遅滞感,抽到时自身获得{0}层封印,抽到時獲得{0}層封印,Gain {0} stacks of ‘{buff_ignorance}’ for five turns when drawn.,引いた時、自身に封印を{0}スタック付与する。
+10,诅咒,FALSE,,湮灭,湮滅,Annihilation,湮滅,抽到时自身获得{0}层失能,抽到時獲得{0}層失能,Gain {0} stacks of ‘{buff_cripple}’ for five turns when drawn.,引いた時、自身に無力化を{0}スタック付与する。
+11,诅咒,FALSE,,幻痛,幻痛,Phantom Pain,幻痛,抽到时自身获得{0}层的流血。,抽到時獲得{0}層的流血。,Gain {0} stacks of ‘{buff_bleeding}’ for five turns when drawn.,引いた時、自身に出血を{0}スタック付与する。
+12,诅咒,TRUE,,虚无感,虛無感,Emptiness,虚無感,毫无用处。,毫無用處。,Useless.,何の役にも立たない。
+13,诅咒,FALSE,,瘟疫,瘟疫,Plague,疫病,丢弃时自身获得{0}层疫病。,丟棄時獲得{0}層疫病。,"When drawn, gains {0} layers of the {buff_disease} effect.",捨てた時、自身に疫病を{0}スタック付与する。

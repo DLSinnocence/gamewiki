@@ -1,34 +1,34 @@
-Id,Note,Name,Tips,Description
-Id（唯一标识）,备注,名称,剧情描述,效果描述
-1,,预知之瞳,先知眼中的命运残片,使用后再抽1张牌
-2,,贤者启示,古代卷轴泄露的天机,使用后再抽2张牌
-3,,裂魂低语,深渊恶魔的蛊惑之音,使用后获得2层易伤
-4,,魔力坍缩,失控的奥术漩涡,使用该牌后将行动点变成1
-5,,星辰核心,坠星碎片中的永恒行动点,使用该牌后将行动点变成2
-6,,铁木之心,千年古树的生存智慧,使用后获得持续2回合的1层强韧
-7,,玄钢灌注,矮人大师的不传秘术,使用后获得持续2回合的3层强韧
-8,,明镜止水,精灵冥想术的结晶,使用后获得1层本心
-9,,星陨余波,天界战争的残留冲击,对所有敌人再造成一次1点物理伤害
-10,,血祭契约,禁忌仪式的必要代价,使用后自身生命-1
-11,,魔力虹吸,窃取元素界的游离行动点,使用后额外获得1点行动点
-12,,奥能矩阵,古代法师的行动点回路,使用后额外获得2点行动点
-13,,双生诅咒,恶魔与天使的共同赠礼,使用后获得持续2回合的1层污染
-14,,巨人血脉,远古泰坦的稀释血统,使用后获得持续3回合的1层锋锐
-15,,泰坦觉醒,沉睡的古老力量复苏,使用后获得持续3回合的2层锋锐
-16,,炎魔烙印,地狱之火的痛苦印记,给与对方3层灼烧
-17,,雷神过载,驾驭风暴的禁忌尝试,给与自身20层超凡
-18,,记忆焚祭,燃烧过去换取未来,使用后可选一张牌燃烬
-19,,往事余烬,将回忆化作战斗薪柴,使用后燃烬一张牌
-20,,春神赐福,自然复苏的生机涌动,使用后获得持续2回合的2层吸收
-21,,生命潮汐,森林之心的永恒律动,使用后获得持续2回合的3层吸收
-22,,清心祷言,神殿牧师的祝福圣言,使用后自身生命+1
-23,,符文结界,古代守护符文的再现,使用后获得持续2回合的1层坚毅
-24,,不朽誓约,与守护巨龙的永恒契约,使用后获得持续2回合的2层坚毅
-25,,荆棘王权,玫瑰战争的古老技艺,使用后获得持续3回合的1层反击
-26,,镜面审判,光明神殿的惩戒秘法,使用后获得持续3回合的2层反击
-27,,龙鳞祝福,古龙褪鳞的馈赠,使用后获得持续2回合的2层坚盾
-28,,永恒熔铸,矮人熔炉的终极杰作,使用后获得持续3回合的4层坚盾
-29,,普拉提粘液,恐惧,"卡牌的数值（阿拉伯数字）全部+1(镶嵌时生效),卡牌使用后不会进入弃牌堆"
-30,,血藤,它渴望着鲜血,每次打出时卡牌造成的伤害+1(可以跨战斗保留)
-31,,水银泪滴,一滴在汞中永恒跃动的液态记忆,"卡牌的数值（阿拉伯数字）全部+2(镶嵌时生效),卡牌使用后不会进入弃牌堆"
-32,,腐蚀之心,"深渊领主的核心残骸,跳动的腐化心脏渗出沥青般的脓血","卡牌给予的状态层数+2(镶嵌生效),使用时自身生命值-4"
+Id,Note,Name,Tips,Description,Name_en,Description_en,Tips_en
+Id（唯一标识）,备注,名称,剧情描述,效果描述,,,
+1,,预知之瞳,先知眼中的命运残片,使用后再抽1张牌,Eye of Foresight,Draw 1 additional card after use,A fragment of fate from the prophet's eye
+2,,贤者启示,古代卷轴泄露的天机,使用后再抽2张牌,Sage's Revelation,Draw 2 additional cards after use,Heavenly secrets leaked from ancient scrolls
+3,,裂魂低语,深渊恶魔的蛊惑之音,使用后获得2层易伤,Soul-Rending Whisper,Gain 2 layers of {buff_vulnerability} after use,The seductive voice of abyssal demons
+4,,魔力坍缩,失控的奥术漩涡,使用该牌后将魔能变成1,Mana Collapse,Set action points to 1 after using this card,An out-of-control arcane vortex
+5,,星辰核心,坠星碎片中的永恒魔能,使用该牌后将魔能变成2,Stellar Core,Set action points to 2 after using this card,Eternal energy within fallen star fragments
+6,,铁木之心,千年古树的生存智慧,使用后获得持续2回合的1层强韧,Ironwood Heart,Gain 1 layer of {buff_resilient} for 2 turns after use,Survival wisdom of a thousand-year-old tree
+7,,玄钢灌注,矮人大师的不传秘术,使用后获得持续2回合的3层强韧,Mysteel Infusion,Gain 3 layers of {buff_resilient} for 2 turns after use,Secret technique of dwarven masters
+8,,明镜止水,精灵冥想术的结晶,使用后获得1层本心,Mirror-Still Water,Gain 1 layer of {buff_trueheart} after use,Crystallization of elven meditation arts
+9,,星陨余波,天界战争的残留冲击,对所有敌人再造成一次1点物理伤害,Meteor Aftershock,Deal 1 additional physical damage to all enemies,Residual impact from celestial wars
+10,,血祭契约,禁忌仪式的必要代价,使用后自身生命-1,Blood Sacrifice Pact,Lose 1 health after use,Necessary price of forbidden rituals
+11,,魔力虹吸,窃取元素界的游离魔能,使用后额外获得1点魔能,Mana Siphon,Gain 1 additional action point after use,Stealing free energy from the elemental plane
+12,,奥能矩阵,古代法师的魔能回路,使用后额外获得2点魔能,Arcane Matrix,Gain 2 additional action points after use,Energy circuit of ancient mages
+13,,双生诅咒,恶魔与天使的共同赠礼,使用后获得持续2回合的1层污染,Twin Curse,Gain 1 layer of {buff_corruption} for 2 turns after use,Joint gift from demon and angel
+14,,巨人血脉,远古泰坦的稀释血统,使用后获得持续3回合的1层锋锐,Giant Bloodline,Gain 1 layer of {buff_keenedge} for 3 turns after use,Diluted bloodline of ancient titans
+15,,泰坦觉醒,沉睡的古老力量复苏,使用后获得持续3回合的2层锋锐,Titan Awakening,Gain 2 layers of {buff_keenedge} for 3 turns after use,Awakening of slumbering ancient power
+16,,炎魔烙印,地狱之火的痛苦印记,给与对方3层灼烧,Balrog Brand,Apply 3 layers of {buff_burn} to enemies,Painful mark of hellfire
+17,,雷神过载,驾驭风暴的禁忌尝试,给与自身20层超凡,Thunder God Overload,Gain 20 layers of {buff_extraordinary},Forbidden attempt to harness storms
+18,,记忆焚祭,燃烧过去换取未来,使用后可选一张牌燃烬,Memory Immolation,Choose 1 card to burn after use,Burning the past to secure the future
+19,,往事余烬,将回忆化作战斗薪柴,使用后燃烬一张牌,Embers of the Past,Burn 1 card after use,Turning memories into battle fuel
+20,,春神赐福,自然复苏的生机涌动,使用后获得持续2回合的2层吸收,Spring God's Blessing,Gain 2 layers of {buff_vitality} for 2 turns after use,Surging vitality of nature's revival
+21,,生命潮汐,森林之心的永恒律动,使用后获得持续2回合的3层吸收,Life Tide,Gain 3 layers of {buff_vitality} for 2 turns after use,Eternal rhythm of the forest's heart
+22,,清心祷言,神殿牧师的祝福圣言,使用后自身生命+1,Purifying Prayer,Gain 1 health after use,Blessed words of temple priests
+23,,符文结界,古代守护符文的再现,使用后获得持续2回合的1层坚毅,Runic Barrier,Gain 1 layer of {buff_impregnable} for 2 turns after use,Recreation of ancient protective runes
+24,,不朽誓约,与守护巨龙的永恒契约,使用后获得持续2回合的2层坚毅,Immortal Pact,Gain 2 layers of {buff_impregnable} for 2 turns after use,Eternal contract with guardian dragons
+25,,荆棘王权,玫瑰战争的古老技艺,使用后获得持续3回合的1层反击,Thorn Sovereignty,Gain 1 layer of {buff_counterattack} for 3 turns after use,Ancient art from the War of Roses
+26,,镜面审判,光明神殿的惩戒秘法,使用后获得持续3回合的2层反击,Mirror Judgment,Gain 2 layers of {buff_counterattack} for 3 turns after use,Punitive secret art of the Light Temple
+27,,龙鳞祝福,古龙褪鳞的馈赠,使用后获得持续2回合的2层坚盾,Dragonscale Blessing,Gain 2 layers of {buff_bulwark} for 2 turns after use,Gift from ancient dragon's shed scales
+28,,永恒熔铸,矮人熔炉的终极杰作,使用后获得持续3回合的4层坚盾,Eternal Forging,Gain 4 layers of {buff_bulwark} for 3 turns after use,Ultimate masterpiece of dwarven forges
+29,,普拉提粘液,恐惧,"卡牌的数值（阿拉伯数字）全部+1(镶嵌时生效),卡牌使用后不会进入弃牌堆",Platy Slime,"All numerical values on card +1 (when embedded), card doesn't enter discard pile after use",Fear
+30,,血藤,它渴望着鲜血,每次打出时卡牌造成的伤害+1(可以跨战斗保留),Blood Vine,Card damage +1 each time played (persists across battles),It thirsts for blood
+31,,水银泪滴,一滴在汞中永恒跃动的液态记忆,"卡牌的数值（阿拉伯数字）全部+2(镶嵌时生效),卡牌使用后不会进入弃牌堆",Mercury Teardrop,"All numerical values on card +2 (when embedded), card doesn't enter discard pile after use",A drop of liquid memory eternally dancing in mercury
+32,,腐蚀之心,"深渊领主的核心残骸,跳动的腐化心脏渗出沥青般的脓血","卡牌给予的状态层数+2(镶嵌生效),使用时自身生命值-4",Heart of Corruption,"Status layers granted by card +2 (when embedded), lose 4 health when used","Core remnant of an abyssal lord, a beating corrupted heart oozing tar-like pus"

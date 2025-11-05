@@ -1,11 +1,90 @@
-Id,Belong,Level,UseScript
-唯一Id,属于哪类,难度等级,对应脚本
-1,命运锁定,1,PlayerInfo.GetNowSave().ExDeleteDes+= 1;
-2,命运锁定,2,PlayerInfo.GetNowSave().ExLockDes += 1;
-3,生命增加,1,PlayerInfo.GetNowSave().EXEnemyHp += 10;
-4,生命增加,2,PlayerInfo.GetNowSave().EXEnemyHp += 20;
-5,生命增加,3,PlayerInfo.GetNowSave().EXEnemyHp += 30;
-6,攻击增加,1,PlayerInfo.GetNowSave().EXEnemyAtk += 10;
-7,攻击增加,2,PlayerInfo.GetNowSave().EXEnemyAtk += 20;
-8,攻击增加,3,PlayerInfo.GetNowSave().EXEnemyAtk += 30;
-9,防御增加,2,PlayerInfo.GetNowSave().ExTough += 1;
+Id,Belong,Level,UseScript,FightScript
+唯一Id,属于哪类,难度等级,对应脚本,
+1,命运锁定,1,"PlayerInfo.SetGameVar(""ExDeleteDes"",(int.Parse(PlayerInfo.GetGameVar(""ExDeleteDes""))+1).ToString());",
+2,命运锁定,2,"PlayerInfo.SetGameVar(""ExLockDes"",(int.Parse(PlayerInfo.GetGameVar(""ExLockDes""))+1).ToString());",
+3,生命增加,1,"PlayerInfo.SetGameVar(""EXEnemyHp"",(int.Parse(PlayerInfo.GetGameVar(""EXEnemyHp""))+15).ToString());",
+4,生命增加,2,"PlayerInfo.SetGameVar(""EXEnemyHp"",(int.Parse(PlayerInfo.GetGameVar(""EXEnemyHp""))+35).ToString());",
+5,生命增加,3,"PlayerInfo.SetGameVar(""EXEnemyHp"",(int.Parse(PlayerInfo.GetGameVar(""EXEnemyHp""))+50).ToString());",
+6,攻击增加,1,"PlayerInfo.SetGameVar(""EXEnemyAtk"",(int.Parse(PlayerInfo.GetGameVar(""EXEnemyAtk""))+10).ToString());",
+7,攻击增加,2,"PlayerInfo.SetGameVar(""EXEnemyAtk"",(int.Parse(PlayerInfo.GetGameVar(""EXEnemyAtk""))+20).ToString());",
+8,攻击增加,3,"PlayerInfo.SetGameVar(""EXEnemyAtk"",(int.Parse(PlayerInfo.GetGameVar(""EXEnemyAtk""))+30).ToString());",
+9,防御增加,2,"PlayerInfo.SetGameVar(""ExTough"",(int.Parse(PlayerInfo.GetGameVar(""ExTough""))+2).ToString());",
+10,绝望深渊,2,"PlayerInfo.SetGameVar(""Difficulty"",(int.Parse(PlayerInfo.GetGameVar(""Difficulty""))+1).ToString());",
+11,绝望深渊,3,"PlayerInfo.SetGameVar(""Difficulty"",(int.Parse(PlayerInfo.GetGameVar(""Difficulty""))+2).ToString());",
+12,灌铅骰子,1,,"AddEvent(""OnDiceValue"", () =>
+        {
+                ValueDice.OnRoll += result => {
+            result.CopyTo(new(result.Value-10,result.Bonus));
+            };
+        });
+AddEvent(""OnDiceCheck"", () =>
+        {
+
+                CheckDice.OnRoll += result => {
+ result.CopyTo(new( (result.Value+10),result.Bonus));
+            };
+        });"
+13,卖方市场,1,"PlayerInfo.SetGameVar(""PriceMul"",(int.Parse(PlayerInfo.GetGameVar(""PriceMul""))+10).ToString());",
+14,卖方市场,2,"PlayerInfo.SetGameVar(""PriceMul"",(int.Parse(PlayerInfo.GetGameVar(""PriceMul""))+20).ToString());",
+15,卖方市场,3,"PlayerInfo.SetGameVar(""PriceMul"",(int.Parse(PlayerInfo.GetGameVar(""PriceMul""))+30).ToString());",
+16,战斗buff,2,,"SetStatus(""AllEnemy"");
+        int a = DefaultDice.Roll().Value;
+        if (a<20)
+        {
+            AddBuff(""buff_elements"",""4"");
+        }
+        else if(a<40)
+        {
+            AddBuff(""buff_keenedge"",""2"");
+        }
+        else if(a<60)
+        {
+            AddBuff(""buff_bulwark"",""2"");
+        }
+        else if(a<70)
+        {
+            AddBuff(""buff_counterattack"",""1"");
+        }
+        else
+        {
+            AddBuff(""buff_evolution"",""1"");
+        }"
+17,战斗buff,3,,"if (PlayerInfo.enemylevel==1||PlayerInfo.enemylevel==4)
+        {
+            return;
+        }
+        SetStatus(""AllEnemy"");
+        string tempName = """";
+        int tempHp = 0;
+        foreach (var item in Object)
+        {
+            if (item.CurHp > tempHp)
+            {
+                tempHp = item.CurHp;
+                tempName = item.InstanceId;
+             }
+        }
+        SetStatusById(tempName);
+        int a = DefaultDice.Roll().Value;
+        if (a<30)
+        {
+            AddBuff(""SpecialBuff_Restrain"",""2"");
+        }
+        else if(a<60)
+        {
+            AddBuff(""SpecialBuff_Irritable"",""2"");
+        }
+        else if(a<90)
+        {
+            AddBuff(""SpecialBuff_Hysteresis"",""2"");
+        }
+        else
+        {
+            AddBuff(""buff_chrysalis"",""1"");
+        }"
+18,命运权重,1,"PlayerInfo.SetGameVar(""普通"",(float.Parse(PlayerInfo.GetGameVar(""普通""))+0.05f).ToString());
+        PlayerInfo.SetGameVar(""普通事件"",(float.Parse(PlayerInfo.GetGameVar(""普通事件""))-0.05f).ToString());",
+19,命运权重,2,"PlayerInfo.SetGameVar(""精英"",(float.Parse(PlayerInfo.GetGameVar(""精英""))+0.05f).ToString());
+        PlayerInfo.SetGameVar(""建筑"",(float.Parse(PlayerInfo.GetGameVar(""建筑""))-0.05f).ToString());",
+20,成本控制,1,"PlayerInfo.SetGameVar(""RefreshCount"",""3"");",
+21,命运权重,3,"PlayerInfo.SetGameVar(""LimitTime"",""True"");",

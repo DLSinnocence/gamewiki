@@ -1,0 +1,193 @@
+Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
+唯一的标识（不能重复）,稀有度,花费,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效,动作
+1,1,1,Combo,"Vars[""BaseScript""]=""AttackCardItem"";AddDescription(""1"",""Damage"",""6"");",,"SetStatus(""Target"");
+        Damage(""6"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            Damage((Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level+7).ToString());
+        }",,,,
+2,2,2,Combo,"Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Damage"",""9"");",,"SetStatus(""AllTarget"");
+        Damage(""9"");
+       if (ComboCheck(PlayerInfo.LastCard))
+        {
+            Damage(((Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level+1)*3).ToString());
+        }",,,,
+3,3,3,Combo,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (Self.buffBarUI != null && Self.buffBarUI.GetBuff(""buff_revelation"") != null)
+        {
+            int level = Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level;
+            SetStatus(""AllTarget"");
+            Damage((level * level).ToString());
+            SetStatus(""Self"");
+            ChangeDefence((level * level).ToString());
+            RemoveBuff(""buff_revelation"");
+        }",,,元素爆发,
+4,2,1,Combo,"Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Buff"",""2"");",,"AddBuff(""buff_revelation"", ""2"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            AddBuff(""buff_revelation"", (Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level/2+2).ToString());
+        }",,,,
+5,2,0,Combo,"Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Draw"",""1"");
+AddDescription(""2"",""Power"",""1"");",," DrawCount(""1"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            if (Self.buffBarUI.GetBuff(""buff_revelation"") != null && Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level > 3)
+            {
+                ChangePower(""1"");
+            }
+        }else
+        {
+            BurnCardByData(dataConfig);
+        }",,,,
+6,2,1,Combo,"Vars[""BaseScript""]=""AttackCardItem"";AddDescription(""1"",""Damage"",""6"");
+        AddDescription(""2"",""Special"",""2"");
+        AddDescription(""3"",""Special"",""2"");
+        AddDescription(""4"",""Special"",""1"");",,"SetStatus(""Target"");
+        Damage(""6"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            if (Self.buffBarUI == null || Self.buffBarUI.GetBuff(""buff_revelation"") == null)
+            {
+                return;
+            }
+            Damage((2 * Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level).ToString());
+            if (Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level>=2)
+            {
+                SetStatus(""Self"");
+                ChangePower(""1"");
+            }
+        }",,,,
+7,3,1,Combo,"Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Draw"",""1"");AddDescription(""2"",""Draw"",""2"");",,"DrawCount(""1"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            DrawCount(""2"");
+        }
+        else
+        {
+            BurnCardByData(dataConfig);
+        }",,,,
+8,1,1,Combo,"Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Defence"",""6"");
+        AddDescription(""2"",""Defence"",""6"");",,"ChangeDefence(""6"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            ChangeDefence(""6"");
+        }",,,,
+9,2,1,Combo,"Vars[""BaseScript""]=""AttackCardItem"";AddDescription(""1"",""Power"",""1"");",,"SetStatus(""Target"");AddBuff(""buff_weakness"",""1"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+SetStatus(""Self"");
+            ChangePower(""1"");
+        }",,,,
+10,3,3,"Combo, Burnout","Vars[""BaseScript""]=""CommonCardItem"";",,"var cards = HandCard
+.Where(card => card != null && card.Tags.Contains(""Combo""))
+.ToList();
+        foreach (var item in cards)
+        {
+            if (item.data[""Id""]==dataConfig.data[""Id""])
+            {
+                continue;
+            }
+            item.scriptExecutor.RunScript(""UseScript"");
+        }
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            AddBuff(""buff_extraordinary"", (cards.Count() * 10).ToString());
+        }",,,,
+11,3,1,"Combo, Burnout","Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Buff"",""6"");",,"
+            var cards = HandCard
+.Where(card => card != null && !card.Tags.Contains(""Froze"") && !card.Tags.Contains(""Combo""))
+.ToList();
+            int i = 1;
+            foreach (var item in cards)
+            {
+                item.Burning(0.2f * i);
+                i++;
+            }
+            if (Self.buffBarUI!=null)
+            {
+                if (Self.buffBarUI.GetBuff(""buff_revelation"")==null||Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level<8)
+                {
+                    AddBuff(""buff_bleeding"",""4"");
+                }
+            }
+      ",,,,
+12,3,1,"Combo, Burnout","Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Buff"",""5"");",,"AddBuff(""buff_burn"",""5"");
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            AddEvent(""Action"",(fromData)=>
+        {
+            dynamic thisData = fromData.GetDynamic();
+            if (!thisData.data.data[""Tag""].Contains(""Combo""))
+            {
+                if (!(thisData.data.Vars.ContainsKey(""SpecialTag"") && thisData.data.Vars[""SpecialTag""].Contains(""Combo"")))
+                {
+                    return;
+                }
+            }
+            if (Self.buffBarUI!=null && Self.buffBarUI.GetBuff(""buff_revelation"") != null)
+            {
+                if (ValueDice.Roll().Value>(100-4*Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level))
+                {
+                    ChangeDynamicVar(""UseCount"", ""1"");
+                }
+            }
+            
+        });
+        }
+        
+        AddEvent(""StartRound"",()=> { Clear(); });",,,,
+13,2,0,"Combo, Burnout","Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Hp"",""2"");",,"SetStatus(""Self"");
+        AddEvent(""Action"",(fromData)=>
+        {
+            dynamic thisData = fromData.GetDynamic();
+            if (!thisData.data.data[""Tag""].Contains(""Combo""))
+            {
+                if (!(thisData.data.Vars.ContainsKey(""SpecialTag"") && thisData.data.Vars[""SpecialTag""].Contains(""Combo"")))
+                {
+                    return;
+                }
+            }
+            ChangeHp(""2"");
+        });
+        AddEvent(""StartRound"",()=> { Clear(); });
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            if (Self.buffBarUI==null||Self.buffBarUI.GetBuff(""buff_revelation"") == null)
+            {
+                return;
+            }
+            ChangeHp((Self.MaxHp * Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level / 100).ToString());
+        }",,,,
+14,2,0,Combo,"if (PlayerInfo.SpecialVars!=null && !PlayerInfo.SpecialVars.ContainsKey(""combo_14""))
+        {
+            PlayerInfo.SpecialVars[""combo_14""] = ""0"";
+        }
+        Vars[""BaseScript""] = ""AttackCardItem"";
+        AddDescription(""1"", ""Damage"", ""4"");
+        AddDescription(""2"", ""Damage"", (int.Parse(PlayerInfo.SpecialVars!=null ?PlayerInfo.SpecialVars[""combo_14""]:""0"") / 2 + 4).ToString());",,"SetStatus(""Target"");
+        Damage(""4"");
+        if (!PlayerInfo.SpecialVars.ContainsKey(""combo_14""))
+        {
+            PlayerInfo.SpecialVars[""combo_14""] = ""0"";
+        }
+        PlayerInfo.SpecialVars[""combo_14""]=(int.Parse(PlayerInfo.SpecialVars[""combo_14""]) + 1).ToString();
+        if (ComboCheck(PlayerInfo.LastCard))
+        {
+            Damage((int.Parse(PlayerInfo.SpecialVars[""combo_14""])/2+4).ToString());
+        }",,,,
+15,3,0,"Combo, Burnout","Vars[""BaseScript""]=""AttackCardItem"";",,"SetStatus(""Target"");
+        if (Self.buffBarUI == null || Self.buffBarUI.GetBuff(""buff_revelation"") == null)
+        {
+            return;
+        }
+if (ComboCheck(PlayerInfo.LastCard))
+        {
+            var TempObject = Object.ToList();
+            foreach (var item in TempObject)
+            {
+                if (item.CurHp < (item.MaxHp * (Self.buffBarUI.GetBuff(""buff_revelation"").buffConfig.Level + 20) / 100))
+                {
+                    SetStatusById(item.InstanceId);
+                    Damage(item.MaxHp.ToString(), ""True"");
+                }
+            }
+        }",,,,

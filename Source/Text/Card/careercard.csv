@@ -1,4 +1,10 @@
-Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
-唯一的标识（不能重复）,消耗费用,名称,卡牌类型,描述,Name,Type,Description
-*1,0,原初之理,消耗技能牌,"从抽牌堆中选择一张牌检索.<br>战斗技能,冷却时间一次战斗。",Original Truth,Burn Skill,"Select a card from the draw pile and retrieve it. Battle skill, cooldown: once per battle."
-*2,0,原初之理,消耗技能牌,"从抽牌堆中选择一张牌检索.<br>战斗技能,冷却时间一次战斗。",Original Truth,Burn Skill,"Select a card from the draw pile and retrieve it. Battle skill, cooldown: once per battle."
+Id,Type,Note,Name,Name_zh-Hant,Name_en,Name_ja,Description,Description_zh-Hant,Description_en,Description_ja
+唯一的标识（不能重复）,卡牌类型,消耗费用,名称,,Name,,描述,,Description,
+*1,消耗技能牌,0,神选,神選,Original Truth,神選,从抽牌堆中检索一张牌加入手卡.<br>冷却：1回合。剩余冷却:{0},從抽牌堆中檢索一張牌加入手卡.<br>冷卻：1回合。剩餘冷卻:{0},"Select a card from the draw pile and retrieve it. Battle skill, CD:1 turns.Remaining cooldown: {0}",山札からカードを1枚選択して手札に加える。<br>クールダウン：1ターン。残りクールダウン:{0}
+*2,消耗技能牌,1,可食用厄运,可食用厄運,Edible Doom,食せる厄災,选择一名指定对象，吞噬目标身上的所有负面异常，每种buff获得不超过10点的厄运魔能，对目标(如果非自身)造成{0}点伤害<br>冷却：10回合。剩余冷却:{1},"選擇一名指定對象，吞噬目標身上的所有負面異常，並
+將異常儲存入奈奈的“胃囊”，獲得不超過10點的厄運魔
+能，對目標造成{0}點傷害<br>冷卻：10回合。 剩餘冷卻:{1}","Select a target that devours all negative anomalies on the target, and
+Store the anomaly in Nana's ""stomach pouch"" to obtain no more than 10 points of {buff_DoomPower} 
+, dealing {0} damage to the target(if is not self).Remaining cooldown: {1}",対象を1体選択し、その対象の全てのデバフを捕食する。デバフ1種類につき最大10点の厄災魔力を獲得し、対象（自身でない場合）に{0}ダメージを与える。<br>クールダウン：10ターン。残りクールダウン:{1}
+*3,消耗技能牌,1,灾祸具现化,災禍具現化,Disaster materialized,災禍の具現化,"获得""灾祸化身"".冷却:2回合 剩余冷却:{0}","獲得""災禍化身"".冷卻:2回合 剩餘冷卻:{0}",Gain {SpecialBuff_CalamityIncarnates}.Remaining cooldown: {0},「災禍の化身」状態になる。<br>クールダウン：2ターン。残りクールダウン:{0}
+*4,消耗技能牌,1,王族律令,王族律令,Royal family laws,王族の律令,冷却:10回合。使用时让所有棋子行动一次 剩余冷却:{0},冷卻：10回合。 使用時讓所有棋子行動一次。剩餘冷卻:{0},"This card is CD-1 only when you are using a card, and this card CD is 10 at the start of battle. When used, make all pieces move once.Remaining cooldown: {0}",全ての駒を1回行動させる。（あなたがカードを使用するたびにクールダウン-1）<br>クールダウン：10ターン。残りクールダウン:{0}

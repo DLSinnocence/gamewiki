@@ -1,0 +1,4 @@
+Id,Hp,Attack,Defend,ActionCount,InitScript,CardList,DollIcon,Model,Animation
+Id,血量,攻击力,防御盾,行动次数,初始buff,卡牌列表,玩偶图标,怪物的模型路径,
+10001,45,3,5,2,"AddBuff(""SpecialBuff_Crow"", ""1"");","PartnerCard_DeepGrows, PartnerCard_FuneralBell, PartnerCard_attack, PartnerCard_defence",Icon/Pattern/乌鸦,Icon/Pattern/乌鸦,AnimationLib/乌鸦
+10002,40,4,2,2,"AddBuff(""SpecialBuff_meow"", ""1"");","PartnerCard_AswiftBlow, PartnerCard_Hah, PartnerCard_Combing, PartnerCard_attack, PartnerCard_defence",Icon/Pattern/黑猫,Icon/Pattern/黑猫,AnimationLib/黑猫

@@ -1,6 +1,6 @@
-Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
-唯一的标识（不能重复）,#REF!,名称,卡牌类型,描述,Name,Type,Description
-1,,火雨术,攻击牌,"对所有敌人造成{0}点伤害,并给予{1}层灼烧。",Rain of Fire,Attack,Deals {0} damage to all enemies and applies {1} layer of {buff_burn}.
-2,,炽焰新星,消耗攻击牌,"对所有敌人造成{0}点伤害,并给予{1}层灼烧。",Meteor Strike,Burn Attack,Deals {0} damage to all enemies and applies {1} layer of {buff_burn}.
-3,,烈阳,消耗技能牌,"给予灼烧,重伤,失格各{0}层",Solar Flare,Burn Skill,"Applies {0} layers of {buff_burn}, {buff_exorcism}, and {buff_disqualification} to the target."
-4,,腐化黑星,攻击牌,"对所有敌人造成{0}点伤害,并给予{1}层灼烧,{2}层重伤。",Roar of Sunborn,Attack,Deals {0} damage to all enemies and applies {1} layer of {buff_burn} and {2} layers of {buff_exorcism}.
+Id,Type,已完成,Name,Name_en,Name_zh-Hant,Name_ja,Description,Description_zh-Hant,Description_en,Description_ja
+唯一的标识（不能重复）,卡牌类型,FALSE,名称,Name,,,描述,,Description,
+1,攻击牌,TRUE,火雨术,Fire Rain,火雨術,火雨術,"对所有敌人造成{0}点伤害,并给予{1}层灼烧。","對所有敵人造成{0}點傷害,並給予{1}層灼燒。",Deal {0} damage to all enemies and apply {1} layer(s) of {buff_burn}.,全ての敵に{0}のダメージを与え、燃焼を{1}スタック付与する。
+2,消耗攻击牌,TRUE,炽焰新星,Blazing Nova,熾焰新星,熾炎の新星,"对所有敌人造成{0}点伤害,并给予{1}层灼烧。","對所有敵人造成{0}點傷害,並給予{1}層灼燒。",Deal {0} damage to all enemies and apply {1} layer(s) of {buff_burn}.,全ての敵に{0}のダメージを与え、燃焼を{1}スタック付与する。
+3,消耗技能牌,TRUE,烈阳,Scorching Sun,烈陽,烈日,"给予灼烧,重伤,失格各{0}层。","給予灼燒,重傷,失格各{0}層","Apply {0} layer(s) each of {buff_burn}, {buff_trauma}, and {buff_degrade} to all enemies.",全ての敵に燃焼、重傷、失格をそれぞれ{0}スタック付与する。
+4,攻击牌,TRUE,腐化黑星,Corrupted Dark Star,腐化黑星,腐敗した黒星,"对所有敌人造成{0}点伤害,并给予{1}层灼烧,{2}层重伤。","對所有敵人造成{0}點傷害,並給予{1}層灼燒,{2}層重傷。",Deal {0} damage to all enemies and apply {1} layer(s) of {buff_burn} and {2} layer(s) of {buff_trauma}.,全ての敵に{0}のダメージを与え、燃焼を{1}スタックと重傷を{2}スタック付与する。

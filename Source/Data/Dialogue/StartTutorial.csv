@@ -1,0 +1,8 @@
+Id,BaseScript,EndScript,Roles,EventName,ChoiceCount,ChoiceScript1,ChoiceScript2
+对话Id,初始脚本,对话结束时执行,"出现的角色Id，说话者用<>包括，用,分割",何时执行对话（事件名）,选项数量,选项脚本,
+1,"Vars[""DesVal1""] = PlayerInfo.PlayerName;",,role_amelia,StartTutorial,2,"EventTrigger(""StartTutorial_*2"");","EventTrigger(""StartTutorial_*3"");"
+*2,,"EventTrigger(""StartTutorial_4"");",role_amelia,StartTutorial_*2,0,,
+*3,,"EventTrigger(""StartTutorial_4"");",role_amelia,StartTutorial_*3,0,,
+4,,,role_amelia,StartTutorial_4,0,,
+5,,,role_amelia,,0,,
+6,,,role_narrator,,0,,

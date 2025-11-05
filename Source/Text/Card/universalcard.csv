@@ -1,23 +1,24 @@
-Id,Note,Name,Type,Description,Name_en,Type_en,Description_en
-唯一的标识（不能重复）,备注,名称,类型,描述,Name,Type,Description
-1,"通用,充能",沉思,技能牌,"抽到时获得{0}点行动点,抽{1}张牌。",Contemplation,Skill,"When drawn, gain {0} power and draw {1} card."
-2,"通用,生存",回溯,技能牌,"将你的血量回归到刻录的时间节点,如果没有刻录,那就刻录一次。",Retrospection,Skill,"Return your health to the time when the card was engraved. If it has not been engraved, engrave it once."
-3,"通用,生存",忘我,技能牌,"结束你的回合,获得持续二回合的{0}层坚毅。",Selflessness,Skill,End your turn and gain {0} layers of {buff_impregnable} for two turns.
-4,"通用,充能,负面",饮鸩止渴,技能牌,"获得{0}点行动点,获得{1}层毒素。",Drinking poison to quench thirst,Skill,Gain {0} power and gain {1} layer of {buff_toxin}.
-5,"通用,过牌,负面",挖肉补疮,技能牌,"抽取{0}张卡牌,获得{1}层毒素。",Cutting flesh to heal wounds,Skill,Draw {0} cards and gain {1} layer of {buff_toxin}.
-6,"通用,生存",极致坚毅,技能牌,获得{0}点护盾。,Perfection Steadfastness,Skill,Gain {0} shield.
-7,"通用,生存",净世,技能牌,"获得{0}层强韧,{1}层反击,{2}层坚毅。",Purification,Skill,"Gain {0} layers of {buff_resilient}, {1} layer of {buff_counterattack}, and {2} layers of {buff_impregnable}."
-8,"通用,生存",不屈,技能牌,获得{0}层不屈。,Tenacity,Skill,Gain {0} layers of {buff_unyielding}.
-9,"通用,生存",舍身,技能牌,获得{0}层狂暴。,Rampage,Skill,Gain {0} layers of {buff_sacrifice}.
-10,"通用,生存",存想,技能牌,获得{0}层增生。,Contemplation,Skill,Gain {0} layers of {buff_remember}.
-11,"通用,输出",孤注一掷,攻击牌,"将生命降低至五点,对指定敌人造成自身已损生命值30%的伤害。",All or nothing,Attack,Reduce your health to five and deal 30% of your lost health to the target enemy.
-12,"通用,生存",回想,技能牌,获得{0}层血墙。,Recollection,Skill,Gain {0} layers of {buff_conscience}.
-13,"通用,输出",无孔不入,攻击牌,对随机敌人造成三次{0}点伤害。,Pervasiveness,Attack,Deal {0} damage three times to a random enemy.
-14,"通用,生存",锲而不舍,技能牌,"获得{0}层无力,{1}层自愈。",Perseverance,Skill,Gain {0} layers of {buff_weak} and {1} layer of {buff_evergreen}.
-15,"通用,生存",周旋,技能牌,"将生命变为二十五点,获得{0}点护盾,获得{1}层强韧。",Juggling,Skill,"Change your health to 25, gain {0} shield, and gain {1} layer of {buff_resilient}."
-16,"通用,充能,过牌",宁做吾,技能牌,"将生命降低至五点,抽{0}张牌,获得{1}点行动点。",Better to be me,Skill,"Reduces health to five, draws {0} cards, and gains {1} power."
-17,通用,超凡,消耗攻击牌,"造成{0}点伤害二次,获得{1}点护盾。",Transcendence,BurnAttack,Deals {0} damage twice and gains {1} shield.
-18,通用,入圣,攻击牌,"造成{0}点伤害三次,获得{1}点护盾。",Enlightenment,Attack,Deals {0} damage three times and gains {1} shield.
-19,"通用,过牌",一梦也,技能牌,获得{0}层源蜕。,A dream,Skill,Gains {0} layers of the {buff_vientiane} effect.
-20,"通用,过牌",不朽意,技能牌,获得{0}层不朽。,Immortality,Skill,Gains {0} layers of the {buff_immortal} effect.
-21,"通用,过牌",燃命,技能牌,"生命值-1,燃烬一张牌,抽{0}张牌",Immortality,Skill,Gains {0} layers of the {buff_immortal} effect.
+Id,第 1 列,Type,Note,Name,Name_zh-Hant,Name_en,Name_ja,Description,Description_zh-Hant,Description_en,Description_ja
+唯一的标识（不能重复）,FALSE,类型,备注,名称,,Name,,描述,,Description,
+1,TRUE,技能牌,"通用,充能",冥想,冥想,Meditation,瞑想,"抽到时获得{0}点魔能,抽{1}张牌。","抽到時獲得{0}點魔能,抽{1}張牌。","When drawn, gain {0} mana and draw {1} card(s).",引いた時、{0}マナを獲得し、カードを{1}枚引く。
+2,TRUE,技能牌,"通用,生存",生命回溯,生命回溯,Life Rewind,生命巻き戻し,"将你的血量回归到刻录的时间节点,如果没有刻录,那就刻录一次。","將你的血量回歸到刻錄的時間節點,如果沒有刻錄,那就刻錄一次。","Return your health to the recorded time point. If not recorded, record it once.",あなたのHPを記録した時点に戻す。記録がない場合は、一度記録する。
+3,TRUE,技能牌,"通用,生存",招架,招架,Parry,パリィ,"结束你的回合,获得{0}层坚毅。","結束你的回合,獲得{0}層堅毅。",End your turn and gain {0} layers of {buff_impregnable} for two turns.,あなたのターンを終了し、堅毅を{0}スタック獲得する。
+4,TRUE,技能牌,通用，充能，负面,魔能榨取,魔能榨取,Mana Drain,魔力搾取,"获得{0}点魔能,获得{1}层失能。","得到{0}點魔能,獲得{1}層毒素。",Gain {0} mana and {1} layer(s) of {buff_toxin}.,{0}マナを獲得し、毒素を{1}スタック獲得する。
+5,TRUE,技能牌,"通用,充能,负面",思维榨取,思維榨取,Mind Drain,思考搾取,"抽取{0}张卡牌,获得{1}层毒素。","抽取{0}張卡牌,獲得{1}層毒素。",Draw {0} cards and gain {1} layer of {buff_toxin}.,カードを{0}枚引き、毒素を{1}スタック獲得する。
+6,TRUE,技能牌,"通用,生存",强化护盾,強化護盾,Reinforced Shield,強化シールド,所有魔女获得{0}点护盾。,所有魔女獲得{0}點護盾。,All witches Gain {0} shield.,全ての魔女が{0}シールドを獲得する。
+7,TRUE,技能牌,"通用,生存",反击姿态,反擊姿態,Counter Stance,反撃の構え,"获得{0}层强韧,{1}层反击,{2}层坚毅。","獲得{0}層強韌,{1}層反擊,{2}層堅毅。","Gain {0} layers of {buff_resilient}, {1} layer of {buff_counterattack}, and {2} layers of {buff_impregnable}.",強靭を{0}スタック、反撃を{1}スタック、堅毅を{2}スタック獲得する。
+8,TRUE,技能牌,"通用,生存",加速术,加速術,Acceleration,加速術,获得{0}层不屈。,得到{0}層不屈。,Gain {0} layers of {buff_unyielding}.,不屈を{0}スタック獲得する。
+9,TRUE,技能牌,"通用,生存",狂暴化,狂暴化,Berserk,狂暴化,获得{0}层狂暴。,獲得{0}層狂暴。,Gain {0} layers of {buff_frenzy}.,狂暴を{0}スタック獲得する。
+10,TRUE,技能牌,"通用,生存",庇护术,庇護術,Sanctuary,庇護術,获得{0}层增生。,獲得{0}層增生。,Gain {0} layers of {buff_mitosis}.,増殖を{0}スタック獲得する。
+11,TRUE,攻击牌,"通用,输出",血契重锋,血契重鋒,Blood Pact: Heavy Strike,血の契約・重撃,"将生命降低至10点,对指定敌人造成自身已损生命值30%的伤害。","將生命降低至10點,對指定敵人造成自身已損生命值30%的傷害。",Reduce your health to 10 and deal 30% of your lost health to the target enemy.,HPを10にし、指定した敵に自身の失ったHPの30%分のダメージを与える。
+12,TRUE,技能牌,"通用,生存",活血术,活血術,Blood Circulation	,活血術,获得{0}层血墙。,得到{0}層血牆。,Gain {0} layers of {buff_bloodwall}.,血の壁を{0}スタック獲得する。
+13,TRUE,攻击牌,"通用,输出",乱舞,亂舞,Wild Dance,乱舞,对随机敌人造成三次{0}点伤害。,對隨機敵人造成三次{0}點傷害。,Deal {0} damage three times to a random enemy.,ランダムな敵に{0}ダメージを3回与える。
+14,TRUE,技能牌,"通用,生存",防御姿态,防禦姿態,Defensive Stance,防御の構え,"获得{0}层无力,{1}层自愈。","獲得{0}層無力,{1}層自癒。",Gain {0} layers of {buff_weak} and {1} layer of {buff_evergreen}.,脱力を{0}スタック、再生を{1}スタック獲得する。
+15,TRUE,技能牌,"通用,生存",血契化盾,血契化盾,Blood Pact: Shield,血の契約・盾化,"将生命变为二十五点,获得{0}点护盾,获得{1}层强韧。","將生命變為二十五點,獲得{0}點護盾,獲得{1}層強韌。","Change your health to 25, gain {0} shield, and gain {1} layer of {buff_resilient}.",HPを25にし、{0}シールドと強靭を{1}スタック獲得する。
+16,TRUE,技能牌,"通用,充能,过牌",血契冥想,血契冥想,Blood Pact: Meditation,血の契約・瞑想,"将生命降低至10点,抽{0}张牌,获得{1}点魔能。","將生命降到10點,抽{0}張牌,獲得{1}點魔能。","Reduces health to 10, draws {0} cards, and gains {1} power.",HPを10にし、カードを{0}枚引き、{1}マナを獲得する。
+17,TRUE,消耗攻击牌,通用,双刃剑盾,雙面刃盾,Double-Edged Shield,諸刃の剣盾,"造成{0}点伤害二次,获得{1}点护盾。","造成{0}點傷害二次,獲得{1}點護盾。",Deals {0} damage twice and gains {1} shield.,{0}ダメージを2回与え、{1}シールドを獲得する。
+*18,TRUE,攻击牌,通用,星芒,星芒,Starlight,星芒,"造成{0}点伤害四次,全体魔女获得{1}点护盾。","造成{0}點傷害三次,全體魔女獲得{1}點護盾。",Deals {0} damage three times and All witches gains {1} shield.,{0}ダメージを3回与え、全ての魔女が{1}シールドを獲得する。
+*19,TRUE,技能牌,"通用,过牌",源蜕,源蛻,Source Molt,源化,获得{0}层源蜕。,獲得{0}層源蛻。,Gains {0} layers of the {buff_sourcecast} effect.,源化を{0}スタック獲得する。
+20,TRUE,技能牌,"通用,过牌",不朽,不朽,Immortality,不朽,获得{0}层不朽。,獲得{0}層不朽。,Gains {0} layers of the {buff_immortal} effect.,不朽を{0}スタック獲得する。
+21,TRUE,技能牌,"通用,过牌",灵感交换,靈感交換,Inspiration Exchange,霊感交換,"生命值-1,燃烬一张牌,抽{0}张牌","生命值-1,燃燼一張牌,抽{0}張牌","Lose 1 health, burn a card, and draw {0} card(s).",HP-1、カードを1枚燃焼し、カードを{0}枚引く。
+22,FALSE,技能牌,通用,百炼成钢,百鍊成鋼,Tempered into steel,百錬成鋼,获得{0}护盾，获得{1}反击，每次使用提供1点护盾获取量，0.2层反击获取量,獲得{0}護盾，獲得{1}反擊，每次使用提供1點護盾獲取量，0.1層反擊獲取量,Gain {0} shield and {1} counter. Each use provides 1 point of shield gain and 0.1 layers of counter gain.,{0}のシールドを獲得し、{1}のカウンターを獲得する。使用するたびにシールド獲得量が1増加し、カウンター獲得量が0.1層増加する

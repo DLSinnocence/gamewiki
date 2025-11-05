@@ -1,10 +1,10 @@
 Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
 唯一的标识（不能重复）,稀有度,花费,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效路径,动作
-1,4,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?(Self.DefenceCalculate(6+int.Parse(Vars[""CorDef""]))).ToString():(6+int.Parse(Vars[""CorDef""])).ToString();Vars[""DesVal2""]=(60+int.Parse(Vars[""CorMoney""])).ToString();",,"ChangeDefence(""6"");
+1,2,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?(Self.DefenceCalculate(6+int.Parse(Vars[""CorDef""]))).ToString():(6+int.Parse(Vars[""CorDef""])).ToString();Vars[""DesVal2""]=(60+int.Parse(Vars[""CorMoney""])).ToString();",,"ChangeDefence(""6"");
         SetStatus(""Self"");
         ChangeRound();
-        ChangeMoney(""60"");",,,,
-2,4,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(4+int.Parse(Vars[""CorAtk""])).ToString():(4+int.Parse(Vars[""CorAtk""])).ToString();",,"var cards = HandCard
+        ChangeMoney(""60"");",,Icon/Card/黄金时代,获得金币,
+*2,2,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(4+int.Parse(Vars[""CorAtk""])).ToString():(4+int.Parse(Vars[""CorAtk""])).ToString();",,"var cards = HandCard
          .Where(card => card != null&&(!card.dataConfig.data[""Tag""].Contains(""Froze"")))
          .ToList();
         if (!cards.Any()) return;
@@ -16,7 +16,7 @@ Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Act
             i++;
         }
 
-        PlayerInfo.Money += count * 30;
+        PlayerInfo.Money += count * 45;
         if (count >= 2)
         {
             SetStatus(""AllRandomEnemy1"");
@@ -24,24 +24,23 @@ Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Act
         }
         if (count >= 4)
         {
+            SetStatus(""Self"");
             DrawCount(ValueDice.WithRange(1, 4).Roll().Value.ToString());
-            ChangePower(ValueDice.WithRange(1, 3).Roll().Value.ToString());
+            ChangePower(ValueDice.WithRange(1, 4).Roll().Value.ToString());
         }
         if (count >= 6)
         {
             SetStatus(""AllRandomEnemy1"");
             Damage(""5"");
+            SetStatus(""Self"");
             DrawCount(ValueDice.WithRange(1, 4).Roll().Value.ToString());
-            ChangePower(ValueDice.WithRange(1, 3).Roll().Value.ToString());
-        }",,,,Skill
-3,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(4+int.Parse(Vars[""CorAtk""])).ToString():(4+int.Parse(Vars[""CorAtk""])).ToString();",,"int count=PlayerInfo.Money/100;
+            ChangePower(ValueDice.WithRange(1, 4).Roll().Value.ToString());
+        }",,Icon/Card/统合之约,获得金币,Skill
+3,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=Self!=null?Self.DamageCalculate(5+int.Parse(Vars[""CorAtk""])).ToString():(5+int.Parse(Vars[""CorAtk""])).ToString();",,"        int count=PlayerInfo.Money/50;
         SetStatus(""AllEnemy"");
-        for (int i = 0; i < count; i++)
-        {
-            Damage(""4"");
-        }
-        PlayerInfo.Money -= count * 50;",,,,Skill
-4,4,0,Recycle,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (!Vars.ContainsKey(""ThisCount""))
+        Damage((5 * count).ToString());
+        PlayerInfo.Money -= count * 25;",,Icon/Card/乾坤一掷,获得金币,Skill
+4,3,1,Recycle,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (!Vars.ContainsKey(""ThisCount""))
         {
             Vars.Add(""ThisCount"", ""0"");
         }
@@ -52,24 +51,30 @@ Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Act
             int count= ValueDice.Roll().Value;
             if (count >= 50)
             {
-                PlayerInfo.Money+= (int)(PlayerInfo.Money*0.2f);
+                PlayerInfo.Money+= Math.Min((int)(PlayerInfo.Money*0.2f),800);
             }
             else
             {
-                PlayerInfo.Money-= (int)(PlayerInfo.Money*0.1f);
+                PlayerInfo.Money-= Math.Min((int)(PlayerInfo.Money*0.1f),400);
                 ChangeHp((-Self.MaxHp/10).ToString());
             }
-        }",,,,
-5,4,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorDraw""])).ToString();",,"BurnCard(""2"", ""2"");
-List<Dictionary<string, string>> cards = GetcardsByRarity(""3"", ""6"").Where(x => !x[""Id""].Contains(""*"")&&(x[""Type""]!=""诅咒"")).ToList();
-for (int i = 0; i < 3; i++)
-{
-AddCard(cards[DefaultDice.WithRange(0, cards.Count - 1).Roll().Value][""Id""]);
-}",,,,
-6,4,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
-        AddBuff(""buff_daydreamer"",INF,""1"");",,,,
-7,4,1,,"Vars[""BaseScript""]=""CommonCardItem"";","List<Dictionary<string, string>> list = GetcardsByRarity(""3"", ""5"").Where(x => x[""Type""].Contains(""技能牌"")).ToList();
+        }
+        if (int.Parse(Vars[""ThisCount""]) >= 7)
+        {
+            Vars[""NeedRemove""] = ""True"";
+        }",,Icon/Card/诅咒炼金,获得金币,
+5,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(3+int.Parse(Vars[""CorDraw""])).ToString();",,"BurnCard(""2"", ""2"");
+List<Dictionary<string, string>> cards = GetcardsByRarity(""2"", ""3"").Where(x => !x[""Id""].Contains(""*"")&&(x[""Type""]!=""诅咒"")).ToList();
+        for (int i = 0; i < 3; i++)
+        {
+            AddCard(cards[DefaultDice.WithRange(0, cards.Count - 1).Roll().Value][""Id""]);
+        }
+        DrawCount(""3"");",,Icon/Card/灵光一闪,,
+6,3,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
+        AddBuff(""buff_reverie"",""1"");",,Icon/Card/幻想酊剂,强化,
+7,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";","List<Dictionary<string, string>> list = GetcardsByRarity(""3"", ""3"").Where(x => x[""Type""].Contains(""技能牌"")).ToList();
         int count=DefaultDice.WithRange(0, list.Count - 1).Roll().Value;
+        dataConfig.data[""Id""] = list[count][""Id""];
         dataConfig.data[""UseScript""] = list[count][""UseScript""];
         dataConfig.data[""Description""]= list[count][""Description""];
         dataConfig.data[""InitScript""]= list[count][""InitScript""];
@@ -81,8 +86,8 @@ AddCard(cards[DefaultDice.WithRange(0, cards.Count - 1).Roll().Value][""Id""]);
             {
                 item.DataUpdate();
             }
-        }",,,,,
-8,4,0,,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (Vars.ContainsKey(""Should""))
+        }",,,Icon/Card/不稳定思绪,强化,
+8,2,0,,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (Vars.ContainsKey(""Should""))
         {
             if (!Vars.ContainsKey(""ThisCount""))
             {
@@ -106,8 +111,8 @@ AddCard(cards[DefaultDice.WithRange(0, cards.Count - 1).Roll().Value][""Id""]);
             result.CopyTo(result+result2);
             };
             }
-        });",,,,
-9,3,0,,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (Vars.ContainsKey(""Should""))
+        });",,Icon/Card/奖励骰,强化,
+9,2,0,,"Vars[""BaseScript""]=""CommonCardItem"";",,"if (Vars.ContainsKey(""Should""))
         {
             Vars[""Should""] = (int.Parse(Vars[""Should""]) + 1 ).ToString();
              if (!Vars.ContainsKey(""ThisCount""))
@@ -130,15 +135,15 @@ AddCard(cards[DefaultDice.WithRange(0, cards.Count - 1).Roll().Value][""Id""]);
             var result2 = CheckDice.InternalRoll(); result.CopyTo(new(Math.Min (result.Value,result2.Value),result.Bonus));
             };
             }
-        });",,,,
-10,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
-        AddBuff(""buff_fate"",INF,""1"");",,,,
+        });",,Icon/Card/惩罚骰,强化,
+10,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
+        AddBuff(""buff_fate"",""1"");",,Icon/Card/雷鸣加护,强化,
 11,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";
         Vars[""DesVal1""]=Self!=null?(Self.DefenceCalculate(1+int.Parse(Vars[""CorDef""]))).ToString():(1+int.Parse(Vars[""CorDef""])).ToString();
-        Vars[""DesVal2""]=Self!=null?(Self.DefenceCalculate(15+int.Parse(Vars[""CorDef""]))).ToString():(15+int.Parse(Vars[""CorDef""])).ToString();",,"SetStatus(""Self"");ChangeDefence(ValueDice.WithRange(1,15).Roll().Value.ToString());",,,,
-12,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";
+        Vars[""DesVal2""]=Self!=null?(Self.DefenceCalculate(15+int.Parse(Vars[""CorDef""]))).ToString():(15+int.Parse(Vars[""CorDef""])).ToString();",,"SetStatus(""Self"");ChangeDefence(ValueDice.WithRange(1,15).Roll().Value.ToString());",,Icon/Card/不稳定屏障,,
+12,2,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";
 ",,"SetStatus(""Self"");int count=PlayerInfo.Money/100;
         if (count>0)
         {
-            AddBuff(""buff_resilient"",INF,count.ToString());
-        }",,,,
+            AddBuff(""buff_resilient"",count.ToString());
+        }",,Icon/Card/帝国堡垒,"获得金币,强化",

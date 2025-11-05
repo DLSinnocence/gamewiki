@@ -1,6 +1,6 @@
 Id,RoleId,StartScript,EndScript,EventName
 对话Id,说话者唯一标识,对话开始时执行,对话结束时执行,何时执行对话（事件名）
-1,shadow,"PlayerInfo.ShowOptions((""做个交易"", () => {PlayerInfo.EventTrigger(""StartOutsiderShop"");PlayerInfo.EndDialogue();}), (""讲个故事"", () => {PlayerInfo.ShowDialogueBox(""shadowchat1_""+ PlayerInfo.RandomSelect(""2"",""4"",""6""));}), (""关于魔女屋"", () => {PlayerInfo.ShowDialogueBox(""shadowchat1_7"");}));",;,ShadowChat1
+1,shadow,"PlayerInfo.ShowOptions((""讲个故事"", () => {PlayerInfo.ShowDialogueBox(""shadowchat1_""+ PlayerInfo.RandomSelect(""2"",""4"",""6""));}), (""关于魔女屋"", () => {PlayerInfo.ShowDialogueBox(""shadowchat1_7"");}));",;,ShadowChat1
 2,shadow,,,
 3,shadow,,PlayerInfo.EndDialogue();,
 4,shadow,,,

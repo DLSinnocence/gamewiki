@@ -1,5 +1,5 @@
-Id,ApplyScript,ClearScript,ReducePerTurn,ReducePerAttacked,ReducePerUse,UpperBound,Icon,Type
-BUFF的ID（唯一英文）,BUFF生效时的效果,清除时效果,层数每回合减少数,层数每受击减少数,层数每使用卡牌减少数,层数上限,图标路径,类型
+Id,ApplyScript,ClearScript,ReducePerTurn,ReducePerAttacked,ReducePerUse,UpperBound,Icon,Type,Effects
+BUFF的ID（唯一英文）,BUFF生效时的效果,清除时效果,层数每回合减少数,层数每受击减少数,层数每使用卡牌减少数,层数上限,图标路径,类型,
 Law:Judgment,"SetStatus(""AllTarget"");
         AddEvent(""ICreateCardItem"",()=>
         {
@@ -13,21 +13,16 @@ Law:Judgment,"SetStatus(""AllTarget"");
                 if (HandCard.Count == 0) return;
         HandCard[DefaultDice.WithRange(0, HandCard.Count - 1).Roll().Value].Reverse();
             }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 Law:Death,"AddEvent(""StartRound"",()=>
         {
-            if (!Vars.ContainsKey(""ThisCount""))
-            {
-                Vars[""ThisCount""] = ""0"";
-            }
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
-            if (Vars[""ThisCount""]== ""6"")
+        });"," if (Vars[""ThisCount""]== ""6"")
             {
                 SetStatus(""AllTarget"");
                 Damage(Object[0].MaxHp.ToString(),""True"");
                 Damage(Object[0].MaxHp.ToString(),""True"");
-            }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+            }",1,0,0,6,Icon/Buff/烬赎,指示物,
 Law:Supreme,"AddEvent(""EndRound"",()=>
         {
             if (!Vars.ContainsKey(""ThisCount""))
@@ -40,7 +35,7 @@ Law:Supreme,"AddEvent(""EndRound"",()=>
                 SetStatus(""Self"");
                 RemoveAllBadBuff(""0"");
             }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 Transcendent,"SetStatus(""Self"");
         AddEvent(""SpecialBuff_TranscendentOnLevelChange"",()=>
         {
@@ -52,7 +47,7 @@ Transcendent,"SetStatus(""Self"");
                 SetStatus(""AllTarget"");
                 ChangeHp(""-4"");
             });
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 ImmortalGodhead,"SetStatus(""Self"");
         AddEvent(""SpecialBuff_ImmortalGodheadOnLevelChange"",()=>
         {
@@ -60,27 +55,28 @@ ImmortalGodhead,"SetStatus(""Self"");
         });
         AddEvent(""StartRound"",()=>{var index=Self.buffBarUI.FindBuff(""buff_limitdamage"");
                 SetStatus(""Self"");
-                AddBuff(""buff_limitdamage"", INF, ""1"");});
+                AddBuff(""buff_limitdamage"",  ""1"");});
         AddEvent(""Hurt"",()=>{
             if (Self.buffBarUI==null)
             {
                 return;
             }
             SetStatus(""Self"");
-            AddBuff(""buff_limitdamage"", INF, ""1"");
-            });",,0,0,0,1,Icon/buff/烬赎,正面
-expiation,"var buffContent=Self.buffBarUI;AddEvent(""SpecialBuff_expiationOnLevelChange"",() => {Vars[""ThisCount""]=""0"";});
+            AddBuff(""buff_limitdamage"",  ""1"");
+            });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+expiation,"var buffContent=Self.buffBarUI;
         AddEvent(""StartRound"",()=>{Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""])+1).ToString();
         if (int.Parse(Vars[""ThisCount""])>=4)
         {
-            SetStatus(""AllTarget"");ChangeHp(""15"");SetStatus(""Self"");ChangeHp(""-2999"");
+            SetStatus(""AllTarget"");ChangeHp(""15"");SetStatus(""Self"");ChangeHp(""-9999"");
+PlayerInfo.GiveWin();
         }
         });
         AddEvent(""Dead"",()=>{if (int.Parse(Vars[""ThisCount""])<4)
         {
            SetStatus(""AllTarget"");ChangeHp(""-15"");
         }
-        });",,0,0,0,99,Icon/buff/烬赎,指示物
+        });",,1,0,0,99,Icon/Buff/烬赎,指示物,
 guiltless,"var buffContent = Self.buffBarUI;
 AddEvent(""Hitted"", () =>
 {
@@ -93,7 +89,7 @@ if (int.Parse(Vars[""ThisCount""]) %4==0)
 {
 RandomAddCard(""card_*2"");
 }
-});",,0,0,0,1,Icon/buff/烬赎,正面
+});",,0,0,0,1,Icon/Buff/烬赎,指示物,
 ThievesKing,"AddEvent(""Action"", () =>
             {
                 PlayerInfo.Money -= 15;
@@ -114,30 +110,30 @@ ThievesKing,"AddEvent(""Action"", () =>
             }
         });
         SetStatus(""AllTarget"");
-        AddEvent(""Dead"",()=> { PlayerInfo.Money += 100; });",,0,0,0,1,Icon/buff/烬赎,正面
+        AddEvent(""Dead"",()=> { PlayerInfo.Money += 100; });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 UnparalleledPower,"AddEvent(""StartRound"",()=>
         {
             SetStatus(""Self"");
             ChangeHp((Self.MaxHp/4*-1).ToString());
             GetEnemy().Attack*=2;
-        });",,0,0,0,1,Icon/buff/烬赎,正面
-believer,"AddEvent(""Hurt"",()=>
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+believer,"AddEvent(""Hurt"", () =>
         {
-            if (!Vars.ContainsKey(""ThisCount"")&&Self.CurHp<Self.MaxHp/2)
+            if (Vars[""ThisCount""] == ""0"" && Self.CurHp < (Self.MaxHp / 2))
             {
-                Vars[""ThisCount""] = ""1"";
-                Self.CurHp = Self.MaxHp;   
+                Vars[""ThisCount""] = ""2"";
+                ChangeHp(""9999"");
                 var enemy = GetEnemy();
-int val1 = int.Parse(atk()) *3/ 10;
-int val2=int.Parse(def()) *3/ 10;
-    enemy.Attack += val1;
-    enemy.Defend+=val2;
+                int val1 = int.Parse(atk()) * 3 / 10;
+                int val2 = int.Parse(def()) * 3 / 10;
+                enemy.Attack += val1;
+                enemy.Defend += val2;
             }
             else
             {
-               return;
+                return;
             }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 BackToBasics,"AddEvent(""StartRound"", () =>
         {
             if (!Vars.ContainsKey(""ThisCount""))
@@ -155,7 +151,7 @@ BackToBasics,"AddEvent(""StartRound"", () =>
                 SetStatus(""AllTarget"");
                 RemoveBadBuff(""1"",""true"");
             }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 hunting,"SetStatus(""AllTarget"");
         AddEvent(""EndRound"", () =>
         {
@@ -163,19 +159,17 @@ hunting,"SetStatus(""AllTarget"");
             {
                 Damage(atk());
             }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 AllogeneicConcentric,"SetStatus(""Self"");
-         AddEvent(""Init"",()=>
-         {
                SetStatus(""AllFriendsExSelf"");
-               AddEvent(""Dead"",()=>
-               {
-                   GetEnemy().Attack= GetEnemy().Attack*3/2;
-                   Self.MaxHp= Self.MaxHp*3/2;
-                   Self.CurHp=Self.MaxHp;
-                   Self.UpdateStatus();
-               });
-         });",,0,0,0,1,Icon/buff/烬赎,正面
+        AddEvent(""Dead"", () =>
+        {
+            GetEnemy().Attack = GetEnemy().Attack * 3 / 2;
+            GetEnemy().Defend = GetEnemy().Defend * 3 / 2;
+            Self.MaxHp = Self.MaxHp * 3 / 2;
+            Self.CurHp = Self.MaxHp;
+            Self.UpdateStatus();
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 TrialsOfStrength,"SetStatus(""AllTarget"");
         AddEvent(""StartRound"",()=>
         {
@@ -189,11 +183,10 @@ TrialsOfStrength,"SetStatus(""AllTarget"");
         } });
         SetStatus(""Self"");
         AddEvent(""Dead"", () =>
-        { PlayerInfo.Strength += 5; });",,0,0,0,1,Icon/buff/烬赎,正面
+        { PlayerInfo.Strength += 5; });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 TrialsOfTenacity,"SetStatus(""AllTarget"");
-        Vars[""ToCount""] = Object[^1].CurHp.ToString();
         Vars[""ExCount""] = ""0"";
-        AddEvent(""Init"", () => { Vars[""ToCount""] = Object[^1].CurHp.ToString(); });
+        ChangeDynamicVar(""liveCount"",""1"");
         AddEvent(""StartRound"",()=>
         {
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
@@ -203,24 +196,31 @@ TrialsOfTenacity,"SetStatus(""AllTarget"");
             }
             if (Vars[""ThisCount""] == ""4"")
                 {
-                    PlayerInfo.Hp = PlayerInfo.MaxHp;
+                    ChangeHp(""999"");
                     PlayerInfo.Perceive += 5;
                     SetStatus(""Self"");
                     ChangeHp(""-99999"");
+PlayerInfo.GiveWin();
                 } });
         AddEvent(""Dead"", () =>
         {
             if (Vars[""ExCount""] == ""1"")
                 return;
             Vars[""ExCount""] = ""1"";
-            PlayerInfo.Hp=int.Parse(Vars[""ToCount""])-30; EscapeFight(); });",,0,0,0,1,Icon/buff/烬赎,正面
+            ChangeHp(""999"");
+            EscapeFight(); });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 TrialsOfWisdom,"Vars[""ThisCount""] = ""0"";
         SetStatus(""Self"");
-        ChangeDynamicVar(""liveCount"",""99999"");
+        AddEvent(""SpecialBuff_TrialsOfWisdomOnLevelChange"",()=> {
+            SetStatus(""Self"");
+            ChangeDynamicVar(""liveCount"",""99999""); });
+        Vars[""SpecialCount""] = ""0"";
         SetStatus(""AllTarget"");
         int a = 5 * Object.Count;
+        
         AddEvent(""WisdomLevelChange"",()=>
         {
+            
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
             if (Self.buffBarUI!=null)
             {
@@ -238,21 +238,45 @@ TrialsOfWisdom,"Vars[""ThisCount""] = ""0"";
         for (int i = 0; i < 5; i++)
         {
         int b = DefaultDice.Roll().Value/25+1;
-        RandomAddCard(""nocard_*""+b); 
-        } ",,0,0,0,6,Icon/buff/烬赎,正面
-meow,"SetStatus(""AllFriendsExSelf"");
-        AddEvent(""Dead"",()=>
+        if (b>4)
         {
+                b = 4;
+        }
+        if (b<1)
+        {
+            b = 1;
+        }
+        RandomAddCard(""nocard_*""+b); 
+        }
+        AddEvent(""StartRound"", () =>
+       {
+           Vars[""SpecialCount""] = (int.Parse(Vars[""SpecialCount""]) + 1).ToString();
+           if (int.Parse(Vars[""SpecialCount""]) >= (a / 5 * 4))
+           {
+               ChangeHp(""-30"");
+               EscapeFight();
+           }
+       });",,0,0,0,6,Icon/Buff/烬赎,指示物,
+meow,"SetStatus(""AllFriendsExSelf"");
+        if (!PlayerInfo.SpecialVars.ContainsKey(""meowCount""))
+        {
+            PlayerInfo.SpecialVars[""meowCount""] = ""0"";
+        }
+        if (PlayerInfo.SpecialVars[""meowCount""] == ""0"")
+        {
+            ChangeDynamicVar(""liveCount"", ""1"");
+            AddEvent(""Dead"", () =>
+        {
+            PlayerInfo.SpecialVars[""meowCount""] = ""1"";
             if (Self.CurHp > Self.MaxHp * 3 / 5)
             {
                 ChangeHp(""20"");
                 SetStatus(""Self"");
-                ChangeHp(""-999"");
+                ChangeHp(""-9999"");
                 SetStatus(""AllFriendsExSelf"");
             }
-         });
-         AddEvent(""OnDiceCheck"",()=>{ SetStatus(""Self""); ChangeHp(""5"");SetStatus(""AllFriendsExSelf""); });
-         AddEvent(""OnDiceValue"",()=>{ SetStatus(""Self""); ChangeHp(""5"");SetStatus(""AllFriendsExSelf""); });",,0,0,0,1,Icon/buff/烬赎,正面
+        });
+        }",,0,0,0,1,Icon/Buff/烬赎,指示物,
 ManInTheMirror,"SetStatus(""AllTarget"");
         AddEvent(""Action"", (fromData) =>
         {
@@ -282,8 +306,8 @@ ManInTheMirror,"SetStatus(""AllTarget"");
             Vars[""CorAtk""] = ""0"";
             Vars[""CorDef""] = ""0"";
             SetStatus(""Self"");
-        });",,0,0,0,1,Icon/buff/烬赎,正面
-Phoenix,"AddEvent(""Init"",()=> { AddBuff(""buff_impregnable"",INF,""4""); });
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+Phoenix,"AddBuff(""buff_impregnable"",""4"");
         AddEvent(""EndRound"",()=>
         {
             var buffBarUI = Self?.buffBarUI;
@@ -293,7 +317,7 @@ Phoenix,"AddEvent(""Init"",()=> { AddBuff(""buff_impregnable"",INF,""4""); });
                 if (buff != null)
                 {
                     SetStatus(""Self"");
-                    AddBuff(""buff_impregnable"", INF, ""1"");
+                    AddBuff(""buff_impregnable"",  ""1"");
                 }
                 else
                 {
@@ -310,8 +334,8 @@ Phoenix,"AddEvent(""Init"",()=> { AddBuff(""buff_impregnable"",INF,""4""); });
         {
             SetStatus(""Alltarget"");
             BurnCard(""1"", ""0"");
-            AddBuff(""buff_burn"", INF, ""2"");
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+            AddBuff(""buff_burn"",  ""2"");
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 Snitch,"SetStatus(""AllTarget"");
         AddEvent(""Action"", (fromData) =>
         {
@@ -330,7 +354,7 @@ Snitch,"SetStatus(""AllTarget"");
                     ChangeHp(((int)(Self.CurHp * (-0.05f))).ToString());
                 }
             }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 Priest,"SetStatus(""AllTarget"");
         AddEvent(""Action"",()=>
         {
@@ -355,11 +379,11 @@ Priest,"SetStatus(""AllTarget"");
                 Vars[""ThisCount""] = ""0"";
             }
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
-            if (int.Parse(Vars[""ThisCount""]) %5==0)
+            if (int.Parse(Vars[""ThisCount""]) %4==0&&int.Parse(Vars[""ThisCount""])<25)
             {
                 RandomAddCard(""cursecard_12"");
             }
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
 Twins,"Vars[""ThisCount""]=""0"";
         SetStatus(""AllFriendsExSelf"");
                AddEvent(""Dead"",()=>
@@ -371,35 +395,116 @@ Twins,"Vars[""ThisCount""]=""0"";
                    }
                    Vars[""ThisCount""]=""1"";
                    SetStatus(""Self"");
-                   AddBuff(""buff_impregnable"", INF, ""2"");
-                   AddBuff(""buff_extraordinary"", INF, ""30"");
-                   AddBuff(""buff_counterattack"",INF,""3"");
-               });",,0,0,0,1,Icon/buff/烬赎,正面
-Musician,"SetStatus(""AllTarget"");
-        int a = Object.Count;
+                   AddBuff(""buff_impregnable"",  ""2"");
+                   AddBuff(""buff_extraordinary"",  ""30"");
+                   AddBuff(""buff_counterattack"",""3"");
+               });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+Musician," SetStatus(""AllTarget"");
         Vars[""ThisCount""] = ""0"";
         AddEvent(""Action"",()=>
         {
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
-            if (int.Parse(Vars[""ThisCount""]) % 5 == 0)
+            if (int.Parse(Vars[""ThisCount""]) % 4 == 0)
             {
                 int b = HandCard.Count;
                 ThrowCard(b.ToString(), ""0"");
+                DrawCount(b.ToString());
             }
-            if (int.Parse(Vars[""ThisCount""])>20*a)
+            if (int.Parse(Vars[""ThisCount""])>15)
             {
-                AddBuff(""buff_chaos"",INF,""1"");
+                AddBuff(""buff_chaos"",""1"");
             }
          }
-        );",,0,0,0,1,Icon/buff/烬赎,正面
-ThirstForBlood,"AddEvent(""Init"",()=>
-        {
-            AddBuff(""buff_bloodsea"", INF, ""1"");
+        );",,0,0,0,1,Icon/Buff/烬赎,指示物,
+ThirstForBlood,"AddBuff(""buff_bloodsea"",  ""1"");
             SetStatus(""AllTarget"");
-            AddBuff(""buff_bloodriver"", INF, ""1"");
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+            AddBuff(""buff_bloodriver"",  ""3"");",,0,0,0,1,Icon/Buff/烬赎,指示物,
 BlessedByHeaven,"AddEvent(""StartRound"",()=>
         {
             SetStatus(""Self"");
-            AddBuff(""buff_evergreen"", INF, (Self.MaxHp/20).ToString());
-        });",,0,0,0,1,Icon/buff/烬赎,正面
+            AddBuff(""buff_evergreen"",  (Self.MaxHp/20).ToString());
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+FortuneBoy,"Vars[""ThisCount""] = ""0"";
+        Vars[""SpecialCount""] = ""0"";
+        AddEvent(""Hurt"",(fightdata=>
+        {
+            dynamic data = fightdata.GetDynamic();
+            if (data.damageType == ""Normal"")
+            {
+                Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""]) + 1).ToString();
+                if (int.Parse(Vars[""ThisCount""])>10+int.Parse(Vars[""SpecialCount""]))
+                {
+                    return;
+                }
+                SetStatusById(data.SourceId);
+                ChangeMoney(""5"");
+                SetStatus(""Self"");
+                ChangeDefence((int.Parse(data.val) / 2).ToString());
+            }
+            else
+            {
+                Vars[""SpecialCount""] = (int.Parse(Vars[""SpecialCount""]) + 1).ToString();
+                SetStatus(""Self"");
+                ChangeHp((Self.MaxHp/20).ToString());
+            }
+        }));",,0,0,0,1,Icon/Buff/烬赎,指示物,
+Mimics,"AddEvent(""Hurt"",(fightdata=>
+        {
+            dynamic data = fightdata.GetDynamic();
+            if (data.damageType == ""Normal"")
+            {
+                SetStatusById(data.SourceId);
+                int a = DefaultDice.Roll().Value;
+                if (a < 50)
+                {
+                    ChangePower(""1"");
+                }
+                else
+                {
+                    DrawCount(""1"");
+                }
+            }
+        }));",,0,0,0,1,Icon/Buff/烬赎,指示物,
+Restrain,"Vars[""ThisCount""] = ""0"";
+        AddEvent(""Attack"", () =>
+        {
+            SetStatus(""AllTarget"");
+            if (Vars[""ThisCount""] == ""0"")
+            {
+                Vars[""ThisCount""] = ""1"";
+                ChangeDynamicVarPercent(""HealMultiplier"", ""-20"");
+            }
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+Irritable,"AddEvent(""StartRound"",()=> {
+
+            AddBuff(""buff_extraordinary"",  ""10"");
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+Hysteresis,"AddEvent(""StartRound"", () => { SetStatus(""AllTarget"");
+        
+        AddCard(""cursecard_12"");});",,0,0,0,1,Icon/Buff/烬赎,指示物,
+CalamityIncarnates,"Vars[""ThisCount""] = PlayerInfo.SpecialVars[""DoomPower""];
+         PlayerInfo.TempStrength +=  int.Parse(PlayerInfo.SpecialVars[""DoomPower""]);
+        PlayerInfo.TempPerceive +=  int.Parse(PlayerInfo.SpecialVars[""DoomPower""]);
+        AddEvent(""Action"",()=> { SetStatus(""AllEnemy"");Damage((Self.MaxHp/50).ToString()); });","PlayerInfo.TempStrength -=  int.Parse(Vars[""ThisCount""]);
+        PlayerInfo.TempPerceive -=  int.Parse(Vars[""ThisCount""]);ChangeCareer(""career_2"");",1,0,0,1,Icon/Buff/烬赎,指示物,
+GiantDollBear,"Self.DamageFilter[""buff_bleeding""] = false;
+        AddEvent(""Hurt"", (fightdata =>
+        {
+            dynamic data = fightdata.GetDynamic();
+            if (data.fromDataId == ""buff_burn"")
+            {
+                Damage(data.val, ""True"");
+            }
+        }));
+        AddEvent(""StartRound"", () =>
+        {
+            if (Vars[""ThisCount""]==""0"")
+            {
+                ChangeRound();
+            }
+        });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+WitchCultists,"AddEvent(""FightStart"",()=> {
+                RandomAddBuff(""5"");
+              });",,0,0,0,1,Icon/Buff/烬赎,指示物,
+Crow,"SetStatus(""AllFriendsExSelf"");
+        AddEvent(""AttackDone"",()=> { SetStatus(""AllTarget"");Damage(atk(),""True""); });",,0,1,1,2,Icon/Buff/烬赎,指示物,

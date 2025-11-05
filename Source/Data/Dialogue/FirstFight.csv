@@ -1,0 +1,9 @@
+Id,BaseScript,EndScript,Roles,EventName,ChoiceCount,ChoiceScript1,ChoiceScript2
+对话Id,初始脚本,对话结束时执行,"出现的角色Id，说话者用<>包括，用,分割",何时执行对话（事件名）,选项数量,选项脚本,
+1,,,role_amelia,FirstFight,0,,
+2,,,role_narrator,,2,"EventTrigger(""FirstFight_*3"");",PlayerInfo.EndDialogue();
+*3,,"EventTrigger(""FirstFight_4"");",role_narrator,FirstFight_*3,0,,
+4,,,role_narrator,FirstFight_4,0,,
+5,,,role_narrator,,0,,
+6,,,role_narrator,,0,,
+7,,,role_narrator,,0,,

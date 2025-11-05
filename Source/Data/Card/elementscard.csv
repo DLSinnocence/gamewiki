@@ -1,18 +1,45 @@
 Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
 唯一的标识（不能重复）,稀有度,消耗的费用,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效,动作
-1,3,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(1+int.Parse(Vars[""CorDraw""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""2"");DrawCount(""1"");",,Icon/buff/治愈光环,stream,
-2,3,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(4+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_evergreen"",""1"",""4"");AddBuff(""buff_elements"",""1"",""2"");",,Icon/buff/治愈光环,stream,
-3,3,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");AddBuff(""buff_vitality"",""1"",""3"");",,Icon/buff/治愈光环,stream,
-4,1,2,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(10+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal3""]=Self!=null?Self.DamageCalculate(10+int.Parse(Vars[""CorAtk""])).ToString():(10+int.Parse(Vars[""CorAtk""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");AddBuff(""buff_extraordinary"",""1"",""10"");SetStatus(""AllEnemy"");Damage(""10"");",,Icon/buff/治愈光环,lightningBolt,Skill
-5,1,1,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(10+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal3""]=Self!=null?Self.DamageCalculate(6+int.Parse(Vars[""CorAtk""])).ToString():(6+int.Parse(Vars[""CorAtk""])).ToString();Vars[""DesVal4""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");AddBuff(""buff_extraordinary"",""1"",""10"");SetStatus(""Target"");Damage(""6"");AddBuff(""buff_vulnerability"",""3"",""1"");",,Icon/buff/治愈光环,lightningBolt,Skill
-6,1,2,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(10+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal3""]=Self!=null?Self.DamageCalculate(13+int.Parse(Vars[""CorAtk""])).ToString():(13+int.Parse(Vars[""CorAtk""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");AddBuff(""buff_extraordinary"",""1"",""10"");SetStatus(""Target"");Damage(""13"");",,Icon/buff/治愈光环,lightningBolt,Skill
-7,2,0,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""2"");SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""2"");",,Icon/buff/治愈光环,Flameshrower,Skill
-8,2,1,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(1+int.Parse(Vars[""CorDraw""])).ToString();",,"SetStatus(""Self"");DrawCount(""1"");AddBuff(""buff_elements"",""1"",""2"");SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""2"");SetStatus(""AllEnemy"");RunImmediately(""buff_burn"",""StartRound"");",,Icon/buff/治愈光环,fireExplosion,Skill
-9,2,1,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal3""]=Self!=null?Self.DamageCalculate(7+int.Parse(Vars[""CorAtk""])).ToString():(7+int.Parse(Vars[""CorAtk""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");SetStatus(""Target"");AddBuff(""buff_burn"",""2"",""2"");Damage(""7"");",,Icon/buff/治愈光环,fireExplosion,Skill
-10,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;SetStatus(""Self"");
-AddBuff(""buff_elements"",""1"",""1"");
+1,2,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(1+int.Parse(Vars[""CorDraw""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""2"");DrawCount(""1"");",,Icon/Card/海洋之梦,强化,
+2,2,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(4+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_evergreen"",""4"");AddBuff(""buff_elements"",""2"");",,Icon/Card/“生长”,,
+3,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(3+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"");AddBuff(""buff_vitality"",""3"");",,Icon/Card/森之结晶,,
+4,1,2,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(10+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal3""]=Self!=null?Self.DamageCalculate(10+int.Parse(Vars[""CorAtk""])).ToString():(10+int.Parse(Vars[""CorAtk""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"");AddBuff(""buff_extraordinary"",""10"");SetStatus(""AllEnemy"");Damage(""10"");",,Icon/Card/聚雷术,斩击,Skill
+5,1,1,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=Self!=null?Self.DamageCalculate(6+int.Parse(Vars[""CorAtk""])).ToString():(6+int.Parse(Vars[""CorAtk""])).ToString();Vars[""DesVal3""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""2"");SetStatus(""Target"");Damage(""6"");AddBuff(""buff_vulnerability"",""1"");",,Icon/Card/雷枪,雷枪,Skill
+6,1,2,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";AddDescription(""1"",""Buff"",""1"");AddDescription(""2"",""Buff"",""10"");AddDescription(""3"",""Defence"",""13"");",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"");AddBuff(""buff_extraordinary"",""10"");ChangeDefence(""13"");",,Icon/Card/雷绝,斩击,Skill
+7,2,0,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""2"");SetStatus(""Target"");AddBuff(""buff_burn"",""2"");",,Icon/Card/凝火术,凝火术,Skill
+8,2,1,,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""2"");SetStatus(""Target"");AddBuff(""buff_burn"",""2"");SetStatus(""AllEnemy"");RunImmediately(""buff_burn"",""StartRound"");",,Icon/Card/绽放,绽放,Skill
+9,2,1,Burnout,"Vars[""BaseScript""]=""AttackCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal3""]=Self!=null?Self.DamageCalculate(7+int.Parse(Vars[""CorAtk""])).ToString():(7+int.Parse(Vars[""CorAtk""])).ToString();",,"SetStatus(""Self"");AddBuff(""buff_elements"",""1"");SetStatus(""Target"");AddBuff(""buff_burn"",""2"");Damage(""7"");",,Icon/Card/罐装火元,,Skill
+10,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;SetStatus(""Self"");if (buffCount == null)
+        {
+            return;}
+AddBuff(""buff_elements"",""1"");
+if(buffCount.GetBuff(""buff_elements"")==null){return;}
 Vars[""elements""]=buffCount.GetBuff(""buff_elements"").buffConfig.Level.ToString();
-ChangeDefence((int.Parse(Vars[""CorDef""])+5+int.Parse(Vars[""elements""])).ToString());",,Icon/buff/治愈光环,stream,
-11,4,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");Vars[""elements""]=buffCount.GetBuff(""buff_elements"").buffConfig.Level.ToString();DrawCount((int.Parse(Vars[""elements""])/4).ToString());",,Icon/buff/治愈光环,elementSelf,
-12,4,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");Vars[""elements""]=buffCount.GetBuff(""buff_elements"").buffConfig.Level.ToString();ChangePower((int.Parse(Vars[""elements""])/4).ToString());",,Icon/buff/治愈光环,elementSelf,
-13,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;SetStatus(""Self"");AddBuff(""buff_elements"",""1"",""1"");Vars[""elements""]=buffCount.GetBuff(""buff_elements"").buffConfig.Level.ToString();SetStatus(""AllEnemy"");Damage((Vars[""elements""]));",,Icon/buff/治愈光环,elementBurst,Skill
+ChangeDefence((2*int.Parse(Vars[""elements""])).ToString());",,Icon/Card/元素护盾,强化,
+11,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;
+        if (buffCount == null)
+        {
+            return;
+        }
+        SetStatus(""Self"");
+        AddBuff(""buff_elements"", ""1"");
+        if (buffCount.GetBuff(""buff_elements"")==null)
+        {
+            return;
+        }
+        Vars[""elements""] = buffCount.GetBuff(""buff_elements"").buffConfig.Level.ToString();
+        DrawCount((int.Parse(Vars[""elements""]) / 4).ToString());",,Icon/Card/元素升华,强化,
+12,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;if (buffCount == null)
+        {
+            return;
+        }SetStatus(""Self"");AddBuff(""buff_elements"",""1""); if (buffCount.GetBuff(""buff_elements"")==null)
+        {
+            return;
+        }Vars[""elements""]=buffCount.GetBuff(""buff_elements"").buffConfig.Level.ToString();ChangePower((int.Parse(Vars[""elements""])/4).ToString());",,Icon/Card/元素循环,强化,
+13,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(1+int.Parse(Vars[""CorBuff""])).ToString();",,"var buffCount=Self.buffBarUI;SetStatus(""Self"");if (buffCount == null)
+        {
+            return;}AddBuff(""buff_elements"",""1""); if (buffCount.GetBuff(""buff_elements"")==null)
+        {
+            return;
+        }Vars[""elements""]=buffCount.GetBuff(""buff_elements"").buffConfig.Level.ToString();SetStatus(""AllEnemy"");
+        Damage((int.Parse(Vars[""elements""])* 2).ToString());",,Icon/Card/元素爆发,"元素爆发,强化",Skill

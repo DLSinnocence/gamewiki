@@ -1,4 +1,80 @@
-Id,SanMax,SanOri,SanSkill,Icon,Skill,SkillTime,Animation
-唯一id,最大san,初始san,理智的技能,图片来源,主动技能,冷却时间,动画文件夹路径
-1,100,100,blessing_*118,Icon/Role/魔女,careercard_*1,1,AnimationLib/原初魔女
-*2,100,100,blessing_*119,Icon/Role/魔女,careercard_*2,1,AnimationLib/原初魔女
+Id,SanMax,SkillScript,Animation,Skill1,Skill2,DollIcon,Character,Avatar,CareerImage,ActionImage1,ActionImage2,Dialogue,FightWidget
+唯一id,最大san,主动技能1,动画文件夹路径,技能卡牌，后续要改,,玩偶路径,立绘路径,头像路径,职业图路径,主动技能图标1,,对话图路径，虽然其实用在statusui,围绕body的附属小组件
+1,100,"SetStatus(""Self""); AddBuff(""buff_impregnable"", ""2"");
+            AddBuff(""buff_extraordinary"", ""20"");
+            PlayerInfo.SkillTime[""careercard_1""] = 0;
+        AddEvent(""StartRound"", ()=> { PlayerInfo.SkillTime[""careercard_1""] = Math.Max(PlayerInfo.SkillTime[""careercard_1""] - 1, 0); });",AnimationLib/原初魔女,careercard_1,,Icon/UI_Icons/Native/魔女屋/人偶1,Images/Character/阿米莉娅,Images/Avatar/阿米莉娅,Images/CareerImage/原初魔女,Icon/Role/原初魔女/element,,Images/Dialogue/Character/原初魔女,
+*2,40,"PlayerInfo.SkillTime[""careercard_2""] = 0;
+        PlayerInfo.SkillTime[""careercard_3""] = 0;
+        if (!PlayerInfo.SpecialVars.ContainsKey(""DoomPower""))
+        {
+            PlayerInfo.SpecialVars[""DoomPower""] = ""0"";
+        }
+        SetStatus(""Self""); AddBuff(""buff_DoomPower"", PlayerInfo.SpecialVars[""DoomPower""]);
+        AddEvent(""StartRound"", () =>
+        {
+            PlayerInfo.SkillTime[""careercard_2""] = Math.Max(0, PlayerInfo.SkillTime[""careercard_2""] - 1);
+            PlayerInfo.SkillTime[""careercard_3""] = Math.Max(0, PlayerInfo.SkillTime[""careercard_3""] - 1); 
+        });
+        AddEvent(""Win"",()=> { ChangeCareer(""career_2"");});AddEvent(""Escape"",()=> { ChangeCareer(""career_2"");});",AnimationLib/见习魔女,careercard_2,careercard_3,DollAni/维洛莉斯/待机/维洛莉斯_待机1,Images/Character/奈奈,Images/Avatar/奈奈,Images/CareerImage/奈奈,Icon/Role/见习魔女/eat1,Icon/Role/见习魔女/eat,Images/Dialogue/Character/见习魔女,
+3,70,"SetStatus(""Self"");
+        PlayerInfo.SpecialVars[""HasGive1""] = ""True"";
+        if (!PlayerInfo.SpecialVars.ContainsKey(""obsidianSoldier""))
+        {
+            PlayerInfo.SpecialVars[""obsidianSoldier""] = ""0"";
+        }
+        if (!PlayerInfo.SpecialVars.ContainsKey(""obsidianKnight""))
+        {
+            PlayerInfo.SpecialVars[""obsidianKnight""] = ""0"";
+        }
+        if (!PlayerInfo.SpecialVars.ContainsKey(""obsidianQueen""))
+        {
+            PlayerInfo.SpecialVars[""obsidianQueen""] = ""0"";
+        }
+        PlayerInfo.SkillTime[""careercard_4""] = 10;
+        AddEvent(""Action"", () =>
+              {
+                  if (PlayerInfo.SkillTime[""careercard_4""] > 0)
+                  {
+                      PlayerInfo.SkillTime[""careercard_4""] -= 1;
+                  }
+              });
+        AddEvent(""Win"", () =>
+        {
+            SetStatus(""Self"");
+            if (PlayerInfo.enemylevel == 1)
+            {
+                PlayerInfo.SpecialVars[""obsidianSoldier""] = (int.Parse(PlayerInfo.SpecialVars[""obsidianSoldier""]) + 1).ToString();
+            }
+            else if (PlayerInfo.enemylevel == 2)
+            {
+                PlayerInfo.SpecialVars[""obsidianKnight""] = (int.Parse(PlayerInfo.SpecialVars[""obsidianKnight""]) + 1).ToString();
+            }
+            else if (PlayerInfo.enemylevel == 3)
+            {
+                PlayerInfo.SpecialVars[""obsidianQueen""] = (int.Parse(PlayerInfo.SpecialVars[""obsidianQueen""]) + 1).ToString();
+            }
+        });
+        AddEvent(""FightStart"", () =>
+                {
+                    SetStatus(""Self"");
+
+                    AddBuff(""buff_obsidianSoldier"", PlayerInfo.SpecialVars[""obsidianSoldier""]);
+
+                    AddBuff(""buff_obsidianKnight"", PlayerInfo.SpecialVars[""obsidianKnight""]);
+
+                    AddBuff(""buff_obsidianQueen"", PlayerInfo.SpecialVars[""obsidianQueen""]);
+                });",AnimationLib/支配魔女,careercard_4,,Icon/UI_Icons/Native/魔女屋/人偶3,Images/Character/阿黛拉,Images/Avatar/阿黛拉,Images/CareerImage/阿黛拉,Icon/Role/阿黛拉/chess,,Images/Dialogue/Character/阿黛拉,Model/RoleWidget/Chess
+*4,40,"PlayerInfo.SkillTime[""careercard_2""] = 0;
+        PlayerInfo.SkillTime[""careercard_3""] = 0;
+        if (!PlayerInfo.SpecialVars.ContainsKey(""DoomPower""))
+        {
+            PlayerInfo.SpecialVars[""DoomPower""] = ""0"";
+        }
+        SetStatus(""Self""); AddBuff(""buff_DoomPower"", PlayerInfo.SpecialVars[""DoomPower""]);
+        AddEvent(""StartRound"", () =>
+        {
+            PlayerInfo.SkillTime[""careercard_2""] = Math.Max(0, PlayerInfo.SkillTime[""careercard_2""] - 1);
+            PlayerInfo.SkillTime[""careercard_3""] = Math.Max(0, PlayerInfo.SkillTime[""careercard_3""] - 1); 
+        });
+        AddEvent(""Win"",()=> { ChangeCareer(""career_2"");});AddEvent(""Escape"",()=> { ChangeCareer(""career_2"");});",AnimationLib/灾厄化身,careercard_2,careercard_3,DollAni/维洛莉斯/待机/维洛莉斯_待机1,Images/Character/奈奈,Images/Avatar/奈奈,Images/CareerImage/奈奈,Icon/Role/见习魔女/eat1,Icon/Role/见习魔女/eat,Images/Dialogue/Character/见习魔女,

@@ -1,0 +1,8 @@
+Id,Text,Text_en,Text_ja,ChoiceText1,ChoiceText1_en,ChoiceText1_ja,ChoiceText2,ChoiceText2_en,ChoiceText2_ja,Notification,Notification_en,Notification_ja
+对话Id,对话正文,,,选项1文本,,,,,,,,
+1,{0}……{0}？,{0}... {0}?,{0}……{0}？,……,...,……,你是……？,Who are you...?,あなたは……？,,,
+*2,走神了吗？,Lost in thought?,ぼーっとしてるの？,,,,,,,,,
+*3,这个时候还开玩笑吗，真是恶趣味呢……,Are you kidding at a time like this? What a bad taste...,こんな時に冗談なんて、悪趣味ね……,,,,,,,,,
+4,有关魔女屋的一切都明白了吧？不过就算没明白，我也不会再讲一遍~,"You understand everything about the Witch's House now, right? But even if you don't, I'm not explaining it again~",魔女の家については全部わかったでしょ？まあ、わからなくても、もう一回は説明しないけどね～,,,,,,,,,
+5,有什么疑问可以问<color=yellow>克莉斯娜</color>，我的脑子没那么好使……我家里的蓝莓夹心曲奇想我了，回见！,"If you have any questions, ask <color=yellow>Krisna</color>. My brain isn't that sharp... My blueberry sandwich cookies at home are missing me, see ya!",何か質問があったら<color=yellow>クリスナ</color>に聞いて。私、頭そんなに良くないから……家のブルーベリーサンドクッキーが私を待ってるの。じゃあね！,,,,,,,,,
+6,<color=yellow>阿米莉娅</color>急匆匆的走了，只留下你一个人风中凌乱。事已至此，先四处逛逛吧。,"<color=yellow>Amelia</color> left in a hurry, leaving you alone and bewildered. Since it's come to this, let's look around for now.",<color=yellow>アメリア</color>は慌てて去っていき、あなたは一人、風の中で呆然と立ち尽くす。こうなっては仕方ない、まずはあたりを散策してみよう。,,,,,,,"在魔女屋中找到克莉斯娜,魔女屋可以左右拖动",Find Krisna in the Witch's House. The Witch's House can be dragged left and right.,魔女の家でクリスナを見つけよう。魔女の家は左右にドラッグできます。

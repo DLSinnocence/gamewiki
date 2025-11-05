@@ -1,53 +1,48 @@
-Id,Note,Name,Description,Tips,Name_en,Description_en,Tips_en
-唯一的标识（不能重复）,备注,名称,描述,剧情描述,Name,Description,Tips
-1,魔力,士兵,魔力+2。,,Soldier,Magic +2.,
-2,幸运,法师,精神+2。,,Mage,Spirit +2.,
-3,精神,刺客,感知+2。,,Assassin,Perception +2.,
-4,感知,羽兽,幸运+2。,,Feathered Beast,Luck +2.,
-5,通用,皇后,选择道途各+2。,,Queen,Choose Path +2 each.,
-6,"通用,生存",牧师,战斗开始时恢复2点生命。,,Priest,Restore 2 health at the start of combat.,
-7,"通用,生存",守卫,最大生命值+5。,,Guard,Maximum health +5.,
-8,"通用,生存",天使,战斗开始时获得1层自愈。,,Angel,Gain 1 layer of {buff_evergreen} at the start of combat.,
-9,"通用,生存",盾卫,战斗开始时你获得1层强韧。,,Shield Guard,Gain 1 layer of {buff_Resilient} at the start of combat.,
-10,"通用,生存",律法,战斗开始时你获得3点护盾。,,Law,Gain 1 shield at the start of combat.,
-11,"通用,过牌",工匠,战斗开始时你额外抽1张牌。,,Craftsman,Draw an extra card at the start of combat.,
-12,"过牌,通用",游侠,战斗开始时获得1层敏锐。,,Ranger,Gain 1 layer of {buff_Fast} at the start of combat.,
-14,"精神,充能",命运之轮,战斗开始时获得1层循环。,,Wheel of Fate,Gain 1 stack of {buff_cycle} at the start of combat.,
-15,"输出,生命",士官,战斗开始时你获得1层锋锐。,,Sergeant,Gain 1 stack of {buff_stretch} at the start of combat.,
-18,"输出,生命",剑士,战斗开始时获得3层爆发。,,Swordsman,Gain 1 stack of {buff_erupt} at the start of combat.,
-19,高级,主教,战斗开始时你获得3层元素。,,Bishop,Gain 1 stack of {buff_elements} at the start of combat.,
-20,"输出,负面",萨满,战斗开始时随机赋予敌人1层易伤。,,Shaman,Randomly inflict 1 stack of {buff_vulnerability} on an enemy at the start of combat.,
-21,通用,国王,获得50金币。,,King,Gain 50 gold.,
-22,通用,教皇,你获得的金币额外增加10%。,,Pope,Increase the amount of gold you earn by 10%.,
-23,高级,审判,战斗开始时获得1层狂暴。,,Judgement,Gain 1 stack of {buff_sacrifice} at the start of combat.,
-24,高级,血鬼,战斗开始时你获得鬼化。,,Blood Demon,Gain {buff_truth} at the start of combat.,
-*25,魔力,巫妖,魔力-1。,,Warlock,Magic -1.,
-*26,幸运,愚者,精神-1。,,Fool,Spirit -1.,
-*27,精神,丑角,幸运-1。,,Jester,Luck -1.,
-*28,感知,隐者,感知-1。,,Hermit,Perception -1.,
-*29,通用,风暴,最大生命值-5。,,Storm,Maximum Health -5.,
-*30,负面,倒吊人,战斗开始时获得1层流血。,,Hanged Man,Gain 1 {buff_blooding} at the start of the battle.,
-*31,负面,死神,战斗开始时获得1层疫病。,,Death,Gain 1 {buff_disease} at the start of the battle.,
-*101,魔力,超凡之始-力,"魔力大于等于10时,战斗开始时第一次伤害+6。",魔力开始在你指尖涌动。,Beginning of the Extraordinary - Strength,First damage dealt at the start of the battle is increased by 6.,Magic begins to flow from your fingertips.
-*102,幸运,超凡之始-运,"幸运大于等于10时,战斗开始时额外抽1张牌。",你是人们口中的“幸运儿”。,Beginning of the Extraordinary - Luck,Draw an additional card at the start of the battle.,You are known as ‘the lucky one.’
-*103,精神,超凡之始-智,"精神大于等于10时,战斗开始时额外获得1点行动点。",你的学识贯通古今。。,Beginning of the Extraordinary - Wisdom,Gain 1 additional power at the start of the battle.,Your knowledge spans the ages.
-*104,感知,超凡之始-感,"感知大于等于10时,战斗开始时获得6点防御。",你的感官异常敏锐。,Beginning of the Extraordinary - Sensitivity,Gain 6 Defence at the start of the battle.,Your senses are exceptionally sharp.
-*105,魔力,超魔涌动,"魔力大于等于20时,战斗开始时获得3层锋锐。",你的魔力水平异常之高，经常将照明施成火球术的效果。,Super Magic Surge,Gain 3 {buff_stretch} at the start of the battle.,Your magic is so powerful that you can often cast fireballs for illumination.
-*106,幸运,吉星高照,"幸运大于等于20时,战斗开始时额外获得30点金币。",你总是创造着奇迹，幸运女神格外垂青。,Lucky Star Blessing,Gain 30 gold coins at the start of combat.,"You are constantly performing miracles, and Lady Luck smiles upon you."
-*107,精神,万法通明,"精神大于等于20时,战斗开始时获得1层启示。",无论多么晦涩的魔力回路，你都可以参透。,Master of All magics,Gain 1 layer of {buff_wisdom} at the start of combat.,"No matter how obscure the magic circuit, you can understand it."
-*108,感知,我见众生,"感知大于等于20时,战斗开始时获得2层坚韧。",你已窥见众生百相，也坚定了心中的信念。,Witness to all beings,Gain 2 layers of {buff_tenacity} at the start of combat.,You have seen the many faces of all beings and strengthened your convictions.
-*109,魔力,撼天动地,"魔力大于等于30时,你每次出牌有80%概率额外造成10点伤害。",你魔力的威能足以改天换地。,Shake the earth,You have a 60% chance to deal 10 additional damage each time you play a card.,The power of your magic is sufficient to reshape the heavens and earth.
-*110,幸运,天降机缘,"幸运大于等于30时,你的战斗奖励+1。",奇迹总是主动降临到你身边。,Opportunity from Heaven,Your combat reward is increased by 1.,Miracles always come to you of their own accord.
-*111,精神,未来之主,"精神大于等于30时,战斗开始时你获得1层鬼化。",时间线对于凡人过于艰涩，而你早已穷尽一切可能。,Master of the Future,You gain 1 layer of {buff_truth} at the start of combat.,"The timeline is too complex for mortals, but you have already explored every possibility."
-*112,感知,眸中万象,"感知大于等于30时,战斗开始你获得1层源蜕。",你洞悉世间万物，也窥视到一丝不属于“此处”的真相。,Insight into everything,You gain 1 layer of {buff_Vientiane} at the start of combat.,You understand all things in the world and have glimpsed a fragment of truth that does not belong to ‘this place.’
-*113,魔力,以力证道,"魔力大于等于40时,战斗开始时获得100层超凡。",魔力开始自发涌动，铭刻着独属于你的回路。,Proving the Way with Power,Gain 100 layers of {buff_extraordinary} at the start of combat.,"Magic begins to flow spontaneously, etching circuits unique to you."
-*114,幸运,天命至高,"幸运大于等于40时,你的所有检定骰降低10检定难度，所有数值骰额外加10检定。",并非天命加身，你即是天命。,The Supreme Destiny,"All your check dice are reduced by 10 check difficulty, and all value dice are increased by 10 check.",It is not fate that has chosen you; you are fate itself.
-*115,精神,虚之造物主,"精神大于等于40时,战斗开始时自身获得3层循环,5层污染。给与所有敌人一层时停。",你早已跳脱出时间，凡间的威胁再难伤你分毫。,Creator of Nothingness,"At the start of battle, you gain 3 layers of {buff_cycle} and 5 layers of {buff_sideEffect}. All enemies are given 1 layer of {buff_charmed}.",You have long transcended time; the threats of the mortal world can no longer harm you in the slightest.
-*116,感知,第一因,"感知大于等于40时,第1回合记录你的状态,之后每回合回溯到对应状态并获得1层坚毅。",万般因果加身，你成为世间第一因。,First Cause,"Record your status in the first round, then backtrack to the corresponding status each round and gain 1 layer of {buff_impregnable}.","Bound by countless causes and effects, you have become the first cause of the world."
-*118,生存,原初魔女-理性化盾,"战斗开始时获得二层坚毅。
-原初之理:1次战斗冷却，从牌堆中检索一张牌。",理性，是这里唯一应当珍视的东西。,Primordial Witch - Rationalisation Shield,"Gain 2 layers of {buff_impregnable} at the start of combat.
-Primordial Truth: 1 combat cooldown, retrieve a card from the deck.",Reason is the only thing worth cherishing here.
-*119,"过牌,充能",原初魔女-恶念为剑,"战斗开始时,你额外获得1点行动点,抽1张牌。",恶念更甚过伤人利刃。,Primordial Witch - Evil Thoughts as a Sword,"At the start of combat, you gain 1 extra power point and draw 1 card.",Evil thoughts are more dangerous than the sharpest blades.
-32,高级,星星,行动时，额外对随机敌人造成一次1点伤害。,,Primordial Witch - Evil Thoughts as a Sword,"At the start of combat, you gain 1 extra power point and draw 1 card.",Evil thoughts are more dangerous than the sharpest blades.
-33,高级,月亮,战斗开始时，你获得1层污染，4层增生。,,Primordial Witch - Evil Thoughts as a Sword,"At the start of combat, you gain 1 extra power point and draw 1 card.",Evil thoughts are more dangerous than the sharpest blades.
-34,高级,太阳,战斗开始时，你获得2回合庇护。,,Primordial Witch - Evil Thoughts as a Sword,"At the start of combat, you gain 1 extra power point and draw 1 card.",Evil thoughts are more dangerous than the sharpest blades.
+Id,Note,Name,Name_zh-Hant,Name_en,Name_ja,Description,Description_zh-Hant,Description_en,Description_ja,Tips,Tips_en,Tips_ja
+唯一的标识（不能重复）,备注,名称,,Name,,描述,,Description,,剧情描述,Tips,
+1,魔力,士兵,士兵,Soldier,兵士,魔力+2。,魔力+2。,Magic +2.,魔力+2。,,,
+2,幸运,法师,法師,Mage,魔術師,精神+2。,精神+2。,Spirit +2.,精神+2。,,,
+3,精神,刺客,刺客,Assassin,暗殺者,感知+2。,感知+2。,Perception +2.,感知+2。,,,
+4,感知,羽兽,羽獸,Feathered Beast,羽獣,幸运+2。,幸運+2。,Luck +2.,幸運+2。,,,
+5,通用,皇后,皇后,Queen,女王,选择道途各+2。,選擇道途各+2。,Choose Path +2 each.,各道筋のステータス+2。,,,
+6,"通用,生存",牧师,牧師,Priest,聖職者,战斗开始时恢复2点生命。,戰鬥開始時恢復1點生命。,Restore 2 health at the start of combat.,戦闘開始時にHPを2回復する。,,,
+7,"通用,生存",守卫,守衛,Guard,衛兵,最大生命值+5。,最大生命值+5。,Maximum health +5.,最大HP+5。,,,
+8,"通用,生存",天使,天使,Angel,天使,战斗开始时获得1层自愈。,戰鬥開始時獲得1層自癒。,Gain 1 layer of {buff_evergreen} at the start of combat.,戦闘開始時に再生を1スタック獲得する。,,,
+9,"通用,生存",盾卫,盾衛,Shield Guard,盾衛,战斗开始时你获得1层强韧。,戰鬥開始時你獲得1層強韌。,Gain 1 layer of {buff_resilient} at the start of combat.,戦闘開始時に強靭を1スタック獲得する。,,,
+10,"通用,生存",律法,律法,Law,律法,战斗开始时你获得3点护盾。,戰鬥開始時你獲得3點護盾。,Gain 1 shield at the start of combat.,戦闘開始時にシールドを3獲得する。,,,
+11,"通用,过牌",工匠,工匠,Craftsman,工匠,战斗开始时你额外抽1张牌。,戰鬥開始時你額外抽1張牌。,Draw an extra card at the start of combat.,戦闘開始時に追加でカードを1枚引く。,,,
+12,"过牌,通用",游侠,遊俠,Ranger,レンジャー,战斗开始时获得1层敏锐。,戰鬥開始時獲得1層敏銳。,Gain 1 layer of {buff_fast} at the start of combat.,戦闘開始時に敏速を1スタック獲得する。,,,
+14,"精神,充能",命运之轮,命運之輪,Wheel of Fate,運命の輪,战斗开始时获得1层循环。,戰鬥開始時獲得1層循環。,Gain 1 stack of {buff_cycle} at the start of combat.,戦闘開始時に循環を1スタック獲得する。,,,
+15,"输出,生命",士官,士官,Sergeant,士官,战斗开始时你获得1层锋锐。,戰鬥開始時你獲得1層鋒銳。,Gain 1 stack of {buff_keenedge} at the start of combat.,戦闘開始時に鋭利を1スタック獲得する。,,,
+18,"输出,生命",剑士,劍士,Swordsman,剣士,战斗开始时获得1层爆发。,戰鬥開始時獲得1層爆發。,Gain 1 stack of {buff_erupt} at the start of combat.,戦闘開始時に爆発を1スタック獲得する。,,,
+19,高级,主教,主教,Bishop,司教,战斗开始时你获得4层元素。,戰鬥開始時你獲得4層元素。,Gain 4 stack of {buff_elements} at the start of combat.,戦闘開始時に元素を4スタック獲得する。,,,
+20,"输出,负面",萨满,薩滿,Shaman,シャーマン,战斗开始时随机赋予敌人1层易伤。,戰鬥開始時隨機賦予敵人1層易傷。,Randomly inflict 1 stack of {buff_vulnerability} on an enemy at the start of combat.,戦闘開始時、ランダムな敵1体に脆弱を1スタック付与する。,,,
+21,通用,国王,國王,King,国王,获得40金币。,獲得40金幣。,Gain 40 gold.,40ゴールドを獲得する。,,,
+22,通用,教皇,教宗,Pope,教皇,你获得的金币额外增加10%。,你獲得的金幣額外增加10%。,Increase the amount of gold you earn by 10%.,獲得するゴールドが10%増加する。,,,
+23,高级,审判,審判,Judgement,審判,战斗开始时获得1层狂暴。,戰鬥開始時獲得1層狂暴。,Gain 1 stack of {buff_frenzy} at the start of combat.,戦闘開始時に狂暴を1スタック獲得する。,,,
+24,高级,血鬼,血鬼,Blood Demon,血鬼,战斗开始时你获得鬼化。,戰鬥開始時你獲得鬼化。,Gain {buff_oniblood} at the start of combat.,戦闘開始時に鬼化を獲得する。,,,
+*101,魔力,超凡之始-力,超凡之始-力,Beginning of the Extraordinary - Strength,超越の始まり-力,"魔力大于等于10时,战斗开始时第一次伤害+6。","魔力大於等於10時,戰鬥開始時第一次傷害+6。",First damage dealt at the start of the battle is increased by 6.,魔力が10以上の場合、戦闘開始時の最初のダメージ+6。,魔力开始在你指尖涌动。,Magic begins to flow from your fingertips.,魔力が指先から溢れ始める。
+*102,幸运,超凡之始-运,超凡之始-運,Beginning of the Extraordinary - Luck,超越の始まり-運,"幸运大于等于10时,战斗开始时额外抽1张牌。","幸運大於等於10時,戰鬥開始時額外抽1張牌。",Draw an additional card at the start of the battle.,幸運が10以上の場合、戦闘開始時に追加でカードを1枚引く。,你是人们口中的“幸运儿”。,You are known as ‘the lucky one.’,あなたは人々が言うところの「幸運の持ち主」だ。
+*103,精神,超凡之始-智,超凡之始-智,Beginning of the Extraordinary - Wisdom,超越の始まり-知,"精神大于等于10时,战斗开始时额外获得1点魔能。","精神大於等於10時,戰鬥開始時額外獲得1點魔能。",Gain 1 additional power at the start of the battle.,精神が10以上の場合、戦闘開始時に追加でマナを1獲得する。,你的学识贯通古今。。,Your knowledge spans the ages.,あなたの学識は古今を貫く。
+*104,感知,超凡之始-感,超凡之始-感,Beginning of the Extraordinary - Sensitivity,超越の始まり-感,"感知大于等于10时,战斗开始时获得6点防御。","感知大於等於10時,戰鬥開始時獲得6點防禦。",Gain 6 Defence at the start of the battle.,感知が10以上の場合、戦闘開始時に防御を6獲得する。,你的感官异常敏锐。,Your senses are exceptionally sharp.,あなたの感覚は異常に鋭い。
+*105,魔力,超魔涌动,超魔湧動,Super Magic Surge,スーパーマジックの奔流,"魔力大于等于20时,战斗开始时获得3层锋锐。","魔力大於等於20時,戰鬥開始時獲得3層鋒銳。",Gain 3 {buff_keenedge} at the start of the battle.,魔力が20以上の場合、戦闘開始時に鋭利を3スタック獲得する。,你的魔力水平异常之高，经常将照明施成火球术的效果。,Your magic is so powerful that you can often cast fireballs for illumination.,あなたの魔力は異常に高く、照明魔法がしばしば火球術の効果を発揮する。
+*106,幸运,吉星高照,吉星高照,Lucky Star Blessing,吉星高照,"幸运大于等于20时,战斗开始时额外获得45点金币。","幸運大於等於20時,戰鬥開始時額外獲得30點金幣。",Gain 45 gold coins at the start of combat.,幸運が20以上の場合、戦闘開始時に追加で45ゴールドを獲得する。,你总是创造着奇迹，幸运女神格外垂青。,"You are constantly performing miracles, and Lady Luck smiles upon you.",あなたは常に奇跡を起こし、幸運の女神に特に愛されている。
+*107,精神,万法通明,萬法通明,Master of All magics,万法通明,"精神大于等于20时,战斗开始时获得1层启示。","精神大於等於20時,戰鬥開始時獲得1層啟示。",Gain 1 layer of {buff_epiphany} at the start of combat.,精神が20以上の場合、戦闘開始時に啓示を1スタック獲得する。,无论多么晦涩的魔力回路，你都可以参透。,"No matter how obscure the magic circuit, you can understand it.",どんなに難解な魔力回路でも、あなたは解読できる。
+*108,感知,我见众生,我見眾生,Witness to all beings,我、衆生を見る,"感知大于等于20时,战斗开始时获得2层坚毅。","感知大於等於20時,戰鬥開始時獲得2層堅韌。",Gain 2 layers of {buff_bulwark} at the start of combat.,感知が20以上の場合、戦闘開始時に堅固を2スタック獲得する。,你已窥见众生百相，也坚定了心中的信念。,You have seen the many faces of all beings and strengthened your convictions.,あなたは衆生の百相を垣間見、心中の信念を固めた。
+*109,魔力,撼天动地,撼天動地,Shake the earth,天地を揺るがす,"魔力大于等于30时,你每次出牌额外造成8点伤害。","魔力大於等於30時,你每次出牌有額外造成8點傷害。",You have a  chance to deal 8 additional damage each time you play a card.,魔力が30以上の場合、カードを使用するたびに追加で8ダメージを与える。,你魔力的威能足以改天换地。,The power of your magic is sufficient to reshape the heavens and earth.,あなたの魔力の威力は天地を覆すに足る。
+*110,幸运,天降机缘,天降機緣,Opportunity from Heaven,天与の好機,"幸运大于等于30时,你的战斗奖励+1。","幸運大於等於30時,你的戰鬥獎勵+1。",Your combat reward is increased by 1.,幸運が30以上の場合、戦闘報酬+1。,奇迹总是主动降临到你身边。,Miracles always come to you of their own accord.,奇跡は常にあなたのもとへ自ら舞い降りてくる。
+*111,精神,未来之主,未來之主,Master of the Future,未来の主,"精神大于等于30时,战斗开始时你获得1层鬼化。","精神大於等於30時,戰鬥開始時你獲得1層鬼化。",You gain 1 layer of {buff_oniblood} at the start of combat.,精神が30以上の場合、戦闘開始時に鬼化を1スタック獲得する。,时间线对于凡人过于艰涩，而你早已穷尽一切可能。,"The timeline is too complex for mortals, but you have already explored every possibility.",時間線は凡人にはあまりにも難解だが、あなたはとうに全ての可能性を究めている。
+*112,感知,眸中万象,眸中萬象,Insight into everything,瞳の中の万象,"感知大于等于30时,战斗开始你获得1层源蜕。","感知大於等於30時,戰鬥開始你獲得1層源蛻。",You gain 1 layer of {buff_sourcecast} at the start of combat.,感知が30以上の場合、戦闘開始時に源化を1スタック獲得する。,你洞悉世间万物，也窥视到一丝不属于“此处”的真相。,You understand all things in the world and have glimpsed a fragment of truth that does not belong to ‘this place.’,あなたは世の万物を洞察し、「ここ」に属さない真実の一端を垣間見た。
+*113,魔力,以力证道,以力證道,Proving the Way with Power,力を以て道を証す,"魔力大于等于40时,战斗开始时获得500层超凡。","魔力大於等於40時,戰鬥開始時獲得500層超凡。",Gain 500 layers of {buff_extraordinary} at the start of combat.,魔力が40以上の場合、戦闘開始時に超越を500スタック獲得する。,魔力开始自发涌动，铭刻着独属于你的回路。,"Magic begins to flow spontaneously, etching circuits unique to you.",魔力が自発的に流れ始め、あなただけの回路を刻み込む。
+*114,幸运,天命至高,天命至高,The Supreme Destiny,天命至高,"幸运大于等于40时,你的所有检定骰降低10检定难度，所有数值骰额外加10检定。","幸運大於等於40時,你的所有檢定骰降低10檢定難度，所有數值骰額外加10檢定。","All your check dice are reduced by 10 check difficulty, and all value dice are increased by 10 check.",幸運が40以上の場合、全ての判定ダイスの難易度-10、全ての数値ダイスに+10の追加判定。,并非天命加身，你即是天命。,It is not fate that has chosen you; you are fate itself.,天命があなたに宿ったのではない、あなたが天命そのものなのだ。
+*115,精神,虚之造物主,虛之造物主,Creator of Nothingness,虚無の創造主,"精神大于等于40时,战斗开始时自身获得2层循环,2层污染。给与所有敌人一层时停。","精神大於等於40時,戰鬥開始時自身獲得2層循環,2層污染。給與所有敵人一層時停。","At the start of battle, you gain 2 layers of {buff_cycle} and 2 layers of {buff_contagion}. All enemies are given 1 layer of {buff_timestop}.",精神が40以上の場合、戦闘開始時に自身は循環を2スタック、汚染を2スタック獲得する。全ての敵に時間停止を1スタック付与する。,你早已跳脱出时间，凡间的威胁再难伤你分毫。,You have long transcended time; the threats of the mortal world can no longer harm you in the slightest.,あなたはとうに時間を超越した。俗世の脅威があなたを傷つけることはもはやない。
+*116,感知,第一因,第一因,First Cause,第一原因,"感知大于等于40时,第1回合记录你的生命,之后每回合回溯到对应状态并获得1层坚毅。","感知大於等於40時,第1回合記錄你的狀態,之後每回合回溯到對應狀態並獲得1層堅毅。","Record your status in the first round, then backtrack to the corresponding status each round and gain 1 layer of {buff_impregnable}.",感知が40以上の場合、1ターン目にあなたの状態を記録し、以降の各ターンでその状態に戻り、堅毅を1スタック獲得する。,万般因果加身，你成为世间第一因。,"Bound by countless causes and effects, you have become the first cause of the world.",あらゆる因果をその身に受け、あなたは世界の第一原因となった。
+32,高级,星星,星星,Star,星,行动时，额外对随机敌人造成一次1点伤害。,行動時，額外對隨機敵人造成一次1點傷害。,"At the start of combat, you gain 1 extra power point and draw 1 card.",行動時、追加でランダムな敵1体に1ダメージを与える。,,Evil thoughts are more dangerous than the sharpest blades.,悪意は最も鋭い刃よりも危険だ。
+33,高级,月亮,月亮,Moon,月,战斗开始时，你获得1层污染，4层增生。,戰鬥開始時，你獲得1層污染，4層增生。,"At the start of combat, you gain 1 extra power point and draw 1 card.",戦闘開始時、汚染を1スタック、増殖を4スタック獲得する。,,Evil thoughts are more dangerous than the sharpest blades.,悪意は最も鋭い刃よりも危険だ。
+34,高级,太阳,太陽,Sun,太陽,战斗开始时，你获得2层庇护。,戰鬥開始時，你獲得2層庇護。,"At the start of combat, you gain 1 extra power point and draw 1 card.",戦闘開始時、庇護を2スタック獲得する。,,Evil thoughts are more dangerous than the sharpest blades.,悪意は最も鋭い刃よりも危険だ。
+*35,高级,重生保险,重生保險,Rebirth Insurance,再生の保険,每场冒险仅限一次，非最终领主战斗死亡时脱离,每場冒險僅限一次，非最終領主戰鬥死亡時脫離,"Once per adventure only, escape when dying in non-final boss battles",冒険ごとに1回のみ、最終ボス以外の戦闘で死亡時に離脱する。,,,
+*36,诅咒,巫妖,,,,战斗开始时最大生命值-4，三场战斗后销毁此祝福并获得3个萨满，3个牧师,,,,,,
+*37,诅咒,恐虐,,,,战斗开始时临时魔力-5，三场战斗后销毁此祝福并获得5魔力，一个士官祝福,,,,,,
+*38,诅咒,奸奇,,,,战斗开始时临时精神-5，三场战斗后销毁此祝福并获得5精神，一个工匠祝福,,,,,,
+*39,诅咒,纳垢,,,,战斗开始时临时幸运-5，三场战斗后销毁此祝福并获得5幸运，120金币,,,,,,
+*40,诅咒,色孽,,,,战斗开始时临时感知-5，三场战斗后销毁此祝福并获得5感知，10最大生命值,,,,,,

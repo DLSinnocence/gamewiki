@@ -1,21 +1,8 @@
 Id,Rarity,Expend,Tag,InitScript,DrawScript,UseScript,DropScript,Icon,Effects,Action
 唯一的标识（不能重复）,稀有度,花费,标签,卡牌初始化脚本,卡牌抽到后执行,卡牌使用后执行,卡牌进入弃牌堆后执行,图标资源的路径,特效路径,动作
-1,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
-        AddBuff(""buff_stretch"",INF,""2"");
-        AddBuff(""buff_tenacity"", INF, ""2"");",,,stream,Buff
-*2,3,1,,"Vars[""BaseScript""]=""AttackCardItem"";",,"SetStatus(""Target"");",,,Icon/icon experiment/1 (187),
-3,5,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";",,"ChangeDynamicVar(""UseCount"",""1"");",,,stream,
-*4,3,1,,"Vars[""BaseScript""]=""CommonCardItem"";",,"SetStatus(""Self"");
-int A = 0;
-        for (int i = HandCard.Count - 1; i >= 0; i--)
-        {
-            bool shouldRemove = !(HandCard[i].data[""Tag""].Contains(""Retain"")||HandCard[i].data[""Tag""].Contains(""Froze""));
-            if (shouldRemove)
-            {
-                HandCard[i].EffectOfThrowCard();
-                A++;
-            }
-        }
-DrawCount(A.ToString());",,,Icon/icon experiment/1 (187),
-5,4,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(30+int.Parse(Vars[""CorBuff""])).ToString();",,"BurnCard(""1"",""2"");AddBuff(""buff_extraordinary"",""3"",""30"");",,,stream,
-6,4,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(1+int.Parse(Vars[""CorDraw""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_disqualification"",""3"",""2"");",,,,Skill
+1,2,1,,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();",,"SetStatus(""Self"");
+        AddBuff(""buff_keenedge"",""2"");
+        AddBuff(""buff_bulwark"", ""2"");",,Icon/Card/肉体强化,强化,Buff
+*3,3,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";",,"ChangeDynamicVar(""UseCount"",""1"");",,Icon/Card/重现,强化,
+5,2,0,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(30+int.Parse(Vars[""CorBuff""])).ToString();",,"BurnCard(""1"",""2"");AddBuff(""buff_extraordinary"",""30"");",,Icon/Card/极尽升华,强化,
+6,3,1,Burnout,"Vars[""BaseScript""]=""CommonCardItem"";Vars[""DesVal1""]=(2+int.Parse(Vars[""CorBuff""])).ToString();Vars[""DesVal2""]=(1+int.Parse(Vars[""CorDraw""])).ToString();",,"SetStatus(""AllEnemy"");AddBuff(""buff_degrade"",""2"");",,Icon/Card/更高处,弱化,Skill

@@ -1,0 +1,6 @@
+Id,Note,Name,Description,Name_en,Description_en,Name_ja,Description_ja,Passive1,Passive1_en,Passive1_ja
+Id,备注,名字,描述,,,,,,,
+10001,,乌鸦,本来无名姓,Observer,Originally nameless,観察者,元々名もなき存在,"<name>报丧偈羽</name>
+<des>魔女造成伤害时，对全体敌方附带一次真实伤害</des>","<name>Wail of the Mourning</name><des>When the witch deals damage, it additionally inflicts damage to all enemy units</des>",<name>報喪偈羽</name><des>魔女がダメージを与えるとき、全ての敵に1回の真のダメージを追加で与える</des>
+10002,,黑猫,幸运的黑猫,Black Cat,A lucky black cat,黒猫,幸運の黒猫,"<name>幸运黑猫</name>
+<des>如果魔女死亡时自身生命值大于60%,自身死亡使魔女恢复满生命(每场冒险最多一次)。</des>","<name>Lucky Black Cat</name><des>If the witch's health is over 60% at the time of death, her death will fully restore her health (maximum once per adventure).</des>",<name>幸運な黒猫</name><des>魔女が死亡する時、彼女の生命値が60%を超えている場合、彼女自身の死亡は魔女の生命を完全に回復させる（各冒険で最大1回）。</des>
