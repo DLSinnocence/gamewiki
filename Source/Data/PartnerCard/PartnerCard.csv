@@ -1,4 +1,4 @@
-Id,InitScript,TargetScript,UseScript,Icon,Tag,Effects,Action
+﻿Id,InitScript,TargetScript,UseScript,Icon,Tag,Effects,Action
 Id,卡牌初始化脚本（使用前执行）,出现时执行（选定目标）,卡牌使用后执行,行动图标,唯一特性,特效,动作
 attack,"Vars[""atk""]=atk();Vars[""CD""]=""0"";Vars[""DesVal1""]=Vars[""atk""];Vars[""priority""]=""1"";","SetStatus(""Target"");",Damage(atk());,Icon/Enemy/EnemyAction/攻击,,,Attack
 defence,"Vars[""CD""]=""0"";Vars[""DesVal1""]=def();Vars[""priority""]=""1"";","SetStatus(""Self"");",ChangeDefence(def());,Icon/Enemy/EnemyAction/防御,,,
@@ -8,17 +8,13 @@ AswiftBlow,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=atk();
         Damage(atk());
         foreach (var status in Object)
         {
-            var buffcon = status.buffBarUI;
-            if (buffcon!=null)
-            {
-                if (buffcon.GetBuff(""buff_vulnerability"")!=null)
+                if (Self.GetBuff(""buff_vulnerability"")!=null)
                 {
                     Damage(atk());
                 }
-            }
         }",Icon/Enemy/EnemyAction/多段攻击,,,
 Combing,"Vars[""CD""]=""0"";Vars[""priority""]=""2"";Vars[""DesVal1""]=def();"," SetStatus(""Self"");","
         ChangeDefence(def());
         PlayerInfo.TempLucky += 3;",Icon/Enemy/EnemyAction/防御,,,
-FuneralBell,"Vars[""CD""]=""1"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_vulnerability"",""2"");",Icon/Enemy/EnemyAction/给予异常,,,
-DeepGrows,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";Vars[""DesVal1""]=atk();","SetStatus(""Target"");","Damage(atk(),""True"");AddBuff(""buff_bleeding"",""3"");",Icon/Enemy/EnemyAction/攻击,,,
+FuneralBell,"Vars[""CD""]=""1"";Vars[""priority""]=""2"";","SetStatus(""Target"");","AddBuff(""buff_vulnerability"",""3"");",Icon/Enemy/EnemyAction/给予异常,,,
+DeepGrows,"Vars[""CD""]=""1"";Vars[""priority""]=""3"";Vars[""DesVal1""]=atk();","SetStatus(""Target"");","Damage(atk(),""True"");AddBuff(""buff_bleeding"",""4"");",Icon/Enemy/EnemyAction/攻击,,,

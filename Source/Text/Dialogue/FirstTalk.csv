@@ -1,4 +1,4 @@
-Id,Text,Text_en,Text_ja,ChoiceText1,ChoiceText1_en,ChoiceText1_ja,ChoiceText2,ChoiceText2_en,ChoiceText2_ja,Notification,Notification_en,Notification_ja
+﻿Id,Text,Text_en,Text_ja,ChoiceText1,ChoiceText1_en,ChoiceText1_ja,ChoiceText2,ChoiceText2_en,ChoiceText2_ja,Notification,Notification_en,Notification_ja
 对话Id,对话正文,,,选项1文本,,,,,,,,
 1,近来可好？希望我家的小<color=yellow>阿米莉娅</color>没给你添麻烦。,How have you been? I hope my little <color=yellow>Amelia</color> hasn't caused you any trouble.,ごきげんよう。うちの<color=yellow>アメリア</color>がご迷惑をおかけしていないと良いのですが。,她是个很可爱的孩子。,She's a very cute kid.,とても可愛い子ですね。,她怎么半路旷工了？,Why did she skip work halfway through?,どうして途中で仕事をサボったのですか？,,,
 *2,您也这么觉得对吧？她是魔女们的前辈，是最得意的造物。,"You think so too, right? She is the senior of the witches, the most proud creation.",あなたもそう思いますでしょう？彼女は魔女たちの先輩であり、最も誇らしい創造物なのです。,,,,,,,,,

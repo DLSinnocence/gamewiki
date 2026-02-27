@@ -1,34 +1,17 @@
-Id,Note,Name,Tips,Description,Name_en,Description_en,Tips_en
-Id（唯一标识）,备注,名称,剧情描述,效果描述,,,
-1,,预知之瞳,先知眼中的命运残片,使用后再抽1张牌,Eye of Foresight,Draw 1 additional card after use,A fragment of fate from the prophet's eye
-2,,贤者启示,古代卷轴泄露的天机,使用后再抽2张牌,Sage's Revelation,Draw 2 additional cards after use,Heavenly secrets leaked from ancient scrolls
-3,,裂魂低语,深渊恶魔的蛊惑之音,使用后获得2层易伤,Soul-Rending Whisper,Gain 2 layers of {buff_vulnerability} after use,The seductive voice of abyssal demons
-4,,魔力坍缩,失控的奥术漩涡,使用该牌后将魔能变成1,Mana Collapse,Set action points to 1 after using this card,An out-of-control arcane vortex
-5,,星辰核心,坠星碎片中的永恒魔能,使用该牌后将魔能变成2,Stellar Core,Set action points to 2 after using this card,Eternal energy within fallen star fragments
-6,,铁木之心,千年古树的生存智慧,使用后获得持续2回合的1层强韧,Ironwood Heart,Gain 1 layer of {buff_resilient} for 2 turns after use,Survival wisdom of a thousand-year-old tree
-7,,玄钢灌注,矮人大师的不传秘术,使用后获得持续2回合的3层强韧,Mysteel Infusion,Gain 3 layers of {buff_resilient} for 2 turns after use,Secret technique of dwarven masters
-8,,明镜止水,精灵冥想术的结晶,使用后获得1层本心,Mirror-Still Water,Gain 1 layer of {buff_trueheart} after use,Crystallization of elven meditation arts
-9,,星陨余波,天界战争的残留冲击,对所有敌人再造成一次1点物理伤害,Meteor Aftershock,Deal 1 additional physical damage to all enemies,Residual impact from celestial wars
-10,,血祭契约,禁忌仪式的必要代价,使用后自身生命-1,Blood Sacrifice Pact,Lose 1 health after use,Necessary price of forbidden rituals
-11,,魔力虹吸,窃取元素界的游离魔能,使用后额外获得1点魔能,Mana Siphon,Gain 1 additional action point after use,Stealing free energy from the elemental plane
-12,,奥能矩阵,古代法师的魔能回路,使用后额外获得2点魔能,Arcane Matrix,Gain 2 additional action points after use,Energy circuit of ancient mages
-13,,双生诅咒,恶魔与天使的共同赠礼,使用后获得持续2回合的1层污染,Twin Curse,Gain 1 layer of {buff_corruption} for 2 turns after use,Joint gift from demon and angel
-14,,巨人血脉,远古泰坦的稀释血统,使用后获得持续3回合的1层锋锐,Giant Bloodline,Gain 1 layer of {buff_keenedge} for 3 turns after use,Diluted bloodline of ancient titans
-15,,泰坦觉醒,沉睡的古老力量复苏,使用后获得持续3回合的2层锋锐,Titan Awakening,Gain 2 layers of {buff_keenedge} for 3 turns after use,Awakening of slumbering ancient power
-16,,炎魔烙印,地狱之火的痛苦印记,给与对方3层灼烧,Balrog Brand,Apply 3 layers of {buff_burn} to enemies,Painful mark of hellfire
-17,,雷神过载,驾驭风暴的禁忌尝试,给与自身20层超凡,Thunder God Overload,Gain 20 layers of {buff_extraordinary},Forbidden attempt to harness storms
-18,,记忆焚祭,燃烧过去换取未来,使用后可选一张牌燃烬,Memory Immolation,Choose 1 card to burn after use,Burning the past to secure the future
-19,,往事余烬,将回忆化作战斗薪柴,使用后燃烬一张牌,Embers of the Past,Burn 1 card after use,Turning memories into battle fuel
-20,,春神赐福,自然复苏的生机涌动,使用后获得持续2回合的2层吸收,Spring God's Blessing,Gain 2 layers of {buff_vitality} for 2 turns after use,Surging vitality of nature's revival
-21,,生命潮汐,森林之心的永恒律动,使用后获得持续2回合的3层吸收,Life Tide,Gain 3 layers of {buff_vitality} for 2 turns after use,Eternal rhythm of the forest's heart
-22,,清心祷言,神殿牧师的祝福圣言,使用后自身生命+1,Purifying Prayer,Gain 1 health after use,Blessed words of temple priests
-23,,符文结界,古代守护符文的再现,使用后获得持续2回合的1层坚毅,Runic Barrier,Gain 1 layer of {buff_impregnable} for 2 turns after use,Recreation of ancient protective runes
-24,,不朽誓约,与守护巨龙的永恒契约,使用后获得持续2回合的2层坚毅,Immortal Pact,Gain 2 layers of {buff_impregnable} for 2 turns after use,Eternal contract with guardian dragons
-25,,荆棘王权,玫瑰战争的古老技艺,使用后获得持续3回合的1层反击,Thorn Sovereignty,Gain 1 layer of {buff_counterattack} for 3 turns after use,Ancient art from the War of Roses
-26,,镜面审判,光明神殿的惩戒秘法,使用后获得持续3回合的2层反击,Mirror Judgment,Gain 2 layers of {buff_counterattack} for 3 turns after use,Punitive secret art of the Light Temple
-27,,龙鳞祝福,古龙褪鳞的馈赠,使用后获得持续2回合的2层坚盾,Dragonscale Blessing,Gain 2 layers of {buff_bulwark} for 2 turns after use,Gift from ancient dragon's shed scales
-28,,永恒熔铸,矮人熔炉的终极杰作,使用后获得持续3回合的4层坚盾,Eternal Forging,Gain 4 layers of {buff_bulwark} for 3 turns after use,Ultimate masterpiece of dwarven forges
-29,,普拉提粘液,恐惧,"卡牌的数值（阿拉伯数字）全部+1(镶嵌时生效),卡牌使用后不会进入弃牌堆",Platy Slime,"All numerical values on card +1 (when embedded), card doesn't enter discard pile after use",Fear
-30,,血藤,它渴望着鲜血,每次打出时卡牌造成的伤害+1(可以跨战斗保留),Blood Vine,Card damage +1 each time played (persists across battles),It thirsts for blood
-31,,水银泪滴,一滴在汞中永恒跃动的液态记忆,"卡牌的数值（阿拉伯数字）全部+2(镶嵌时生效),卡牌使用后不会进入弃牌堆",Mercury Teardrop,"All numerical values on card +2 (when embedded), card doesn't enter discard pile after use",A drop of liquid memory eternally dancing in mercury
-32,,腐蚀之心,"深渊领主的核心残骸,跳动的腐化心脏渗出沥青般的脓血","卡牌给予的状态层数+2(镶嵌生效),使用时自身生命值-4",Heart of Corruption,"Status layers granted by card +2 (when embedded), lose 4 health when used","Core remnant of an abyssal lord, a beating corrupted heart oozing tar-like pus"
+﻿Id,Note,Name,Description,Name_en,Name_ja,Description_en,Description_ja
+Id（唯一标识）,备注,名称,效果描述,,,,
+1,,末日,附着卡打出时恢复1点魔能，焚毁。,Doomsday,終末,"When the attached card is played, restore 1 mana. Exhaust.",付与されたカードを使用時、魔力を1回復する。焼却。
+2,,绝灭,附着卡打出次数+5，使用后彻底销毁。,Extinction,絶滅,"Attached card play count +5, permanently destroyed after use.",付与されたカードの使用回数+5、使用後に完全に破壊される。
+3,,双生,附着卡打出次数+1，焚毁。,Twin,双生,"Attached card play count +1, Exhaust.",付与されたカードの使用回数+1、焼却。
+4,,无限,附着卡获得打出时不会被丢弃，但是魔能耗费+1。,Infinity,無限,"Attached card will not be discarded when played, but mana cost +1.",付与されたカードは使用時に捨てられなくなるが、魔力消費+1。
+5,,相片,附着卡获得保留tag。,Photo,写真,Attached card gains the Retain tag.,付与されたカードは保留タグを獲得する。
+6,,虔诚,给予附着卡 唤神:获得神启层数点护盾。,Devotion,敬虔,Grants attached card Divinity: Gain shield equal to Revelation stacks.,付与されたカードに神喚を付与：神啓の層数分シールドを獲得する。
+*7,,时痕,给予附着卡 刹那。,Time Mark,時の痕,Grants attached card Fleeting.,付与されたカードに刹那を付与する。
+8,,复仇,附着卡打出时获得1层蓄势。,Vengeance,復讐,"When the attached card is played, gain 1 stack of Momentum.",付与されたカードを使用時、蓄勢を1層獲得する。
+9,,超频,附着卡打出时抽1张牌，但是魔能耗费+1。,Overclock,超過,"When the attached card is played, draw 1 card,but mana cost +1.",付与されたカードを使用時、カードを1枚引く。魔力消費+1。
+10,,铸金,附着卡打出时获得2金币。,Gold Casting,鋳金,"When the attached card is played, gain 2 gold.",付与されたカードを使用時、ゴールドを2獲得する。
+11,,治愈,附着卡打出时恢复4*魔能消耗点生命。,Healing,治癒,"When the attached card is played, restore HP equal to 4 * mana cost.",付与されたカードを使用時、魔力消費×4のHPを回復する。
+12,,固化,附着卡打出时获得6*魔能消耗点护盾。,Solidify,固化,"When the attached card is played, gain shield equal to 6 * mana cost.",付与されたカードを使用時、魔力消費×6のシールドを獲得する。
+13,,刀刃,附着卡打出时对随机敌人造成7*魔能消耗点伤害。,Blade,刃,"When the attached card is played, deal damage equal to 7 * mana cost to a random enemy.",付与されたカードを使用時、魔力消費×7のダメージをランダムな敵に与える。
+14,,蓄能,附着卡打出后获得魔能消耗层储能。,Energy Storage,蓄能,"After the attached card is played, gain Energy stacks equal to mana cost.",付与されたカードを使用後、魔力消費層数分の蓄能を獲得する。
+15,,衔尾,若卡牌非焚毁，附着卡打出后返回抽牌堆。,Ouroboros,ウロボロス,"If the card is not Exhausted, the attached card returns to the draw pile after being played.",カードが焼却でない場合、付与されたカードは使用後に山札に戻る。

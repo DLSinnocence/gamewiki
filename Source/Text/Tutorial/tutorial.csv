@@ -1,4 +1,4 @@
-Id,Note,Image,Name,Description,Name_en,Description_en,Name_ja,Description_ja
+﻿Id,Note,Image,Name,Description,Name_en,Description_en,Name_ja,Description_ja
 Id,备注,图片路径,标题,正文,Title,Description,,
 Test1,,Images/Tutorial/House/主页面,欢迎参与测试~！,《魔女：终末旅途》是一款卡牌肉鸽游戏，你可以出发冒险，使用卡牌进行战斗和游戏，获取真理之晶，利用真理之晶的资源解锁和升级魔女屋内的设施，提高属性或者解锁更多魔女，卡牌，遗物，也可以创建自定义卡牌加入游戏，来挑战更高的难度,Welcome to the Test~!,"Witch: The Final Journey is a card roguelike game. You can embark on adventures, use cards for combat and gameplay, obtain Crystals of Truth, and use them to unlock and upgrade facilities in the Witch's House. This allows you to improve attributes, unlock more witches, cards, and relics. You can also create custom cards to add to the game and challenge higher difficulties.",テストへようこそ～！,「魔女：終末の旅」はカードローグライクゲームです。冒険に出かけ、カードを使って戦闘やゲームを進め、真理の結晶を手に入れましょう。真理の結晶を使って魔女の家の施設を解放・アップグレードし、ステータスを向上させたり、より多くの魔女、カード、遺物を解放したりできます。また、カスタムカードを作成してゲームに加え、より高い難易度に挑戦することも可能です。
 Test2,,Images/Tutorial/House/主页面,欢迎参与测试~！,"游戏当前版本号为0.7.15.3
@@ -24,8 +24,6 @@ You can continue to increase the difficulty to challenge yourself.",難易度選
 さらに難易度を上げて自分自身に挑戦することも可能です。"
 SafeBox,,Images/Tutorial/Adventure/保险箱,保险箱,保险箱内可以储存金币，遗物，卡牌等资源，在游戏开局时，保险箱内的物品可以带入游戏内，通关游戏，或者在游戏中遇到保险箱也可以将游戏内的道具带回魔女屋,Safe Box,"The safe box can be used to store resources like gold, relics, and cards. At the beginning of a run, items from the safe box can be brought into the game. After clearing a run, or by encountering a safe box during a run, you can also bring in-game items back to the Witch's House.",金庫,金庫にはゴールド、遺物、カードなどのリソースを保管できます。ゲーム開始時、金庫内のアイテムをゲームに持ち込むことができます。ゲームをクリアしたり、ゲーム中に金庫を見つけたりすると、ゲーム内のアイテムを魔女の家に持ち帰ることもできます。
 Illustrated book,,Images/Tutorial/House/图鉴,图鉴,点击魔女屋中的书架可以打开图鉴，用于查阅已发现的卡牌，遗物等,Codex,"Click the bookshelf in the Witch's House to open the Codex, where you can view discovered cards, relics, and other items.",図鑑,魔女の家の本棚をクリックすると図鑑が開きます。発見したカードや遺物などを確認できます。
-Witch Choice,,Images/Tutorial/House/角色选择,魔女选择,点击魔女屋中的柱子可以选择不同的魔女（当前版本的第二个魔女需要在女神像中解锁才可以使用）,Witch Selection,Click the pillar in the Witch's House to select different witches (the second witch in the current version needs to be unlocked via the goddess statue before she can be used).,魔女選択,魔女の家の柱をクリックすると、異なる魔女を選択できます（現在のバージョンでは、2人目の魔女は女神像で解放しないと使用できません）。
-Pattern Choice,,Images/Tutorial/House/宠物选择,随从选择,点击魔女屋中的鸟笼可以选择不同的随从，随从有不同的行为和特性，会自动协助魔女战斗，即使死亡也会在下一场战斗满血复活,Follower Selection,"Click the birdcage in the Witch's House to select different followers. Followers have different behaviors and traits, and will automatically assist the witch in combat. Even if they die, they will be revived with full health in the next battle.",従者選択,魔女の家の鳥かごをクリックすると、異なる従者を選択できます。従者はそれぞれ異なる行動や特性を持ち、自動で魔女の戦闘を補助します。死亡しても、次の戦闘ではHPが全回復した状態で復活します。
 Announcement,,Images/Tutorial/House/主页面,公告,点击魔女屋中的小黑板可以查看游戏公告，查询游戏最新更新的内容，游戏的变化，或者历史更新记录，游戏的公告是游戏内的数据，需要更新游戏才会刷新，不是网游的实时公告,Announcements,"Click the small blackboard in the Witch's House to view game announcements, check the latest update content, game changes, or historical update records. The announcements are in-game data and will only refresh when the game is updated; they are not real-time online announcements like in an online game.",お知らせ,魔女の家の小さな黒板をクリックすると、ゲームのお知らせを確認できます。最新のアップデート内容、ゲームの変更点、過去の更新履歴などを閲覧できます。これらのお知らせはゲーム内データであり、ゲームのアップデート時に更新されるもので、オンラインゲームのようなリアルタイムのお知らせではありません。
 CardEditor,,Images/Tutorial/House/自定义卡牌,自定义卡牌,消耗真理之晶可以编辑卡牌，编辑好的卡牌需要替换掉默认的卡牌池才会生效,Custom Cards,You can spend Crystals of Truth to edit cards. Edited cards will only take effect after replacing cards in the default card pool.,カスタムカード,真理の結晶を消費してカードを編集できます。編集したカードは、デフォルトのカードプールと入れ替えることで効果を発揮します。
 DesChoice,,Images/Tutorial/MapSelect/命运选择,命运选择,"游戏地图遭遇的大部分情景都可以自由选择
@@ -70,8 +68,8 @@ By long-pressing the rotating arrow button in the bottom-right corner during you
 自分のターンが終了したら、右下のボタンをクリックしてターンを終了できます。
 自分のターン中に右下の回転矢印ボタンを長押しすると、現在のターンをやり直すことができます（戦闘中の乱数は変化しません）。"
 Action card,,Images/Tutorial/Fight/战斗,行动牌,"当轮到我方的回合时，玩家需要打出手中的行动牌来产生各种各样的效果以取得胜利
-行动牌分为两大类，黑色的“燃烬行动牌”和白色的“普通行动牌”
-带有燃烬词条的行动牌使用后会从本次战斗中彻底消失，无法再使用，在战斗结束后恢复
+行动牌分为两大类，黑色的“焚毁行动牌”和白色的“普通行动牌”
+带有焚毁词条的行动牌使用后会从本次战斗中彻底消失，无法再使用，在战斗结束后恢复
 而普通行动牌则会进入弃牌堆，待抽牌堆的卡牌全部抽完之后将弃牌堆的卡牌洗入抽牌堆重新抽取",Action Cards,"During your turn, you need to play action cards from your hand to produce various effects to achieve victory.
 Action cards are divided into two main categories: black ""Burnout Action Cards"" and white ""Normal Action Cards"".
 Cards with the Burnout keyword will be permanently removed from the current battle after use and cannot be used again until the battle ends.

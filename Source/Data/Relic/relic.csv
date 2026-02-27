@@ -1,62 +1,67 @@
-Id,Rarity,OwnScript,FightScript,Icon
+﻿Id,Rarity,OwnScript,FightScript,Icon
 id,稀有度,获取时的脚本,战斗脚本,图片名称
-1,2,,"AddEvent(""Action"",(() => {SetStatus(""Self"");ChangeDefence(""2"");}));",Icon/Relic/风之灵
-2,2,,"AddEvent(""Action"",() => {if(CheckDice.Roll().Value<20){ChangePower(""1"");}});",Icon/Relic/法师资格证书
-3,1,,"AddEvent(""Shuffle"",(() => {SetStatus(""AllRandomEnemy1"");ChangeHp(""-20"");}));",Icon/Relic/影劫草
-4,2,,"AddEvent(""FightStart"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_trauma"",""2"");}));",Icon/Relic/白盐
-5,1,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");ChangeHp(""15"");Vars[""ThisCount""]=""0"";});AddEvent(""StartRound"",() => {Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""])+1).ToString();UpdateRelicShow();SetStatus(""Self"");for(int i=0; i<(((int.Parse(Vars[""ThisCount""])%5)+1)/5); i++ ){ChangeHp(""-999"");}});",Icon/Relic/死契  帕雷凡
-6,2,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_burn"",""1"");}));",Icon/Relic/红石
+1,3,,"AddEvent(""Action"",(() => {SetStatus(""Self"");ChangeDefence(""3"");}));",Icon/Relic/风之灵
+2,4,,"AddEvent(""Action"",() => {if(CheckDice.Roll().Value<20){ChangePower(""1"");}});",Icon/Relic/法师资格证书
+3,1,,"AddEvent(""Shuffle"",(() => {SetStatus(""AllRandomTarget1"");ChangeHp(""-20"");}));",Icon/Relic/影劫草
+4,2,,"AddEvent(""FightStart"",(() => {SetStatus(""AllRandomTarget1"");AddBuff(DataId.buff_vulnerability,""4"");}));",Icon/Relic/白盐
+5,1,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");ChangeHp(""15"");Vars[""ThisCount""]=""0"";});AddEvent(""StartRound"",() => {
+            Vars[""ThisCount""]=(int.Parse(Vars[""ThisCount""])+1).ToString();UpdateRelicShow();
+            if (int.Parse(Vars[""ThisCount""])==5)
+            {
+                SetStatus(""Self"");
+                ChangeHp(""-999"");
+            }});",Icon/Relic/死契  帕雷凡
+6,3,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomTarget1"");AddBuff(DataId.buff_burn,""1"");}));",Icon/Relic/红石
 7,3,,"AddEvent(""FightStart"",() => {
            SetStatus(""AllTarget"");
-           AddBuff(""buff_degrade"",""4""); });",Icon/Relic/普拉提原体
-8,2,,"SetStatus(""AllTarget"");
-        AddEvent(""Action"",() => {ChangeHp(((Self.CurHp-Self.MaxHp)*3/10).ToString());});",Icon/Relic/怨恨
-9,3,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");AddBuff(""buff_bleeding"",""2"");ChangeMaxPower(""1"");});",Icon/Relic/血髓鸣泣
-10,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_elements"",""2"");}));",Icon/Relic/碎裂源晶
-11,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_oniblood"",""1"");AddBuff(""buff_keenedge"",""2"");}));",Icon/Relic/鬼骨面具
-*12,2,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");AddBuff(""buff_oniblood"",""1"");AddBuff(""buff_fast"",""3"");ChangeHp((Self.CurHp/6*-1).ToString());});",Icon/Relic/毒苹果
-13,1,,"AddEvent(""StartRound"",() => {SetStatus(""Self"");if(Self.CurHp<50){AddBuff(""buff_oniblood"",""1"");}});",Icon/Relic/血鬼保险条例
-14,2,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomTarget3"");Damage(""1"");}));",Icon/Relic/穿刺群落
+           AddBuff(DataId.buff_degrade,""4""); });",Icon/Relic/普拉提原体
+8,3,,,Icon/Relic/怨恨
+9,4,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");AddBuff(DataId.buff_frenzy,""1"");ChangeMaxPower(""1"");});",Icon/Relic/血髓鸣泣
+10,1,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_elements,""2"");}));",Icon/Relic/碎裂源晶
+11,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_oniblood,""1"");AddBuff(DataId.buff_keenedge,""2"");}));",Icon/Relic/鬼骨面具
+*12,3,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");AddBuff(DataId.buff_oniblood,""1"");AddBuff(DataId.buff_fast,""3"");ChangeHp((Self.CurHp/6*-1).ToString());});",Icon/Relic/毒苹果
+13,1,,"AddEvent(""StartRound"",() => {SetStatus(""Self"");if(Self.CurHp<50){AddBuff(DataId.buff_oniblood,""1"");}});",Icon/Relic/血鬼保险条例
+14,3,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomTarget3"");Damage(""1"");}));",Icon/Relic/穿刺群落
 15,1,,"AddEvent(""FightStart"", () => {
         Vars[""ThisCount""] = ""0"";
             if (Self.CurHp <= Self.MaxHp * 2 / 5 && Vars[""ThisCount""] == ""0"")
             {
                 Vars[""ThisCount""] = ""1"";
                 PlayerInfo.Money += 40;
-                AddBuff(""buff_oniblood"", ""1"");
+                AddBuff(DataId.buff_oniblood, ""1"");
             }
         });
         AddEvent(""Hurt"",() => {if (Self.CurHp <= Self.MaxHp * 2 / 5 && Vars[""ThisCount""] == ""0"")
             {
                 Vars[""ThisCount""] = ""1"";
                 PlayerInfo.Money += 40;
-                AddBuff(""buff_oniblood"", ""1"");
+                AddBuff(DataId.buff_oniblood, ""1"");
+            }});AddEvent(""Action"",() => {if (Self.CurHp <= Self.MaxHp * 2 / 5 && Vars[""ThisCount""] == ""0"")
+            {
+                Vars[""ThisCount""] = ""1"";
+                PlayerInfo.Money += 40;
+                AddBuff(DataId.buff_oniblood, ""1"");
             }});",Icon/Relic/恶念
 16,1,,"AddEvent(""Action"",() => {
   if (CheckDice.Roll().Value<50)
   {
-  SetStatus(""AllRandomEnemy1"");ChangeHp(""-8"");
+  SetStatus(""AllRandomTarget1"");ChangeHp(""-8"");
   }
   });",Icon/Relic/雷鸣之羽
-17,3,,"AddEvent(""StartRound"",(() => {SetStatus(""Self"");AddBuff(""buff_elements"",""4"");ChangePower(""1"");}));",Icon/Relic/魔力源晶
-18,2,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomEnemy1"");Damage(""1"");SetStatus(""Self"");ChangeDefence(""1"");}));",Icon/Relic/剑盾
+17,4,,"AddEvent(""StartRound"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_elements,""4"");ChangePower(""1"");}));",Icon/Relic/魔力源晶
+18,2,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomTarget1"");Damage(""1"");SetStatus(""Self"");ChangeDefence(""1"");}));",Icon/Relic/剑盾
 *19,2,,"AddEvent(""StartRound"",() => {SetStatus(""Self"");ChangeDefence(Vars[""layersExperienced""]);});",Icon/Relic/《深渊求生守则》
-20,3,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_weak"",""1"");}));",Icon/Relic/施虐者权杖
-*21,2,,"AddEvent(""Hurt"",(() => ChangeMoney(""8"")));",Icon/Relic/染血硬币
-22,1,,"AddEvent(""StartRound"", () => {  AddBuff(""buff_keenedge"",  ""4""); });
+20,3,,"AddEvent(""Action"",(() => {SetStatus(""AllRandomTarget1"");AddBuff(DataId.buff_weak,""1"");}));",Icon/Relic/施虐者权杖
+*21,3,,"AddEvent(""Hurt"",(() => ChangeMoney(""8"")));",Icon/Relic/染血硬币
+22,1,,"AddEvent(""StartRound"", () => {  AddBuff(DataId.buff_keenedge, ""4""); });
         AddEvent(""Action"",() => {SetStatus(""Self"");
-            var buffBarUI = Self.buffBarUI;
-            if (buffBarUI==null)
+            if (Self.GetBuff(DataId.buff_keenedge)==null)
             {
-                return;
-            }
-            if (buffBarUI.GetBuff(""buff_keenedge"")==null)
-            {
-                AddBuff(""buff_weak"",""1"");
+                AddBuff(DataId.buff_weak,""1"");
             }
             else
             {
-                buffBarUI.GetBuff(""buff_keenedge"").buffConfig.level -= 1;
+                Self.GetBuff(DataId.buff_keenedge).buffConfig.Level -= 1;
             }
             });",Icon/Relic/断剑
 *23,2,,"AddEvent(""FightStart"",() => {
@@ -69,18 +74,18 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
                 SetStatus(""Self"");
                 ChangeDynamicVar(""liveCount"",""1"");
             }});AddEvent(""Dead"",() => {Vars[""ThisCount""]=""2"";});",Icon/Relic/逆转时针
-*24,3,,"AddEvent(""Action"",(() => ChangePower(""1"")));",Icon/Relic/破损表盘
-25,1,,"AddEvent(""FightStart"",(() => {DrawCount(""2"");ChangeMaxHp(""-1"");}));",Icon/Relic/血嗣契约
-26,3,,"AddEvent(""FightStart"",
-        (() => {AddBuff(""buff_immortal"",""1"");}));",Icon/Relic/嬗变因子
-*27,2,,"AddEvent(""StartRound"",(() =>{SetStatus(""Self"");ChangeDynamicVar(""UseCount"",""1"");}));",Icon/Relic/虚影
-28,3,,"Vars[""ThisCount""] = ""0"";
+*24,4,,"AddEvent(""Action"",(() => ChangePower(""1"")));",Icon/Relic/破损表盘
+25,1,,"AddEvent(""FightStart"",(() => {DrawCount(""2"");ChangeMaxHp(""+1"");}));",Icon/Relic/血嗣契约
+26,4,,"AddEvent(""FightStart"",
+        (() => {AddBuff(DataId.buff_immortal,""1"");}));",Icon/Relic/嬗变因子
+*27,3,,"AddEvent(""StartRound"",(() =>{SetStatus(""Self"");ChangeDynamicVar(""UseCount"",""1"");}));",Icon/Relic/虚影
+28,4,,"Vars[""ThisCount""] = ""0"";
         UpdateRelicShow();
         AddEvent(""StartRound"",()=>
         {
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();
             UpdateRelicShow();
-            if (int.Parse(Vars[""ThisCount""]) >= 4)
+            if (int.Parse(Vars[""ThisCount""]) == 4)
             {
                 ChangeHp(""-9999"");
             }
@@ -101,30 +106,26 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
                 EscapeFight();
             }
         }));",Icon/Relic/点金手
-30,3,,"AddEvent(""Action"",(() => {SetStatus(""Self"");AddBuff(""buff_elements"",""1"");}));",Icon/Relic/第六元素
-31,3,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");ChangeHp((Self.CurHp/10*(-3)).ToString());});
+30,4,,"AddEvent(""Action"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_elements,""1"");}));",Icon/Relic/第六元素
+31,4,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");ChangeHp((Self.CurHp/10*(-3)).ToString());});
         AddEvent(""Action"",() => {if(CheckDice.Roll().Value<40) ChangeDynamicVar(""UseCount"",""1"");});",Icon/Relic/血色回响
-32,3,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_epiphany"",""1"");}));",Icon/Relic/烛芯
-33,3,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");ChangeHp(""2"");ChangePower(""2"");}));",Icon/Relic/希冀
-34,2,,"AddEvent(""Hurt"",(() => {SetStatus(""Self"");ChangeDefence(""4"");}));",Icon/Relic/静谧
-35,3,,"Vars[""ThisCount""] = ""0"";
+32,4,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_epiphany,""1"");AddBuff(DataId.buff_impregnable,""1"");}));",Icon/Relic/烛芯
+33,4,,"AddEvent(""FightStart"",(() => {SetStatus(""Self""); ChangePower(""2"");DrawCount(""2"");}));",Icon/Relic/希冀
+34,3,,"AddEvent(""Hurt"",(() => {SetStatus(""Self"");ChangeDefence(""7"");}));",Icon/Relic/静谧
+35,4,,"Vars[""ThisCount""] = ""0"";
         AddEvent(""NoPowerWhenTry"",(() => { ChangePower(""1"");
-            ChangeHp((Math.Pow(int.Parse(Vars[""ThisCount""]+2),2)*-1).ToString());}));
-            Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();UpdateRelicShow();
-        AddEvent(""StartRound"",(() => {
-            ChangePower((int.Parse(Vars[""ThisCount""])*-1 ).ToString());
-            Vars[""ThisCount""] = ""0""; }));",Icon/Relic/超频协议
-36,3,,"AddEvent(""FightStart"",(() => {SetStatus(""AllRandomEnemy1"");AddBuff(""buff_timestop"",""1"");}));",Icon/Relic/静滞秒针
-37,1,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_mitosis"",""4"");}));",Icon/Relic/战车造像
+            ChangeHp((Math.Pow(int.Parse(Vars[""ThisCount""]+1),2)*-1).ToString());Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();UpdateRelicShow();}));",Icon/Relic/超频协议
+36,4,,"AddEvent(""FightStart"",(() => {SetStatus(""AllRandomTarget1"");AddBuff(DataId.buff_timestop,""1"");}));",Icon/Relic/静滞秒针
+37,1,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_evergreen,""5"");}));",Icon/Relic/战车造像
 *38,3,,"AddEvent(""FightStart"",() => PlayerInfo.Reward+=1);",Icon/Relic/补给凭证
 39,1,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");
-        if (Self.CurHp>Self.MaxHp*4/10)
+        if (Self.CurHp>Self.MaxHp/5*2)
         {
-                ChangeMoney((Self.CurHp-Self.MaxHp*4/10).ToString());
+                ChangeMoney((Self.CurHp-Self.MaxHp/5*2).ToString());
         }
-            Vars[""MaxHp""]=Self.MaxHp.ToString();SetHp((int.Parse(Vars[""MaxHp""])*4/10).ToString());});",Icon/Relic/铭刻分针
-40,3,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_unyielding"",""1"");}));",Icon/Relic/机芯
-*41,2,,"AddEvent(""FightStart"", () => { SetStatus(""AllTarget""); AddBuff(""buff_bleeding"", ""5""); });
+            Vars[""MaxHp""]=Self.MaxHp.ToString();SetHp((int.Parse(Vars[""MaxHp""])/5*2).ToString());});",Icon/Relic/铭刻分针
+40,4,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_unyielding,""1"");}));",Icon/Relic/机芯
+*41,2,,"AddEvent(""FightStart"", () => { SetStatus(""AllTarget""); AddBuff(DataId.buff_bleeding, ""5""); });
         bool isTrigger = false;
         SetStatus(""All"");
         AddEvent(""buff_bleedingOnLevelChange"", () =>
@@ -135,11 +136,7 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
             var tempList = Object.ToList();
             foreach (var item in tempList)
             {
-                if (item.buffBarUI==null)
-                {
-                    return;
-                }
-                var buff = item.buffBarUI.GetBuff(""buff_bleeding"");
+                var buff = item.GetBuff(DataId.buff_bleeding);
                 if (buff != null)
                 {
                     count += buff.buffConfig.Level;
@@ -149,7 +146,7 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
             {
                 return;
             }
-            Self.DamageFilter[""blooding""] = true;
+            Self.DamageFilter[""blooding""] = 100f;
             isTrigger = true;
         });",Icon/Relic/升格仪式
 42,2,,"AddEvent(""StartRound"",() => {Vars[""Used""]=""True"";SetStatus(""Self"");ChangeDynamicVar(""DefaultDamage"",""6"");});
@@ -164,18 +161,18 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
            } 
             });",Icon/Relic/刀片
 43,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");ChangeMaxHp(""3"");}));",Icon/Relic/历战徽记：体魄
-44,1,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_extraordinary"",""20"");}));",Icon/Relic/全威力珠
-45,3,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_cycle"",""2"");}));",Icon/Relic/时虫之鳞
+44,1,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_extraordinary,""20"");}));",Icon/Relic/全威力珠
+45,4,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_cycle,""2"");}));",Icon/Relic/时虫之鳞
 46,1,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");ChangeHp(""8"");}));",Icon/Relic/振奋之息
-47,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_counterattack"",""3"");}));",Icon/Relic/曲针
-48,1,,"AddEvent(""FightStart"",() => {
-  if (PlayerInfo.CardTotalCount>22)
+47,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_poised,""3"");}));",Icon/Relic/曲针
+48,3,,"AddEvent(""FightStart"",() => {
+  if (PlayerInfo.CardTotalCount>18)
   {
   ChangeMaxPower(""1"");
   }
   });",Icon/Relic/渊薮呼唤
-49,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_impregnable"",""1"");}));",Icon/Relic/纸板甲
-50,2,,"AddEvent(""Hitted"",(() => {SetStatus(""Self"");ChangeHp(""2"");}));",Icon/Relic/历战徽记：自愈
+49,1,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_impregnable,""1"");}));",Icon/Relic/纸板甲
+50,2,,"AddEvent(""Hurt"",(() => {SetStatus(""Self"");ChangeHp(""2"");}));",Icon/Relic/历战徽记：自愈
 51,1,,"AddEvent(""EndRound"", () =>
         {
             int count = HandCard.Where(x => x.data[""InitScript""].Contains(""CommonCardItem"")).Count() * 2;
@@ -193,17 +190,17 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
                 ChangeHp(""-999"");
             }
         });",Icon/Relic/死契  伊尔
-*53,2,,"AddEvent(""FightStart"", () => { Vars[""ToCount""] = PlayerInfo.enemyCount.ToString();Vars[""ThisCount""] = ""0""; });
+*53,3,,"AddEvent(""FightStart"", () => { Vars[""ToCount""] = PlayerInfo.enemyCount.ToString();Vars[""ThisCount""] = ""0""; });
         SetStatus(""AllTarget"");
         AddEvent(""Dead"",()=> {if (int.Parse(Vars[""ThisCount""])<int.Parse(Vars[""ToCount""]))
         {
-                PlayerInfo.AddBless(""blessing_15"");
+                PlayerInfo.AddBless(DataId.blessing_15);
         } });
         AddEvent(""EndRound"", () =>
         {
             Vars[""ThisCount""]= (int.Parse(Vars[""ThisCount""]) + 1).ToString();
         });",Icon/Relic/历战徽记：先登
-54,3,,"Vars[""ToPower""] = ""0"";Vars[""ToCard""] = ""0"";
+54,4,,"Vars[""ToPower""] = ""0"";Vars[""ToCard""] = ""0"";
         AddEvent(""StartRound"", () => { Vars[""ToPower""] = ""0"";Vars[""ToCard""] = ""0""; });
         AddEvent(""EndCreateCardItem"",()=>{ if (HandCard.Count==PlayerInfo.CardTopCount&&Vars[""ToPower""] == ""0"")
         {
@@ -215,9 +212,10 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
             Vars[""ToCard""] = ""1"";
             DrawCount(""4"");
         }});",Icon/Relic/阴&阳
-55,1,,"AddEvent(""FightStart"",()=> { AddBuff(""buff_sublimation"",""1"");  });",Icon/Relic/轴钉
-56,1,,"AddEvent(""StartRound"",() => {ChangeCardTop(""1"");
-            SetStatus(""AllRandomEnemy1"");
+55,1,,"AddEvent(""StartRound"",() => {
+            AddBuff(DataId.buff_evergreen,""3"");AddBuff(DataId.buff_extraordinary,""10"");});",Icon/Relic/轴钉
+56,2,,"AddEvent(""StartRound"",() => {ChangeCardTop(""1"");
+            SetStatus(""AllRandomTarget1"");
             for (int i = 0; i < PlayerInfo.Wisdom / 5; i++) { Damage(""2""); } ;});",Icon/Relic/《风暴》
 57,1,,"AddEvent(""FightStart"",(() => DrawCount(""2"")));",Icon/Relic/先机
 58,2,,"AddEvent(""FightStart"",() => {SetStatus(""Self"");
@@ -235,7 +233,7 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
             int a = DefaultDice.Roll().Value;
             if (a < 25)
             {
-                SetStatus(""AllRandomEnemy1"");
+                SetStatus(""AllRandomTarget1"");
                 Damage(Vars[""ThisCount""]);
             }
             else if (a < 50)
@@ -249,15 +247,15 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
                 ChangeHp(Vars[""ThisCount""]);
             }
             else
-            {
+            {SetStatus(""Self"");
                 ChangeMoney(Vars[""ThisCount""]);
             } });
         AddEvent(""BurnCard"",(() => {Vars[""ThisCount""] =(int.Parse(Vars[""ThisCount""])+1).ToString();UpdateRelicShow();}));",Icon/Relic/追忆
 60,1,,"AddEvent(""EndRound"",() => {ChangeHp((PlayerInfo.Power*6).ToString());ChangePower((-1*PlayerInfo.Power).ToString()); });",Icon/Relic/魔力插头
 61,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");ChangeMaxHp(""-2"");ChangeMoney(""40"");}));",Icon/Relic/赝造金像
 62,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");ChangeDynamicVar(""RetainCard"",""2""); }));",Icon/Relic/固化理智
-63,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_chaos"",""1"");}));",Icon/Relic/《死灵之书》
-64,3,,"Vars[""ThisCount""] = ""0"";UpdateRelicShow();
+63,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_chaos,""1"");}));",Icon/Relic/《死灵之书》
+*64,3,,"Vars[""ThisCount""] = ""0"";UpdateRelicShow();
         AddEvent(""buff_timelockOnLevelChange"",()=> {
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();UpdateRelicShow();
             if (int.Parse(Vars[""ThisCount""]) %2==0)
@@ -266,26 +264,28 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
             }
         });",Icon/Relic/笼中雀
 *65,2,,"SetStatus(""AllTarget"");
-        AddEvent(""Dead"",()=> { if (fightType== PlayerInfo.Enemy) 
+        AddEvent(""Dead"",()=> { 
+            if (returnFightType()== PlayerInfo.Enemy) 
             {
-                PlayerInfo.AddBless(""blessing_20"");
+                PlayerInfo.AddBless(DataId.blessing_20);
             
         }});",Icon/Relic/咒怨石像
 66,2,,"AddEvent(""ICreateCardItem"",()=> { ChangeDefence((ValueDice.Roll().Value/30).ToString()); });",Icon/Relic/千纸鹤
-67,1,,"Vars[""ThisCount""] = ""0"";
+67,3,,"Vars[""ThisCount""] = ""0"";
         AddEvent(""Hurt"", () =>
         {
             Vars[""ThisCount""] = (int.Parse(Vars[""ThisCount""]) + 1).ToString();UpdateRelicShow();
             if (int.Parse(Vars[""ThisCount""])%6==0&&int.Parse(Vars[""ThisCount""])<25)
             {
-                PlayerInfo.AddBless(""blessing_10"");
+                PlayerInfo.AddBless(DataId.blessing_10);
             }
         });",Icon/Relic/律法范本
-68,2,,"if (PlayerInfo.enemylevel==2)
+68,3,,"if (PlayerInfo.enemylevel==2)
         {
-            AddEvent(""Win"",()=> { PlayerInfo.AddBless(""blessing_5""); });
+            AddEvent(""Win"",()=> { PlayerInfo.AddBless(DataId.blessing_5); });
         }",Icon/Relic/国王权杖
 69,1,,"Vars[""ThisCount""] = ""0"";
+       AddEvent(""StartRound"",()=>{Vars[""ThisCount""]=""0""; });
         AddEvent(""Action"",()=>{ Vars[""ThisCount""] = ""1""; });
         AddEvent(""EndRound"",()=>{ if (Vars[""ThisCount""] == ""0"")
         {
@@ -296,42 +296,30 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
         AddEvent(""StartRound"", () => {
             DrawCount((5-int.Parse(Vars[""ThisCount""])).ToString());
              Vars[""ThisCount""] = ""0""; });",Icon/Relic/灵感债券
-71,3,,"AddEvent(""FightStart"", ()=> { ChangeMaxPower(""1""); });
+71,4,,"AddEvent(""FightStart"", ()=> { ChangeMaxPower(""1""); });
         AddEvent(""StartRound"", () => { BurnCard(""1"",""1""); });",Icon/Relic/火鬼鸣泣
-72,1,,"if (PlayerInfo.CardTotalCount>18&&PlayerInfo.CardTotalCount<28)
+72,2,,"if (PlayerInfo.CardTotalCount>10&&PlayerInfo.CardTotalCount<20)
         {
-            AddBuff(""buff_extraordinary"",  (PlayerInfo.CardTotalCount*10-180).ToString());
+            AddBuff(DataId.buff_extraordinary, (PlayerInfo.CardTotalCount*10-100).ToString());
         }
-        else if(PlayerInfo.CardTotalCount>=28)
+        else if(PlayerInfo.CardTotalCount>=20)
         {
-            AddBuff(""buff_extraordinary"",  ""100"");
+            AddBuff(DataId.buff_extraordinary, ""100"");
         }",Icon/Relic/龙之血
-73,2,,"ChangeMaxPower(""-2"");
-        AddEvent(""EndRound"",()=>{ AddBuff(""buff_epiphany"",  ""1""); });",Icon/Relic/试作光环
-74,2,,"AddEvent(""FightStart"",()=> { Vars[""ThisCount""] = ""0""; });
+73,4,,"ChangeMaxPower(""-2"");
+        AddEvent(""EndRound"",()=>{ AddBuff(DataId.buff_epiphany, ""1""); });",Icon/Relic/试作光环
+74,3,,"AddEvent(""FightStart"",()=> { Vars[""ThisCount""] = ""0""; });
         AddEvent(""Action"",()=> {if (HandCard.Count == 1 && Vars[""ThisCount""] == ""0"")
             {
-                DrawCount(""4"");
+                DrawCount(""5"");
             Vars[""ThisCount""] = ""1"";
             
         } });
         AddEvent(""StartRound"",()=> {Vars[""ThisCount""] = ""0"";});",Icon/Relic/主教长袍
-75,1,,"AddEvent(""Action"",()=> {if (HandCard.Count > PlayerInfo.CardCount)
-            {
-                if (Self.buffBarUI == null)
-                {
-                    Debug.LogWarning(""Self.buffBarUI is null"");
-                    return;
-                }
-                if (Self.buffBarUI.GetBuff(""buff_WhiteSolitaire"") == null)
-                {
-                    AddBuff(""buff_WhiteSolitaire"",  (HandCard.Count - PlayerInfo.CardCount).ToString());
-                }
-                else
-                {
-                    Self.buffBarUI.GetBuff(""buff_WhiteSolitaire"").buffConfig.Level = (HandCard.Count - PlayerInfo.CardCount);
-                }
-        } });",Icon/Relic/纸牌塔：白
+75,1,,"AddEvent(""EndRound"", () =>
+        {
+            ChangeDefence(PlayerInfo.usedCardListCount.ToString());
+        });",Icon/Relic/纸牌塔：白
 *76,1,,"AddEvent(""EndRound"",()=> {if (HandCard.Count < PlayerInfo.CardCount)
             {
                 ChangeDefence((PlayerInfo.CardCount- HandCard.Count).ToString());
@@ -339,16 +327,15 @@ id,稀有度,获取时的脚本,战斗脚本,图片名称
 *77,1,,"AddEvent(""FightStart"",()=> { ChangeDefence(""12""); });",Icon/Relic/铁桶
 *78,3,,"AddEvent(""FightStart"",() =>
         {
-            AddBuff(""buff_keenedge"",  ""3"");
+            AddBuff(DataId.buff_keenedge, ""3"");
             ChangePower(""1"");
         });",Icon/Relic/纯金王冠
 *79,2,,"AddEvent(""FightStart"",() =>
         {
-            RandomAddBuff(""3"");
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 5; i++)
             {
                 RandomAddGoodBuff();
             }
             
-        });",Icon/Relic/纯金王冠
-*80,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(""buff_impregnable"",""2"");AddBuff(""buff_degrade"",""2"");}));",Icon/Relic/纯金王冠
+        });",Icon/Relic/可可的勾线笔
+*80,2,,"AddEvent(""FightStart"",(() => {SetStatus(""Self"");AddBuff(DataId.buff_impregnable,""2"");AddBuff(DataId.buff_degrade,""2"");}));",Icon/Relic/迷途天使之环

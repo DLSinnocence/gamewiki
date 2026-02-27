@@ -1,4 +1,4 @@
-Id,Note,Name,Name_en,Name_ja,Title,Title_en,Title_ja,Description,Description_en,Description_ja,Action1,Action1_en,Action1_ja,Action2,Action2_en,Action2_ja,Passive1,Passive1_en,Passive1_ja,Passive2,Passive2_en,Passive2_ja
+﻿Id,Note,Name,Name_en,Name_ja,Title,Title_en,Title_ja,Description,Description_en,Description_ja,Action1,Action1_en,Action1_ja,Action2,Action2_en,Action2_ja,Passive1,Passive1_en,Passive1_ja,Passive2,Passive2_en,Passive2_ja
 唯一id,备注,称号,,,称号,,,描述,,,主动1描述,,,主动2,,,被动1,,,被动2,,
 1,,阿米莉娅,Amelia,アメリア,原初魔女,Primordial Witch,原初の魔女,"最初诞生的魔女，因为主天使早期技术不成熟的原因，这原型之作的缺点和她的优点一样丰沛
 拥有极佳的适应和成长能力，敏捷的思维，但是也因此得到了跳脱的性格，不按指示的行动的逆反性格
@@ -15,7 +15,7 @@ Her top three favorite things are getting something for nothing, sleeping, and t
 魔女の中の大先輩でありながら、その顔立ちとは裏腹な性格。黙っていれば氷の美女だが、口を開けばクールな女神から寮の同室のような存在に早変わり。情熱的で活力に満ち、あらゆる新しいものに興味を持つが、試した後はすぐに飽きてしまう。
 
 好きなことトップ3は、労せずして得ること、寝ること、そして注目している新作ゲームの発売。
-",<name>神选</name><des>1冷却，从牌堆中检索一张牌。</des>,"<name>God's Choice</name><des>1 cooldown, search for a card in the deck.</des>",<name>神選</name><des>クールダウン3。山札からカードを1枚手札に加える。</des>,,,,<name>理性化盾</name><des>战斗开始时获得2层坚毅。</des>,<name>Rationalize into Shield</name><des>Gain 2 layers of Fortitude at combat start.</des>,<name>理性化の盾</name><des>戦闘開始時、堅毅を2スタック獲得する。</des>,<name>恶念为剑</name><des>战斗开始时获得20层超凡。</des>,<name>Malice as Sword</name><des>Gain 20 layers of Extraordinary at combat start.</des>,<name>悪念の剣</name><des>戦闘開始時、超越を20スタック獲得する。</des>
+",<name>神选</name><des>1冷却，从牌堆中检索一张牌。</des>,"<name>God's Choice</name><des>1 cooldown, search for a card in the deck.</des>",<name>神選</name><des>クールダウン3。山札からカードを1枚手札に加える。</des>,,,,<name>理性化盾</name><des>战斗开始时获得2层坚毅。</des>,<name>Rationalize into Shield</name><des>Gain 2 layers of {buff_impregnable} at combat start.</des>,<name>理性化の盾</name><des>戦闘開始時、{buff_impregnable}を2スタック獲得する。</des>,<name>恶念为剑</name><des>战斗开始时获得3层元素。</des>,<name>Malice as a Sword</name><des>Gain 3 layers of {buff_elements} at combat start.</des>,<name>悪念は剣となる</name><des>戦闘開始時に{buff_elements}を3スタック獲得する。</des>
 *2,,奈奈·维洛莉丝,Nana Veloris,ナナ・ヴェロリス,见习魔女,Apprentice Witch,見習い魔女,"天界于奥尔德林5034年制作，崭新出炉的最新型号魔女
 拥有极具欺骗性的外表和无条件的杀戮心
 具备在毫无自觉的情况下将人从心理和情绪上同时破防的天然黑性格
@@ -26,7 +26,7 @@ She nourishes herself by feeding on 'abnormalities' and transforms into a giant 
 非常に欺瞞的な外見と、無条件の殺戮心を持つ。
 無自覚のうちに相手を心理的、感情的に同時に打ちのめす天然黒な性格。
 「異常」を糧として自身を養い、戦闘中は身長6メートル、体長数十メートルの巨大な骨の棘を持つ怪物と化し、行く手に見えるものすべてを粉砕する。","<name>可食用厄运</name>
-<des>选择一名指定对象（可以指向包括自身在内的我方和敌方），吞噬目标身上的所有负面异常，并将异常储存入奈奈的“胃囊”，获得一定的厄运魔能，(如果目标非自身)造成5点伤害</des>","<name>Edible Misfortune</name>
+<des>5冷却,选择一名指定对象（可以指向包括自身在内的我方和敌方），吞噬目标身上的所有负面异常，并将异常储存入奈奈的“胃囊”，获得一定的厄运魔能，(如果目标非自身)造成5点伤害</des>","<name>Edible Misfortune</name>
 <des>Choose a target (can be self, an ally, or an enemy), devour all debuffs on the target, store them in Nana's 'stomach', gain a certain amount of Doom Power, and (if the target is not self) deal 5 damage.</des>","<name>食せる厄災</name>
 <des>対象を1体選択（自身を含む味方、または敵も選択可能）。対象の全てのデバフを捕食し、ナナの「胃袋」に保存する。一定量の厄災魔力を獲得し、（対象が自身でない場合）5ダメージを与える。</des>","<name>灾祸具现化</name>
 <des>化身为厄莉克特拉，获得状态""灾厄化身""</des>","<name>Calamity Manifestation</name>
@@ -58,7 +58,7 @@ She nourishes herself by feeding on 'abnormalities' and transforms into a giant 
 非常に欺瞞的な外見と、無条件の殺戮心を持つ。
 無自覚のうちに相手を心理的、感情的に同時に打ちのめす天然黒な性格。
 「異常」を糧として自身を養い、戦闘中は身長6メートル、体長数十メートルの巨大な骨の棘を持つ怪物と化し、行く手に見えるものすべてを粉砕する。","<name>可食用厄运</name>
-<des>选择一名指定对象（可以指向包括自身在内的我方和敌方），吞噬目标身上的所有负面异常，并将异常储存入奈奈的“胃囊”，获得一定的厄运魔能，(如果目标非自身)造成5点伤害</des>","<name>Edible Misfortune</name>
+<des>5冷却,选择一名指定对象（可以指向包括自身在内的我方和敌方），吞噬目标身上的所有负面异常，并将异常储存入奈奈的“胃囊”，获得一定的厄运魔能，(如果目标非自身)造成5点伤害</des>","<name>Edible Misfortune</name>
 <des>Choose a target (can be self, an ally, or an enemy), devour all debuffs on the target, store them in Nana's 'stomach', gain a certain amount of Doom Power, and (if the target is not self) deal 5 damage.</des>","<name>食せる厄災</name>
 <des>対象を1体選択（自身を含む味方、または敵も選択可能）。対象の全てのデバフを捕食し、ナナの「胃袋」に保存する。一定量の厄災魔力を獲得し、（対象が自身でない場合）5ダメージを与える。</des>","<name>灾祸具现化</name>
 <des>化身为厄莉克特拉，获得状态""灾厄化身""</des>","<name>Calamity Manifestation</name>
@@ -67,3 +67,30 @@ She nourishes herself by feeding on 'abnormalities' and transforms into a giant 
 <des>奈奈的初始生命遭到削减，但可以通过厄运魔能为自身提供治疗和最大生命值加成</des>","<name>Vessel of the Unfortunate</name>
 <des>Nana's initial health is reduced, but she can use Doom Power to heal herself and increase her maximum health.</des>","<name>不幸者の器</name>
 <des>ナナの初期HPは減少しているが、厄災魔力で自身を治療し、最大HPを増加させることができる。</des>",,,
+5,,卡洛琳,Caroline,キャロライン,猎杀魔女,Hunting Witches,魔女を狩る,猎杀魔女,Hunting Witches,魔女を狩る,"<name>叹息之墙</name>
+<des>3冷却，指定一个友方目标，抽取5张卡牌，其回合结束时，焚毁其所有未使用的手牌</des>","<name>Wall of Sighs</name>
+<des>3 cooldown, target a friendly unit, draw 5 cards, then at the end of their turn, burn all unused cards in their hand</des>","<name>嘆きの壁</name>
+<des>クールタイム3、味方の対象1体を指定し、カードを5枚引く。そのターン終了時に、使用されなかった手札をすべて灰にする</des>","<name>无光圣盾</name>
+<des>摧毁一个敌人的第一个攻击意图。</des>","<name>Guardian Lightless Shield</name>
+<des>Destroys the first attack intent of an enemy.</des>","<name>無光の聖盾</name>
+<des>敵の最初の攻撃意図を破壊する。</des>","<name>铸盾为剑</name>
+<des>造成的伤害基于当前护盾值和反击层数额外提高，每1点护盾或1层反击+1%伤害。</des>","<name>Forge Shield into Sword</name>
+<des>Damage +1% per point of shield or per layer of {buff_counterattack}.</des>","<name>盾を剣に変える</name>
+<des>シールド1または{buff_counterattack}1スタックごとに与ダメージ+1%。</des>",,,
+6,,厄米娅,Ermia,アーミヤ,混沌魔女,Chaos Witch,カオスの魔女,混沌魔女,Chaos Witch,カオスの魔女,"<name>混沌操纵</name>
+<des>2冷却，重掷当前标记的混沌效果。</des>","<name>Chaos Manipulation</name>
+<des>Reroll the chaos effect currently marked.</des>","<name>混沌の操縦</name>
+<des>現在のマークされた混沌の効果を再投擲する。</des>",,,,"<name>可动摇信念</name>
+<des>基础生命提高50，受到的治疗提高50%，造成的伤害会在80%~200%之间波动</des>","<name>Can Shake Beliefs</name>
+<des>Increases base health by 50, increases healing received by 50% Damage dealt fluctuates between 80% and 200%</des>","<name>信念を揺るがすことができる</name>
+<des>基礎生命力が50増加し、受ける治療効果が50%増加
+与えるダメージは80%～200%の範囲で変動する</des>","<name>命运之舞台</name>
+<des>每当自己的回合开始时，随机触发一种混沌效果，混沌效果包含以下可能：
+1.受到最大生命值20%的真实伤害（不会致死），敌方全体受到最大生命值10%的真实伤害。
+2.恢复最大生命值的30%。
+3.额外抽2张牌失去1魔能。
+4.获得随机层数（1~3）的流血或灼烧，所有敌方获得双倍。
+5.当前所有状态层数×1.2。
+6.获得100层超凡。</des>","<name>Stage of Fate</name>
+<des>At the start of your turn, trigger one random chaos effect: 1. Take 20% max HP true damage (non-fatal), all enemies take 10% max HP true damage. 2. Recover 30% max HP. 3. Draw 2, lose 1 mana. 4. Gain random 1~3 layers of {buff_bleeding} or {buff_burn}, all enemies gain double. 5. All status layers ×1.2. 6. Gain 100 layers of {buff_extraordinary}.</des>","<name>運命の舞台</name>
+<des>自分のターン開始時、ランダムで1つのカオス効果：1. 最大HP20%の貫通ダメージ（致死なし）、敵全体は最大HP10%の貫通ダメージ。2. 最大HP30%回復。3. カード2枚引く、マナ1失う。4. {buff_bleeding}か{buff_burn}を1～3スタックランダム獲得、敵全体は2倍。5. 全状態層数×1.2。6. {buff_extraordinary}を100スタック獲得。</des>"

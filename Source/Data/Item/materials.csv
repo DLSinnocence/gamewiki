@@ -1,4 +1,4 @@
-Id,Dimensions,Type,Icon,Rarity
+﻿Id,Dimensions,Type,Icon,Rarity
 （id）唯一标识,成分,类型,图标路径,稀有度
 1,"1,1,0,1,0,0",AlchemicalMaterials,Icon/buff/治愈光环,2
 2,"0,2,1,0,0,0",AlchemicalMaterials,Icon/buff/治愈光环,2

@@ -1,4 +1,4 @@
-Id,Note,Chapter,Chapter_en,Name,Name_en,Description,Description_en,Tip,Tip_en,Text,Text_en
+﻿Id,Note,Chapter,Chapter_en,Name,Name_en,Description,Description_en,Tip,Tip_en,Text,Text_en
 Id,Note,Chapter,Chapter_en,Name,Name_en,Description,Description_en,Tip,Tip_en,Text,Text_en
 1,,战斗,Combat,魔力,Magic,基础四属性之一,One of the four basic attributes,基础属性,Basic Attribute,"在战斗中,魔力会赋予卡牌无与伦比的威力。每点魔力提供0.03的独立乘区伤害","In combat, magic grants cards unparalleled power. Each point of magic provides 0.03 independent multiplicative damage"
 2,,战斗,Combat,幸运,Luck,基础四属性之一,One of the four basic attributes,基础属性,Basic Attribute,每点幸运额外提供0.2的祝福上限和一定量的判定优势,Each point of luck provides an additional 0.2 blessing cap and certain judgment advantages
