@@ -126,7 +126,7 @@ chaos,,"
             }
         });",,0,0,0,1,Icon/Buff/混乱,负面,3,,,
 eclipse,,"SetStatus(""Self"");
-AddEvent(""buff_eclipseOnLevelChange"",()=>{ChangeDynamicVar(""CardCost"",""-2"");});",ChangeHp("-999");,10,0,0,1,Icon/Buff/魔化,指示物,4,,,
+AddEvent(""buff_eclipseOnLevelChange"",()=>{ChangeDynamicVar(""CardCost"",""-2"");});","ChangeHp(""-999"");",10,0,0,1,Icon/Buff/魔化,指示物,4,,,
 vulnerability,"AddDescription(""1"", ""Percent"", Vars[""layer""].ToInt() * 0.1f);","SetStatus(""Self"");
 AddEvent(""buff_vulnerabilityOnLevelChange"",() => {ChangeDynamicVarPercent(""AttackedPercentDamage"",(int.Parse(Self.GetBuff(DataId.buff_vulnerability).buffConfig.Level.ToString())*10).ToString());});",,2,0,0,99,Icon/Buff/易伤,负面,2,,,
 cycle,,"AddEvent(""Shuffle"",() => {ChangePower(Self.GetBuff(DataId.buff_cycle).buffConfig.Level.ToString());});",,0,0,0,5,Icon/Buff/循环,正面,4,,,
@@ -272,12 +272,9 @@ lifelink,,"void AverageHp()
         else minMaxHp = minMaxHp > status.MaxHp ? status.MaxHp : minMaxHp; 
         total += status.CurHp; count += 1; 
         });
-    Debug.Log($""总血量{total}，数量{count}，平均血量{total / count}，最低血量{minMaxHp}"");
     if (count <= 1) return; 
     int even = total / count; even = even > minMaxHp ? minMaxHp : even; 
-    Debug.Log(""当前人数为""+Object.Count+""更新人数为""+Object.Where(x => x.GetBuff(DataId.buff_lifelink) != null).Count());
     SetStatus(Object.Where(x => x.GetBuff(DataId.buff_lifelink) != null));
-    Debug.Log($""{Object.Count}平均血量{even}，最低血量{minMaxHp}"");
     SetHp(even.ToString());
 }
 SetStatus(""Self"");
@@ -294,7 +291,7 @@ synergies,,"Vars[""CorCount""]=""0"";SetStatus(""AllFriends"");int count = 0;for
             {
                 continue;
             }
-            var buff = status.GetBuff(DataId.buff_synergies); if (buff != null) buff.buffConfig.dataConfig.Vars[""CorCount""]=count.ToString(); buff.buffConfig.dataConfig.Vars[""DesVal1""] = count.ToString();}",SetStatus("AllFriendsExSelf");int count = 0;foreach (var status in Object){var buff = status.GetBuff(DataId.buff_synergies); if (buff != null) count ++;}foreach (var status in Object){var buff = status.GetBuff(DataId.buff_synergies); if (buff != null) buff.buffConfig.dataConfig.Vars["CorCount"]=count.ToString(); buff.buffConfig.dataConfig.Vars["DesVal1"] = count.ToString();},1,0,0,2,Icon/Buff/连携,指示物,3,,,
+            var buff = status.GetBuff(DataId.buff_synergies); if (buff != null) buff.buffConfig.dataConfig.Vars[""CorCount""]=count.ToString(); buff.buffConfig.dataConfig.Vars[""DesVal1""] = count.ToString();}","SetStatus(""AllFriendsExSelf"");int count = 0;foreach (var status in Object){var buff = status.GetBuff(DataId.buff_synergies); if (buff != null) count ++;}foreach (var status in Object){var buff = status.GetBuff(DataId.buff_synergies); if (buff != null) buff.buffConfig.dataConfig.Vars[""CorCount""]=count.ToString(); buff.buffConfig.dataConfig.Vars[""DesVal1""] = count.ToString();}",1,0,0,2,Icon/Buff/连携,指示物,3,,,
 DoomPower,"AddDescription(""1"", ""Percent"", Vars[""layer""].ToInt() * 0.1f);
 AddDescription(""2"", ""Hp"", Vars[""layer""]);","AddEvent(""buff_DoomPowerOnLevelChange"",()=>
          {
