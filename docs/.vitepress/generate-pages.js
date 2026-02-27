@@ -79,6 +79,25 @@ function escapeMarkdown(text) {
     .replace(/\n/g, "<br>"); // 换行符变成 <br> 避免断行
 }
 
+function escapeHtml(text) {
+  return String(text || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/\n/g, " ");
+}
+
+function renderCardGrid(cards) {
+  const items = cards
+    .map(
+      ({ href, title, description }) =>
+        `<a class="wiki-card" href="${escapeHtml(href)}"><span class="wiki-card__title">${escapeHtml(title)}</span>${description ? `<p class="wiki-card__desc">${escapeHtml(description)}</p>` : ""}</a>`
+    )
+    .join("\n");
+  return `<div class="wiki-card-grid">\n${items}\n</div>`;
+}
+
 function renderMarkdown(title, data, buffMap) {
   const lines = [`# ${title}\n`];
   const type = data.Type;
@@ -150,24 +169,21 @@ function generatePages() {
     const outputDir = path.join(outputRoot, category, name);
     fs.mkdirSync(outputDir, { recursive: true });
 
-    const indexContent = [
-      `# ${name} 列表\n`,
-      `| 名称 | 描述 |`,
-      `| --- | --- |`,
-    ];
-
-    dataRows.forEach((row) => {
+    const cards = dataRows.map((row) => {
       const text = textMap.get(row.Id) || {};
       const displayName = text.Name || row.Id;
-      const description = escapeMarkdown(text.Description || text.描述 || "");
+      const description = (text.Description || text.描述 || "").slice(0, 120);
       const fileName = sanitizeFileName(row.Id);
-      indexContent.push(
-        `| [${displayName}](./${fileName}.md) | ${description} |`
-      );
+      return {
+        href: `./${fileName}`,
+        title: displayName,
+        description,
+      };
     });
+    const indexContent = `# ${name} 列表\n\n${renderCardGrid(cards)}\n`;
     writeMarkdown(
       path.join(outputRoot, category, name, "index.md"),
-      indexContent.join("\n")
+      indexContent
     );
 
     // ✅ 生成详情页
@@ -190,25 +206,20 @@ function generateCategoryHome(categoryDir, textMap = new Map()) {
     fs.statSync(path.join(categoryDir, name)).isDirectory()
   );
 
-  const indexContent = [
-    `# ${category} 列表\n`,
-    `| 名称 | 描述 |`,
-    `| --- | --- |`,
-  ];
-
-  subDirs.forEach(sub => {
+  const cards = subDirs.map((sub) => {
     const text = textMap.get(sub) || {};
     const displayName = text.Name || sub;
-    const description = escapeMarkdown(text.Description || text.描述 || '');
-
-    indexContent.push(
-      `| [${displayName}](./${encodeURIComponent(sub)}/) | ${description} |`
-    );
+    const description = (text.Description || text.描述 || "").slice(0, 120);
+    return {
+      href: `./${encodeURIComponent(sub)}/`,
+      title: displayName,
+      description,
+    };
   });
-
-  const indexPath = path.join(categoryDir, 'index.md');
+  const indexContent = `# ${category} 列表\n\n${renderCardGrid(cards)}\n`;
+  const indexPath = path.join(categoryDir, "index.md");
   debug(`生成目录首页: ${indexPath}`);
-  writeMarkdown(indexPath, indexContent.join('\n'));
+  writeMarkdown(indexPath, indexContent);
 }
 
 generatePages();

@@ -73,24 +73,15 @@ export function getWikiNavAndSidebar(): {
 
   const wikiIndexPath = path.join(wikiRoot, "index.md");
   if (!fs.existsSync(wikiIndexPath)) {
-    const indexContent = [
-      "# Wiki 首页\n",
-      "欢迎来到 Wiki 首页，以下是所有分类：\n",
-      "| 类型 | 链接 |",
-      "| ---- | ---- |",
-    ];
-
-    categories.forEach((category) => {
-      const title = toTitleCase(category);
-      if (title != ".vitepress")
-      {
-        indexContent.push(
-        `| ${title} | [查看](/${encodeURIComponent(category)}/) |`
-      );
-      }
-    });
-
-    fs.writeFileSync(wikiIndexPath, indexContent.join("\n"), "utf-8");
+    const cardEntries = categories
+      .filter((c) => c !== ".vitepress")
+      .map(
+        (category) =>
+          `<a class="wiki-card" href="./${encodeURIComponent(category)}/"><span class="wiki-card__title">${toTitleCase(category)}</span><p class="wiki-card__desc">查看 ${toTitleCase(category)} 分类下的所有条目</p></a>`
+      )
+      .join("\n");
+    const indexContent = `# Wiki 首页\n\n欢迎来到 Wiki 首页，以下是所有分类：\n\n<div class="wiki-card-grid">\n${cardEntries}\n</div>\n`;
+    fs.writeFileSync(wikiIndexPath, indexContent, "utf-8");
   }
 
   return { nav, sidebar };

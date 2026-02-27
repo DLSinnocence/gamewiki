@@ -1,1 +1,6 @@
 *.meta
+
+# docs 下只保留 .vitepress，其余文件夹均忽略
+docs/*
+!docs/.vitepress
+!docs/.vitepress/**
